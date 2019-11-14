@@ -9,7 +9,8 @@ class Scale:
         self._scales.append("Ionian Bebop")
         self._scales.append("Dorian Bebop")
         self._scales.append("Mixo Bebop")
-        self._scales.append("Dim")
+        self._scales.append("Dim WH")
+        self._scales.append("Dim HW")
 
     def get_random_scale(self) -> str:
         random_note = Note().get_random_note()

@@ -2,10 +2,10 @@ from model.exercise import Exercise
 from model.exercise_step import ExerciseStep
 import random
 
-class WorkOut:
 
-    _GUITAR_M = "USA Bass"
-    _GUITAR_D = "Mexican Bass"
+class WorkOut:
+    _GUITAR_P = "Precision"
+    _GUITAR_S = "StingRay"
     _GUITAR_A = "Taylor"
 
     def __init__(self, exercises: []):
@@ -14,15 +14,16 @@ class WorkOut:
         self._step_index = 0
 
     def add_random_guitar(self):
+        return
         random_number = random.randint(1, 100)
-        if random_number >= 1 and random_number < 60:
-            random_guitar = self._GUITAR_M
-        elif random_number >= 60 and random_number < 90:
-            random_guitar = self._GUITAR_D
+        if 1 <= random_number < 60:
+            random_guitar = self._GUITAR_S
+        elif 60 <= random_number < 90:
+            random_guitar = self._GUITAR_P
         else:
             random_guitar = self._GUITAR_A
         guitar_step = ExerciseStep(random_guitar)
-        guitar_exercise = Exercise("Guitar", "Pick the following guitar",[guitar_step])
+        guitar_exercise = Exercise("Guitar", "Pick the following guitar", [guitar_step])
         self._exercises.insert(0, guitar_exercise)
 
     def get_current_exercise(self) -> Exercise:
@@ -52,7 +53,7 @@ class WorkOut:
         else:
             return self.get_current_exercise(), self.get_current_step()
 
-    def get_exercise_count(self) ->int:
+    def get_exercise_count(self) -> int:
         return len(self._exercises)
 
     def get_exercise_index(self) -> int:

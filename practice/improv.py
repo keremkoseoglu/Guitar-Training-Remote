@@ -11,19 +11,36 @@ class Improv(AbstractPractice):
         "Random note",
         "Approach note",
         "Sequence",
-        "Tritone sub",
-        "Tritone sub (Lyd b7)",
-        "Dom7 3rd Dim",
-        "Half step above",
         "Simple melody",
         "Chromatic",
-        "Repetition",
+        "Repeating elements",
         "Chords",
         "Distant notes",
+        "Close notes",
         "Two threes maj",
         "Bebop",
         "Blockbuster",
-        "Feeling projection"
+        "Feeling projection",
+        "Emotion graph",
+
+        "Play out - mel.min.",
+        "Play out - chromatic",
+        "Coltrane patterns",
+        "Phrasing",
+        "Rhythmic games",
+        "Right target note",
+        "Strong beat / note",
+        "Double stops",
+        "Thematic improv",
+        "Call & response",
+        "Emphasize chords",
+
+        "Dom7 phrygian",
+        "Dom7 altered",
+        "Dom7 3rd Dim",
+
+        "Free lyric solo",
+        "Mindful of rhythm / harm / melody"
     ]
 
     _TITLE = "Improv"

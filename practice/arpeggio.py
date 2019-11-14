@@ -3,13 +3,17 @@ from music_theory import chord, position, scale
 from practice import abstract_practice
 import random
 
+
 class Arpeggio(abstract_practice.AbstractPractice):
 
     _TITLE = "Arpeggio"
 
     _ARPEGGIO_TYPES = [
         "Do an arpeggio on the given scale",
-        "Walk diatonic arpeggios from scale"
+        "Walk diatonic arpeggios from scale",
+        "Do arpeggio as 1 down 4 up",
+        "Do upper structure from 1 / 3 / 5 / 7",
+        "Do arpeggio - all strings / positions / fingers"
     ]
 
     def get_exercise(self, quantity: int) -> exercise.Exercise:
@@ -40,7 +44,7 @@ class Arpeggio(abstract_practice.AbstractPractice):
         # ---Build return list-----
 
         for random_arp in random_stuff:
-            suggested_position = position_obj.get_random_position()
+            suggested_position = position_obj.get_random_chord_position()
 
             random_step = exercise_step.ExerciseStep(random_arp, "Suggested position: " + str(suggested_position))
             random_steps.append(random_step)

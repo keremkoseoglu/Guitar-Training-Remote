@@ -13,16 +13,20 @@ class OneLiner(AbstractPractice):
         "Solo / repertoir",
         "Solo / rhythm changes",
         "Solo / sing",
+        "Solo / one chord"
+        "Bass chord melody",
+        "Melody / chords"
         
         "Transcribe solo",
         "Transcribe groove",
 
         "Bebop (2 5 1)",
         "Circle of 5ths",
-        "Groove loop",
+        "Groove loop over drum",
         "Metronome",
         "New style",
-        "Repertoire"
+        "Repertoire",
+        "Slap 4let / 3let"
     ]
 
     _TITLE = "One-Liner"

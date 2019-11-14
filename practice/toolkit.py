@@ -1,11 +1,12 @@
-import inspect, practice, sys
+import inspect
 import os
+
 
 class Toolkit:
 
     _MODULE_EXTENSIONS = ('.py', '.pyc', '.pyo')
 
-    def get_all_practices(self):
+    def get_all_practices(self) -> []:
         output = []
 
         modules = self.get_all_modules()

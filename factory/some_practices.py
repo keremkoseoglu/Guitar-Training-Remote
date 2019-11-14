@@ -2,6 +2,7 @@ from factory import abstract_factory, all_practices
 import random
 from model import workout
 
+
 class SomePractices(abstract_factory.AbstractFactory):
 
     _LOW_PERCENT = 50

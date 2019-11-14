@@ -5,19 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3adc262d-018b-4989-b44e-f37356e3518d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Guitar Training Remote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Guitar Training Remote.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/factory/some_practices.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory/some_practices.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/face.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/face.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/workout.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/workout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music_theory/chord.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/chord.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music_theory/degree.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/degree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music_theory/mode.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/mode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_theory/position.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/position.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_theory/scale.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/scale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/abstract_practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/abstract_practice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/arpeggio.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/arpeggio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/improv.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/improv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/notes_on_fretboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/notes_on_fretboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/interval.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/interval.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/one_liner.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/one_liner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/scale_of_mode.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/tritone_sub.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/tritone_sub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/relative_degree_memo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/scale_dexterity.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/scale_dexterity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/scale_on_chord.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/scale_on_chord.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/toolkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/toolkit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/tritone_sub.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/technique/right_hand.py" beforeDir="false" afterPath="$PROJECT_DIR$/technique/right_hand.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,48 +33,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Guitar_Training_Remote$main.coverage" NAME="main Coverage Results" MODIFIED="1543495542210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-670459828">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="27" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="8" />
-          <entry key="project.open.time.5" value="9" />
-          <entry key="project.open.time.6" value="3" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="27" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="115" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="115" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="45" />
-          <entry key="py" value="4565" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="45" />
-          <entry key="Python" value="4565" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts" />
-      <usages-collector id="statistics.vcs.git.usages" />
-    </session>
+    <SUITE FILE_PATH="coverage/Guitar_Training_Remote$main.coverage" NAME="main Coverage Results" MODIFIED="1573707154399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
   </component>
   <component name="FileEditorManager">
     <leaf />
@@ -95,6 +60,8 @@
       <find>inran</find>
       <find>fact</find>
       <find>factor</find>
+      <find>posi</find>
+      <find>get_arpeg</find>
     </findStrings>
     <replaceStrings>
       <replace>self._main_label</replace>
@@ -103,7 +70,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -116,49 +83,45 @@
         <option value="$PROJECT_DIR$/factory/all_exercises.py" />
         <option value="$PROJECT_DIR$/factory/test_factory.py" />
         <option value="$PROJECT_DIR$/music_theory/note.py" />
-        <option value="$PROJECT_DIR$/music_theory/position.py" />
         <option value="$PROJECT_DIR$/gui/button_event.py" />
         <option value="$PROJECT_DIR$/model/exercise_step.py" />
-        <option value="$PROJECT_DIR$/practice/scale_on_chord.py" />
         <option value="$PROJECT_DIR$/factory/all_practices.py" />
-        <option value="$PROJECT_DIR$/practice/toolkit.py" />
         <option value="$PROJECT_DIR$/practice/right_hand_tech.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/practice/degree_memo.py" />
-        <option value="$PROJECT_DIR$/practice/abstract_practice.py" />
         <option value="$PROJECT_DIR$/practice/mode_degree_sequence.py" />
         <option value="$PROJECT_DIR$/practice/scale_of_mode.py" />
         <option value="$PROJECT_DIR$/practice/scale_degree_sequence.py" />
         <option value="$PROJECT_DIR$/practice/maj_deg_mode_memo.py" />
-        <option value="$PROJECT_DIR$/practice/scale_dexterity.py" />
-        <option value="$PROJECT_DIR$/factory/some_practices.py" />
-        <option value="$PROJECT_DIR$/gui/face.py" />
         <option value="$PROJECT_DIR$/practice/notes_on_fretboard.py" />
         <option value="$PROJECT_DIR$/practice/relative_degree_memo.py" />
         <option value="$PROJECT_DIR$/practice/notes_on_strings.py" />
         <option value="$PROJECT_DIR$/music_theory/degree.py" />
-        <option value="$PROJECT_DIR$/practice/interval.py" />
-        <option value="$PROJECT_DIR$/model/workout.py" />
-        <option value="$PROJECT_DIR$/practice/one_liner.py" />
-        <option value="$PROJECT_DIR$/practice/arpeggio.py" />
         <option value="$PROJECT_DIR$/music_theory/chord.py" />
         <option value="$PROJECT_DIR$/music_theory/mode.py" />
-        <option value="$PROJECT_DIR$/technique/right_hand.py" />
-        <option value="$PROJECT_DIR$/practice/improv.py" />
         <option value="$PROJECT_DIR$/practice/tritone_sub.py" />
+        <option value="$PROJECT_DIR$/factory/some_practices.py" />
+        <option value="$PROJECT_DIR$/model/workout.py" />
         <option value="$PROJECT_DIR$/music_theory/scale.py" />
+        <option value="$PROJECT_DIR$/practice/abstract_practice.py" />
+        <option value="$PROJECT_DIR$/practice/scale_on_chord.py" />
+        <option value="$PROJECT_DIR$/practice/interval.py" />
+        <option value="$PROJECT_DIR$/music_theory/position.py" />
+        <option value="$PROJECT_DIR$/practice/toolkit.py" />
+        <option value="$PROJECT_DIR$/gui/face.py" />
+        <option value="$PROJECT_DIR$/technique/right_hand.py" />
+        <option value="$PROJECT_DIR$/practice/one_liner.py" />
+        <option value="$PROJECT_DIR$/practice/anchor_note.py" />
+        <option value="$PROJECT_DIR$/practice/improv.py" />
+        <option value="$PROJECT_DIR$/practice/arpeggio.py" />
+        <option value="$PROJECT_DIR$/practice/scale_dexterity.py" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="320" />
     <option name="y" value="23" />
-    <option name="width" value="1920" />
+    <option name="width" value="1280" />
     <option name="height" value="1124" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -215,9 +178,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -240,7 +204,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -270,22 +234,62 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529827633165</updated>
+      <workItem from="1545730605149" duration="1195000" />
+      <workItem from="1545753995837" duration="9000" />
+      <workItem from="1546243179357" duration="86000" />
+      <workItem from="1548067052540" duration="781000" />
+      <workItem from="1549514650768" duration="420000" />
+      <workItem from="1550226622917" duration="58000" />
+      <workItem from="1550226855716" duration="25000" />
+      <workItem from="1550859524450" duration="1116000" />
+      <workItem from="1551030753323" duration="105000" />
+      <workItem from="1551068754523" duration="218000" />
+      <workItem from="1551086587692" duration="7000" />
+      <workItem from="1551154362105" duration="605000" />
+      <workItem from="1551155006531" duration="2000" />
+      <workItem from="1551200636787" duration="17000" />
+      <workItem from="1551376455305" duration="19000" />
+      <workItem from="1551627269376" duration="128000" />
+      <workItem from="1551679143661" duration="627000" />
+      <workItem from="1551682752686" duration="399000" />
+      <workItem from="1552538505318" duration="178000" />
+      <workItem from="1553661548566" duration="271000" />
+      <workItem from="1556177503859" duration="262000" />
+      <workItem from="1556622300120" duration="36000" />
+      <workItem from="1557240489777" duration="41000" />
+      <workItem from="1557379646773" duration="279000" />
+      <workItem from="1557379969470" duration="90000" />
+      <workItem from="1566362751452" duration="168000" />
+      <workItem from="1573569411566" duration="304000" />
+      <workItem from="1573706796924" duration="454000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7900000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1124" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18849841" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32945737" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3246124" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32945737" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32364342" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39863327" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.15184894" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -302,18 +306,13 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/factory/all_practices.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -341,13 +340,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/music_theory/position.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -365,52 +357,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/abstract_practice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/degree_memo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/toolkit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/scale_degree_sequence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/scale_on_chord.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/face.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="77" column="20" lean-forward="true" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -421,13 +371,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/relative_degree_memo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/relative_degree_memo.py" />
     <entry file="file://$PROJECT_DIR$/factory/test_factory.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -442,129 +386,194 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/scale_dexterity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/notes_on_strings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/interval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="852">
-          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/exercise_step.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music_theory/degree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/factory/some_practices.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/factory/all_practices.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="272">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/workout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+        <state relative-caret-position="238">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/one_liner.py">
+    <entry file="file://$PROJECT_DIR$/model/exercise_step.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="34">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/tritone_sub.py" />
+    <entry file="file://$PROJECT_DIR$/music_theory/scale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music_theory/degree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/music_theory/chord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="238">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/arpeggio.py">
+    <entry file="file://$PROJECT_DIR$/practice/toolkit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/music_theory/note.py">
+    <entry file="file://$PROJECT_DIR$/factory/all_practices.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="51" />
+        <state relative-caret-position="238">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music_theory/position.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/face.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/abstract_practice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/degree_memo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/interval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/notes_on_strings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/technique/right_hand.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="221">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/right_hand_tech.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
+        <state relative-caret-position="51">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/improv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music_theory/scale.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/tritone_sub.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/music_theory/mode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="51" />
+        <state relative-caret-position="170">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/scale_on_chord.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music_theory/note.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/one_liner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/improv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/anchor_note.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/scale_degree_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/scale_dexterity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/arpeggio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="63" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

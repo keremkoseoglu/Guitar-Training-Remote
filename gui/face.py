@@ -11,6 +11,7 @@ from model import exercise, exercise_step
 
 _APP_TITLE = "Guitar Training Remote"
 
+
 class ButtonRow(GridLayout):
 
     BUTTON_RESTART = 1
@@ -46,6 +47,7 @@ class ButtonRow(GridLayout):
 
     def _btn_restart_clicked(self, instance):
         self._event.button_clicked(self.BUTTON_RESTART)
+
 
 class Face(GridLayout):
 

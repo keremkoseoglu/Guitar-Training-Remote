@@ -1,5 +1,6 @@
 import random
 
+
 class RightHand:
 
     def __init__(self):
@@ -8,7 +9,9 @@ class RightHand:
             "Index mid index",
             "3 finger scale",
             "Chr. seesaw",
-            "String crossing"
+            "String crossing",
+            "Palm mute triplet",
+            "Scott's speed test"
         ]
 
     def _clone_techniques(self) -> []:
