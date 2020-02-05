@@ -2,6 +2,7 @@ from model import exercise, exercise_step
 from practice.abstract_practice import AbstractPractice
 import random
 
+
 class Improv(AbstractPractice):
 
     _IMPROVS = [
@@ -17,7 +18,6 @@ class Improv(AbstractPractice):
         "Chords",
         "Distant notes",
         "Close notes",
-        "Two threes maj",
         "Bebop",
         "Blockbuster",
         "Feeling projection",
@@ -40,7 +40,12 @@ class Improv(AbstractPractice):
         "Dom7 3rd Dim",
 
         "Free lyric solo",
-        "Mindful of rhythm / harm / melody"
+        "Mindful of rhythm / harm / melody",
+        "Emphasize chord tones",
+        "Start end on chord tones",
+        "Play the silence",
+        "Whole tone",
+        "Accents"
     ]
 
     _TITLE = "Improv"
@@ -52,9 +57,14 @@ class Improv(AbstractPractice):
         improvs = []
 
         for i in range(0, quantity):
-            if len(improvs) == 0:
+            if len(improvs) <= 0:
                 improvs = self._IMPROVS.copy()
-            random_index = random.randint(0, len(improvs) - 1)
+
+            try:
+                random_index = random.randint(0, len(improvs) - 1)
+            except:
+                break
+
             random_main_improv = improvs.pop(random_index)
             sub_txt = ""
 
@@ -79,4 +89,19 @@ class Improv(AbstractPractice):
             random_steps.append(random_step)
 
         output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        return output
+
+    def get_improvs(self) -> []:
+        return self._IMPROVS
+
+    def get_improvs(self, count: int) -> []:
+        output = []
+
+        improvs = self._IMPROVS
+        for r in range(count):
+            if len(improvs) <= 0:
+                break
+            i = random.randint(0, len(improvs) - 1)
+            output.append(improvs.pop(i))
+
         return output

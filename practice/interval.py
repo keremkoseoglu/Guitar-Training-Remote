@@ -22,7 +22,7 @@ class Intervals(abstract_practice.AbstractPractice):
             step_text = ""
 
             while True:
-                degree_count = random.randint(2, 3)
+                degree_count = 2
                 degrees = degree_obj.get_random_degrees(degree_count, limit_octave=True)
                 if not (
                         (degree_count == 2 and degrees[0] == degrees[1])

@@ -6,7 +6,6 @@ class RightHand:
     def __init__(self):
         self._techniques = [
             "4 finger gallop",
-            "Index mid index",
             "3 finger scale",
             "Chr. seesaw",
             "String crossing",

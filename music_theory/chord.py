@@ -17,7 +17,6 @@ class Chord:
             "-b9",
             "-11",
             "-13",
-            "-b13",
             "Ø",
             # Melodic minor oriented
             "-∆7",     # Jazz minor / melodic minor

@@ -14,3 +14,4 @@ class RightHandTech(AbstractPractice):
             new_step = exercise_step.ExerciseStep(tech[i], "")
             steps.append(new_step)
         return exercise.Exercise(self._TITLE, self._SUBTITLE, steps)
+

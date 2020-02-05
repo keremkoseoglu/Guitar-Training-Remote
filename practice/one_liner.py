@@ -9,13 +9,10 @@ class OneLiner(AbstractPractice):
         "Old licks",
         "New lick",
 
-        "Solo / chord prg.",
-        "Solo / repertoir",
-        "Solo / rhythm changes",
-        "Solo / sing",
+        "Solo / repertoire",
         "Solo / one chord"
         "Bass chord melody",
-        "Melody / chords"
+        "Melody / chords",
         
         "Transcribe solo",
         "Transcribe groove",
@@ -23,10 +20,12 @@ class OneLiner(AbstractPractice):
         "Bebop (2 5 1)",
         "Circle of 5ths",
         "Groove loop over drum",
-        "Metronome",
         "New style",
         "Repertoire",
-        "Slap 4let / 3let"
+        "Slap 4let / 3let",
+        "Fill power trio solo",
+        "Pinch harmonics",
+        "YouTube lesson"
     ]
 
     _TITLE = "One-Liner"
