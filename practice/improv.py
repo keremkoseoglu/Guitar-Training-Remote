@@ -7,13 +7,11 @@ class Improv(AbstractPractice):
 
     _IMPROVS = [
         "Tonal / modal",
-        "2 5 1 lick",
         "3/5 note phrasing",
         "Random note",
         "Approach note",
         "Sequence",
         "Simple melody",
-        "Chromatic",
         "Repeating elements",
         "Chords",
         "Distant notes",
@@ -33,7 +31,6 @@ class Improv(AbstractPractice):
         "Double stops",
         "Thematic improv",
         "Call & response",
-        "Emphasize chords",
 
         "Dom7 phrygian",
         "Dom7 altered",
@@ -41,11 +38,12 @@ class Improv(AbstractPractice):
 
         "Free lyric solo",
         "Mindful of rhythm / harm / melody",
-        "Emphasize chord tones",
-        "Start end on chord tones",
         "Play the silence",
         "Whole tone",
-        "Accents"
+
+        "Accents",
+        "Emphasize chord tones",
+        "Emphasize chord changes"
     ]
 
     _TITLE = "Improv"

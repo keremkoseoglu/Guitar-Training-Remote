@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3adc262d-018b-4989-b44e-f37356e3518d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music_theory/chord.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/chord.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/improv.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/improv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/interval.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/interval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/one_liner.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/one_liner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/right_hand_tech.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/right_hand_tech.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technique/right_hand.py" beforeDir="false" afterPath="$PROJECT_DIR$/technique/right_hand.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,17 +164,10 @@
       <workItem from="1580703795444" duration="57000" />
       <workItem from="1580703892454" duration="29000" />
       <workItem from="1580916880396" duration="21000" />
+      <workItem from="1580961179315" duration="17000" />
+      <workItem from="1580964399040" duration="133000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -226,10 +214,10 @@
       <screen x="0" y="23" width="1920" height="1124" />
     </state>
     <state width="1665" height="382" key="GridCell.Tab.1.right/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868026" />
-    <state x="972" y="537" key="com.intellij.ide.util.TipDialog" timestamp="1580916881239">
-      <screen x="0" y="23" width="2560" height="1364" />
+    <state x="729" y="447" key="com.intellij.ide.util.TipDialog" timestamp="1580961180322">
+      <screen x="0" y="23" width="1920" height="1124" />
     </state>
-    <state x="729" y="447" key="com.intellij.ide.util.TipDialog/0.23.1920.1124@0.23.1920.1124" timestamp="1580703914588" />
+    <state x="729" y="447" key="com.intellij.ide.util.TipDialog/0.23.1920.1124@0.23.1920.1124" timestamp="1580961180322" />
     <state x="972" y="537" key="com.intellij.ide.util.TipDialog/0.23.2560.1364@0.23.2560.1364" timestamp="1580916881239" />
   </component>
   <component name="XDebuggerManager">
