@@ -16,7 +16,7 @@ class Toolkit:
             module = __import__(module_name, fromlist=[""])
 
             for name, obj in inspect.getmembers(module, inspect.isclass):
-                if name != "AbstractPractice":
+                if name != "AbstractPractice" and name != "Position":
                     output.append(obj)
 
         return output
