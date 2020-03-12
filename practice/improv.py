@@ -43,7 +43,8 @@ class Improv(AbstractPractice):
 
         "Accents",
         "Emphasize chord tones",
-        "Emphasize chord changes"
+        "Emphasize chord changes",
+        "Side slipping"
     ]
 
     _TITLE = "Improv"
@@ -67,7 +68,7 @@ class Improv(AbstractPractice):
             sub_txt = ""
 
             sub_appended = False
-            for i in range(2):
+            for ii in range(2):
                 if len(improvs) == 0:
                     break
                 if sub_txt == "":
@@ -88,9 +89,6 @@ class Improv(AbstractPractice):
 
         output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
         return output
-
-    def get_improvs(self) -> []:
-        return self._IMPROVS
 
     def get_improvs(self, count: int) -> []:
         output = []

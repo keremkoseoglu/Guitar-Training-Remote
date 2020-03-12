@@ -1,16 +1,15 @@
 from factory import abstract_factory
-from model import exercise, exercise_step, workout
+from model import workout
 import practice.toolkit
 import random
+
 
 class AllPractices(abstract_factory.AbstractFactory):
 
     _MAX_STEPS_PER_EXERCISE = 5
 
     def get_workout(self) -> workout.WorkOut:
-
         exercises = []
-
         practice_objects = practice.toolkit.Toolkit().get_all_practices()
 
         while len(practice_objects) > 0:
@@ -24,5 +23,4 @@ class AllPractices(abstract_factory.AbstractFactory):
             practice_objects.pop(random_practice_index)
 
         output = workout.WorkOut(exercises)
-
         return output

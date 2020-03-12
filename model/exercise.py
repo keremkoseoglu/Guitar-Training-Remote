@@ -1,6 +1,10 @@
 class Exercise:
 
-    def __init__(self, title:str, description:str, steps=[]):
+    def __init__(self, title:str, description:str, steps=None):
         self.title = title
         self.description = description
-        self.steps = steps
+
+        if steps is None:
+            self.steps = []
+        else:
+            self.steps = steps

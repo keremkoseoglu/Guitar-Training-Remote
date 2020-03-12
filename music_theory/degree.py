@@ -2,7 +2,6 @@ import random
 
 
 class Degree:
-
     _OCTAVE_LIMIT = 7
 
     def __init__(self):
@@ -19,7 +18,6 @@ class Degree:
                 return degree
 
     def get_random_degrees(self, count: int, limit_octave=False) -> []:
-
         output = []
 
         for c in range(count):

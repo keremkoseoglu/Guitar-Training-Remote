@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from model import exercise
-from music_theory import position
+from music_theory.position import Position
+
 
 class AbstractPractice(ABC):
     def __init__(self):
@@ -11,6 +12,5 @@ class AbstractPractice(ABC):
         pass
 
     def get_random_position_suggestion_text(self) -> str:
-        position_obj = position.Position()
-        random_position = str(position_obj.get_random_position())
+        random_position = str(Position.get_random_position())
         return "Suggested position: " + random_position

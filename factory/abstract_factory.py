@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from model import workout
 
+
 class AbstractFactory(ABC):
     def __init__(self):
         pass

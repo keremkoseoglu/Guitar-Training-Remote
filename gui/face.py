@@ -1,19 +1,14 @@
-import datetime
 from factory import some_practices
 from gui.button_event import ButtonEvent
-import kivy
 from kivy.app import App
-from kivy.clock import Clock
 from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
-from model import exercise, exercise_step
 
 _APP_TITLE = "Guitar Training Remote"
 
 
 class ButtonRow(GridLayout):
-
     BUTTON_RESTART = 1
     BUTTON_NEXT = 4
 

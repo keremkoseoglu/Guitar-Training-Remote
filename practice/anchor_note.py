@@ -10,9 +10,7 @@ class AnchorNote(abstract_practice.AbstractPractice):
     _SUBTITLE = "Anchor note & use over..."
 
     def get_exercise(self, quantity: int) -> exercise.Exercise:
-
         random_steps = []
-
         i = random.randint(0, 1)
 
         if i == 0:
@@ -35,16 +33,8 @@ class AnchorNote(abstract_practice.AbstractPractice):
                         stuff_txt += " | "
                     stuff_txt += s
 
-                random_step = exercise_step.ExerciseStep(
-                    random_note,
-                    stuff_txt
-                )
+                random_step = exercise_step.ExerciseStep(random_note, stuff_txt)
                 random_steps.append(random_step)
 
-        output = exercise.Exercise(
-            self._TITLE,
-            self._SUBTITLE,
-            random_steps
-        )
-
+        output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
         return output

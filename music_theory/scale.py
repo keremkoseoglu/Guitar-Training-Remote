@@ -2,6 +2,7 @@ import random
 from music_theory.note import Note
 from music_theory.mode import Mode
 
+
 class Scale:
 
     def __init__(self):

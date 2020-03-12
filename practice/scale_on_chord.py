@@ -1,20 +1,16 @@
 from model import exercise, exercise_step
-from music_theory import chord, position
+from music_theory import chord
 from practice import abstract_practice
 import random
 
 
 class ScaleOnChord(abstract_practice.AbstractPractice):
-
     _TITLE = "Scale on chord"
     _SUBTITLE = "a scale on top of chord"
-
     _PLAY_CHOICE = ["Play in", "Play out"]
 
     def get_exercise(self, quantity: int) -> exercise.Exercise:
-
         random_steps = []
-
         random_chords = chord.Chord().get_random_chords(quantity)
 
         for random_chord in random_chords:
@@ -25,12 +21,7 @@ class ScaleOnChord(abstract_practice.AbstractPractice):
 
             random_steps.append(random_step)
 
-        output = exercise.Exercise(
-            self._TITLE,
-            self._get_subtitle(),
-            random_steps
-        )
-
+        output = exercise.Exercise(self._TITLE, self._get_subtitle(), random_steps)
         return output
 
     def _get_random_play_choice(self) -> str:

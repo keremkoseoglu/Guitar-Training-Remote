@@ -10,6 +10,8 @@ class Metronome(abstract_practice.AbstractPractice):
     _BPM_RANGE = [60, 160]
 
     _METRONOME_EXERCISES = ["Random mute",
+                            "Reducing in half",
+                            "Count 5 over 4",
                             "1- 2- 3- 4-",
                             "1- 3-",
                             "2- 4-",

@@ -9,6 +9,7 @@ class SomePractices(abstract_factory.AbstractFactory):
     _HIGH_PERCENT = 80
 
     def __init__(self):
+        super().__init__()
         self._select_guitar = True
 
     def get_workout(self) -> workout.WorkOut:

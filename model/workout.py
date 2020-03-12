@@ -15,7 +15,7 @@ class WorkOut:
 
     def add_random_guitar(self):
         return
-        random_number = random.randint(1, 100)
+        """random_number = random.randint(1, 100)
         if 1 <= random_number < 60:
             random_guitar = self._GUITAR_S
         elif 60 <= random_number < 90:
@@ -24,7 +24,7 @@ class WorkOut:
             random_guitar = self._GUITAR_A
         guitar_step = ExerciseStep(random_guitar)
         guitar_exercise = Exercise("Guitar", "Pick the following guitar", [guitar_step])
-        self._exercises.insert(0, guitar_exercise)
+        self._exercises.insert(0, guitar_exercise)"""
 
     def get_current_exercise(self) -> Exercise:
         try:

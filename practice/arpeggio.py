@@ -1,5 +1,6 @@
 from model import exercise, exercise_step
-from music_theory import chord, position, scale
+from music_theory import chord, scale
+from music_theory.position import Position
 from practice import abstract_practice
 import random
 
@@ -21,7 +22,7 @@ class Arpeggio(abstract_practice.AbstractPractice):
         # ---Preparation-----
 
         random_steps = []
-        position_obj = position.Position()
+        random_scales = []
 
         # ---Build random list-----
 
@@ -44,7 +45,7 @@ class Arpeggio(abstract_practice.AbstractPractice):
         # ---Build return list-----
 
         for random_arp in random_stuff:
-            suggested_position = position_obj.get_random_chord_position()
+            suggested_position = Position.get_random_chord_position()
 
             random_step = exercise_step.ExerciseStep(random_arp, "Suggested position: " + str(suggested_position))
             random_steps.append(random_step)

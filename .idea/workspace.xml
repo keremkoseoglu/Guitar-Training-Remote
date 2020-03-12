@@ -3,7 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="3adc262d-018b-4989-b44e-f37356e3518d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/abstract_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory/abstract_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/all_practices.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory/all_practices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/some_practices.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory/some_practices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/test_factory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/button_event.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/button_event.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/face.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/face.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/exercise.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/exercise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/workout.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/workout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_theory/chord.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/chord.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_theory/degree.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/degree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_theory/mode.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/mode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_theory/note.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/note.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_theory/position.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/position.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_theory/scale.py" beforeDir="false" afterPath="$PROJECT_DIR$/music_theory/scale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/abstract_practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/abstract_practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/anchor_note.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/anchor_note.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/arpeggio.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/arpeggio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/chord_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/chord_connection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/improv.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/improv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/metronome.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/metronome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/scale_on_chord.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice/scale_on_chord.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +82,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
@@ -166,6 +193,10 @@
       <workItem from="1580916880396" duration="21000" />
       <workItem from="1580961179315" duration="17000" />
       <workItem from="1580964399040" duration="133000" />
+      <workItem from="1581929082202" duration="2361000" />
+      <workItem from="1582981144951" duration="92000" />
+      <workItem from="1582994481382" duration="17000" />
+      <workItem from="1584027080710" duration="753000" />
     </task>
     <servers />
   </component>
@@ -182,6 +213,10 @@
       <screen x="0" y="23" width="1920" height="1124" />
     </state>
     <state x="754" y="328" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.1124@0.23.1920.1124" timestamp="1580703843002" />
+    <state x="1031" y="577" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1584027631348">
+      <screen x="0" y="23" width="2560" height="1364" />
+    </state>
+    <state x="1031" y="577" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2560.1364@0.23.2560.1364" timestamp="1584027631348" />
     <state width="1665" height="382" key="GridCell.Tab.0.bottom" timestamp="1580452868025">
       <screen x="0" y="23" width="1920" height="1124" />
     </state>
@@ -214,14 +249,20 @@
       <screen x="0" y="23" width="1920" height="1124" />
     </state>
     <state width="1665" height="382" key="GridCell.Tab.1.right/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868026" />
-    <state x="729" y="447" key="com.intellij.ide.util.TipDialog" timestamp="1580961180322">
-      <screen x="0" y="23" width="1920" height="1124" />
+    <state x="972" y="537" key="com.intellij.ide.util.TipDialog" timestamp="1582994484231">
+      <screen x="0" y="23" width="2560" height="1364" />
     </state>
     <state x="729" y="447" key="com.intellij.ide.util.TipDialog/0.23.1920.1124@0.23.1920.1124" timestamp="1580961180322" />
-    <state x="972" y="537" key="com.intellij.ide.util.TipDialog/0.23.2560.1364@0.23.2560.1364" timestamp="1580916881239" />
+    <state x="972" y="537" key="com.intellij.ide.util.TipDialog/0.23.2560.1364@0.23.2560.1364" timestamp="1582994484231" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/practice/toolkit.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

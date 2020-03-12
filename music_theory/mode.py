@@ -38,7 +38,6 @@ class Mode:
         return self._modes[i]
 
     def get_random_modes(self, count: int, with_note=True) -> []:
-
         output = []
         note_obj = Note()
 

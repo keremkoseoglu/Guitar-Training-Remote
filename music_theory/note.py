@@ -1,7 +1,7 @@
 import random
 
-class Note:
 
+class Note:
     def __init__(self):
         self._notes = ["C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"]
 

@@ -1,6 +1,7 @@
 import random
 from music_theory.note import Note
 
+
 class Chord:
 
     def __init__(self):
@@ -33,7 +34,6 @@ class Chord:
         return self._chord_types[i]
 
     def get_random_chords(self, count: int) -> []:
-
         output = []
         note_obj = Note()
 
