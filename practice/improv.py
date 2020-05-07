@@ -6,45 +6,33 @@ import random
 class Improv(AbstractPractice):
 
     _IMPROVS = [
-        "Tonal / modal",
-        "3/5 note phrasing",
         "Random note",
-        "Approach note",
-        "Sequence",
         "Simple melody",
-        "Repeating elements",
         "Chords",
         "Distant notes",
-        "Close notes",
         "Bebop",
-        "Blockbuster",
-        "Feeling projection",
         "Emotion graph",
 
         "Play out - mel.min.",
         "Play out - chromatic",
         "Coltrane patterns",
         "Phrasing",
-        "Rhythmic games",
-        "Right target note",
         "Strong beat / note",
         "Double stops",
-        "Thematic improv",
         "Call & response",
 
         "Dom7 phrygian",
         "Dom7 altered",
         "Dom7 3rd Dim",
 
-        "Free lyric solo",
-        "Mindful of rhythm / harm / melody",
         "Play the silence",
         "Whole tone",
 
         "Accents",
         "Emphasize chord tones",
         "Emphasize chord changes",
-        "Side slipping"
+        "Side slipping",
+        "Enclosures"
     ]
 
     _TITLE = "Improv"
