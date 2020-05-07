@@ -1,4 +1,5 @@
 from model import exercise, exercise_step
+from model.guitar import Guitar
 from music_theory import note
 from practice import abstract_practice
 import random
@@ -7,10 +8,13 @@ import random
 class NotesOnFretboard(abstract_practice.AbstractPractice):
 
     _MAX_NOTE_PER_STEP = 3
-    _TITLE = "Fretboard single note memorization"
-    _SUBTITLE = "Find the given note(s) on each string"
+    _TITLE = "Single note memorization"
 
-    def get_exercise(self, quantity: int) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        if guitar == Guitar.KEYS:
+            subtitle = "Find the given note(s) on each octave"
+        else:
+            subtitle = "Find the given note(s) on each string"
 
         note_obj = note.Note()
         random_steps = []
@@ -28,5 +32,5 @@ class NotesOnFretboard(abstract_practice.AbstractPractice):
             random_step = exercise_step.ExerciseStep(step_text)
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        output = exercise.Exercise(self._TITLE, subtitle, random_steps)
         return output

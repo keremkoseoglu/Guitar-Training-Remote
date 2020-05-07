@@ -1,4 +1,5 @@
 from model import exercise_step, exercise
+from model.guitar import Guitar
 from practice.abstract_practice import AbstractPractice
 import technique.right_hand
 
@@ -7,7 +8,10 @@ class RightHandTech(AbstractPractice):
     _TITLE = "Right hand"
     _SUBTITLE = "Practice right hand techniques"
 
-    def get_exercise(self, quantity: int) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        if guitar == Guitar.KEYS:
+            return None
+
         steps = []
         tech = technique.right_hand.RightHand().get_random_techniques(quantity)
         for i in range(0, len(tech)):

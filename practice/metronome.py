@@ -1,4 +1,5 @@
 from model import exercise, exercise_step
+from model.guitar import Guitar
 from practice import abstract_practice
 import random
 
@@ -27,7 +28,7 @@ class Metronome(abstract_practice.AbstractPractice):
                             "3-",
                             "4-"]
 
-    def get_exercise(self, quantity: int) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
 
         random_steps = []
 

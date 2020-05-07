@@ -1,30 +1,21 @@
+import random
 from model.exercise import Exercise
 from model.exercise_step import ExerciseStep
-import random
+from model.guitar import Guitar
 
 
 class WorkOut:
-    _GUITAR_P = "Precision"
-    _GUITAR_S = "StingRay"
-    _GUITAR_A = "Taylor"
 
     def __init__(self, exercises: []):
         self._exercises = exercises
         self._exercise_index = 0
         self._step_index = 0
+        self.guitar = Guitar.UNDEFINED
 
-    def add_random_guitar(self):
-        return
-        """random_number = random.randint(1, 100)
-        if 1 <= random_number < 60:
-            random_guitar = self._GUITAR_S
-        elif 60 <= random_number < 90:
-            random_guitar = self._GUITAR_P
-        else:
-            random_guitar = self._GUITAR_A
-        guitar_step = ExerciseStep(random_guitar)
+    def add_guitar(self, guitar: Guitar):
+        guitar_step = ExerciseStep(guitar.name)
         guitar_exercise = Exercise("Guitar", "Pick the following guitar", [guitar_step])
-        self._exercises.insert(0, guitar_exercise)"""
+        self._exercises.insert(0, guitar_exercise)
 
     def get_current_exercise(self) -> Exercise:
         try:
