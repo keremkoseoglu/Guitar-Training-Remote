@@ -1,4 +1,5 @@
 from model import exercise, exercise_step
+from model.guitar import Guitar
 from practice.abstract_practice import AbstractPractice
 import random
 
@@ -11,7 +12,7 @@ class OneLiner(AbstractPractice):
 
         "Solo / repertoire",
         "Solo / one chord"
-        "Bass chord melody",
+        "Chord melody",
         "Melody / chords",
         
         "Transcribe solo",
@@ -22,16 +23,14 @@ class OneLiner(AbstractPractice):
         "Groove loop over drum",
         "New style",
         "Repertoire",
-        "Slap 4let / 3let",
         "Fill power trio solo",
-        "Pinch harmonics",
         "YouTube lesson"
     ]
 
     _TITLE = "One-Liner"
     _SUBTITLE = "Go over the one-liners"
 
-    def get_exercise(self, quantity: int) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
 
         random_steps = []
         one_liners = []

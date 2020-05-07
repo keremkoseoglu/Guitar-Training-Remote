@@ -1,4 +1,5 @@
 from model import exercise, exercise_step
+from model.guitar import Guitar
 from music_theory import chord, scale
 from music_theory.position import Position
 from practice import abstract_practice
@@ -14,10 +15,10 @@ class Arpeggio(abstract_practice.AbstractPractice):
         "Walk diatonic arpeggios from scale",
         "Do arpeggio as 1 down 4 up",
         "Do upper structure from 1 / 3 / 5 / 7",
-        "Do arpeggio - all strings / positions / fingers"
+        "Do arpeggio - all positions / fingers"
     ]
 
-    def get_exercise(self, quantity: int) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
 
         # ---Preparation-----
 

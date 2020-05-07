@@ -1,4 +1,5 @@
 from model import exercise, exercise_step
+from model.guitar import Guitar
 from practice.abstract_practice import AbstractPractice
 import random
 
@@ -38,7 +39,7 @@ class Improv(AbstractPractice):
     _TITLE = "Improv"
     _SUBTITLE = "Practice the improv approaches"
 
-    def get_exercise(self, quantity: int) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
 
         random_steps = []
         improvs = []

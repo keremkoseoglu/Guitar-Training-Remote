@@ -1,4 +1,5 @@
 from model import exercise, exercise_step
+from model.guitar import Guitar
 from music_theory import note
 from practice import abstract_practice
 
@@ -6,10 +7,13 @@ from practice import abstract_practice
 class NotesOnStrings(abstract_practice.AbstractPractice):
 
     _STRINGS = 4
-    _TITLE = "String note memorization"
-    _SUBTITLE = "Find the given notes on subsequent strings"
+    _TITLE = "Note memorization"
 
-    def get_exercise(self, quantity: int) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        if guitar == Guitar.KEYS:
+            subtitle = "Find the given notes on subsequent octaves"
+        else:
+            subtitle = "Find the given notes on subsequent strings"
 
         note_obj = note.Note()
         random_steps = []
@@ -26,5 +30,5 @@ class NotesOnStrings(abstract_practice.AbstractPractice):
             random_step = exercise_step.ExerciseStep(step_text)
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        output = exercise.Exercise(self._TITLE, subtitle, random_steps)
         return output

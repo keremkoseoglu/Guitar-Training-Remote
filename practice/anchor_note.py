@@ -1,4 +1,5 @@
 from model import exercise, exercise_step
+from model.guitar import Guitar
 from practice import abstract_practice
 from music_theory import chord, mode, note, scale
 import random
@@ -9,7 +10,7 @@ class AnchorNote(abstract_practice.AbstractPractice):
     _TITLE = "Anchor Note"
     _SUBTITLE = "Anchor note & use over..."
 
-    def get_exercise(self, quantity: int) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
         random_steps = []
         i = random.randint(0, 1)
 
