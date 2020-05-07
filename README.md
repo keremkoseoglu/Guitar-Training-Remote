@@ -15,6 +15,10 @@ hopefully improve your skills over time.
 You will notice that the content of some practices will be random as
 well, such as the chord or notes you need to work on.
 
+## Modifying instruments
+
+You can modify your desired instruments in model/guitar.py.
+
 ## Adding new practices
 
 The application builds the practice set completely automatically, based on
