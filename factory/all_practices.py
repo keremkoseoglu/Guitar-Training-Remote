@@ -1,9 +1,9 @@
 """ All practices """
 import random
+from vibhaga.inspector import Inspector, Container
 from factory import abstract_factory
 from model import workout
 from model.guitar import Guitar
-import practice.toolkit
 
 
 class AllPractices(abstract_factory.AbstractFactory): # pylint: disable=R0903
@@ -13,8 +13,11 @@ class AllPractices(abstract_factory.AbstractFactory): # pylint: disable=R0903
     def get_workout(self, guitar: Guitar = Guitar.UNDEFINED) -> workout.WorkOut:
         """ Returns a new workout containing all practices """
         exercises = []
-        practice_objects = practice.toolkit.Toolkit().get_all_practices()
-
+        practice_objects = Inspector.get_classes_in_container(
+            Container(["practice"]),
+            ["abstract"],
+            ["AbstractPractice", "Position", "Guitar"])
+        
         while len(practice_objects) > 0:
             random_practice_index = random.randint(0, len(practice_objects) - 1)
             practice_object = practice_objects[random_practice_index]
