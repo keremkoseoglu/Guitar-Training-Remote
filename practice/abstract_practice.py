@@ -10,7 +10,6 @@ class AbstractPractice(ABC):
 
     @abstractmethod
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
-        # todo buraya ve alt sınıflara guitar ekle
         pass
 
     def get_random_position_suggestion_text(self) -> str:
