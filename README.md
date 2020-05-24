@@ -4,6 +4,22 @@ I write this Python application for my own bass guitar practice needs. It can be
 used with any instrument though. The name is inspired by the [Jedi Training Remote](https://www.starwars.com/databank/training-remote), seen
 on Star Wars.
 
+## Installation
+
+First, install Vibhaga.
+
+```
+pip install git+http://github.com/keremkoseoglu/vibhaga.git
+```
+
+Then, install Guitar Training Remote.
+
+```
+pip install git+http://github.com/keremkoseoglu/Guitar-Training-Remote.git
+```
+
+## Starting
+
 Simply run main.py to start the application.
 
 ## How it works
