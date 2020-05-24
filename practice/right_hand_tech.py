@@ -9,7 +9,7 @@ class RightHandTech(AbstractPractice):
     _SUBTITLE = "Practice right hand techniques"
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
-        if guitar == Guitar.KEYS:
+        if guitar != Guitar.BASS:
             return None
 
         steps = []
