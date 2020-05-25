@@ -17,7 +17,7 @@ class AllPractices(abstract_factory.AbstractFactory): # pylint: disable=R0903
             Container(["practice"]),
             ["abstract"],
             ["AbstractPractice", "Position", "Guitar"])
-        
+
         while len(practice_objects) > 0:
             random_practice_index = random.randint(0, len(practice_objects) - 1)
             practice_object = practice_objects[random_practice_index]

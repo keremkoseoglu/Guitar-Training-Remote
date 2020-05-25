@@ -1,10 +1,12 @@
+""" One liner """
+import random
 from model import exercise, exercise_step
 from model.guitar import Guitar
 from practice.abstract_practice import AbstractPractice
-import random
 
 
 class OneLiner(AbstractPractice):
+    """ One liner """
 
     _ONE_LINERS = [
         "Old licks",
@@ -14,7 +16,7 @@ class OneLiner(AbstractPractice):
         "Solo / one chord"
         "Chord melody",
         "Melody / chords",
-        
+
         "Transcribe solo",
         "Transcribe groove",
 
@@ -31,11 +33,12 @@ class OneLiner(AbstractPractice):
     _SUBTITLE = "Go over the one-liners"
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        """ Returns random one liner exercises """
 
         random_steps = []
         one_liners = []
 
-        for i in range(0, quantity):
+        for quantity_pos in range(0, quantity): # pylint: disable=W0612
             if len(one_liners) == 0:
                 one_liners = self._ONE_LINERS.copy()
             random_index = random.randint(0, len(one_liners) - 1)

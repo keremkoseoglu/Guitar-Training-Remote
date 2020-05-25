@@ -1,15 +1,18 @@
+""" Chord connection """
+import random
 from model import exercise, exercise_step
 from model.guitar import Guitar
 from practice import abstract_practice, improv
 from music_theory import chord
-import random
 
 
 class ChordConnection(abstract_practice.AbstractPractice):
+    """ Chord connection """
     _TITLE = "Chord Connection"
     _SUBTITLE = "Connect chords via"
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        """ Returns random chord connection exercises """
         random_steps = []
 
         for random_improv in improv.Improv().get_improvs(quantity):
@@ -17,10 +20,10 @@ class ChordConnection(abstract_practice.AbstractPractice):
             stuff = chord.Chord().get_random_chords(context_count)
 
             stuff_txt = ""
-            for s in stuff:
+            for stuff_char in stuff:
                 if stuff_txt != "":
                     stuff_txt += " | "
-                stuff_txt += s
+                stuff_txt += stuff_char
 
             random_step = exercise_step.ExerciseStep(random_improv, stuff_txt)
             random_steps.append(random_step)

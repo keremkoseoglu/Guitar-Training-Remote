@@ -1,7 +1,9 @@
+""" Right hand techniques """
 import random
 
 
 class RightHand:
+    """ Right hand techniques """
 
     def __init__(self):
         self._techniques = [
@@ -20,9 +22,10 @@ class RightHand:
         return output
 
     def get_random_techniques(self, count) -> []:
+        """ Returns random right hand techniques """
         output = []
         local_tech = self._clone_techniques()
-        for i in range(0, count):
+        for i in range(0, count): # pylint: disable=W0612
             if len(local_tech) == 0:
                 break
             random_tech_index = random.randint(0, len(local_tech) - 1)

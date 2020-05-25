@@ -1,13 +1,14 @@
+""" Metronome """
+import random
 from model import exercise, exercise_step
 from model.guitar import Guitar
 from practice import abstract_practice
-import random
 
 
 class Metronome(abstract_practice.AbstractPractice):
+    """ Metronome """
 
     _TITLE = "Metronome"
-
     _BPM_RANGE = [60, 160]
 
     _METRONOME_EXERCISES = ["Random mute",
@@ -29,6 +30,7 @@ class Metronome(abstract_practice.AbstractPractice):
                             "4-"]
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        """ Returns metronome exercises """
 
         random_steps = []
 
