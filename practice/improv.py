@@ -1,10 +1,13 @@
+""" Improv """
+import random
 from model import exercise, exercise_step
 from model.guitar import Guitar
 from practice.abstract_practice import AbstractPractice
-import random
+
 
 
 class Improv(AbstractPractice):
+    """ Improv """
 
     _IMPROVS = [
         "Random note",
@@ -40,24 +43,25 @@ class Improv(AbstractPractice):
     _SUBTITLE = "Practice the improv approaches"
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        """ Returns improv exercises """
 
         random_steps = []
         improvs = []
 
-        for i in range(0, quantity):
+        for quantity_pos in range(0, quantity): # pylint: disable=W0612
             if len(improvs) <= 0:
                 improvs = self._IMPROVS.copy()
 
             try:
                 random_index = random.randint(0, len(improvs) - 1)
-            except:
+            except Exception:
                 break
 
             random_main_improv = improvs.pop(random_index)
             sub_txt = ""
 
             sub_appended = False
-            for ii in range(2):
+            for one_two in range(2): # pylint: disable=W0612
                 if len(improvs) == 0:
                     break
                 if sub_txt == "":
@@ -80,10 +84,11 @@ class Improv(AbstractPractice):
         return output
 
     def get_improvs(self, count: int) -> []:
+        """ Returns a random number of improv exercises """
         output = []
 
         improvs = self._IMPROVS
-        for r in range(count):
+        for count_pos in range(count): # pylint: disable=W0612
             if len(improvs) <= 0:
                 break
             i = random.randint(0, len(improvs) - 1)

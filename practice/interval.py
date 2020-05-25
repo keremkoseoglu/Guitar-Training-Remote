@@ -1,23 +1,26 @@
+""" Intervals """
+import random
 from model import exercise, exercise_step
 from model.guitar import Guitar
 from music_theory import degree, mode
 from practice import abstract_practice
-import random
 
 
 class Intervals(abstract_practice.AbstractPractice):
+    """ Intervals """
 
     _DIRECTIONS = ["Up", "Down"]
     _TITLE = "Interval practice"
     _SUBTITLE = "Play shifting intervals"
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        """ Returns random interval exercises """
 
         degree_obj = degree.Degree()
         mode_obj = mode.Mode()
         random_steps = []
 
-        for step_index in range(0, quantity):
+        for step_index in range(0, quantity): # pylint: disable=W0612
             mode_text = mode_obj.get_random_mode() + " " + self._get_direction()
 
             step_text = ""

@@ -1,8 +1,10 @@
+""" Chord module """
 import random
 from music_theory.note import Note
 
 
 class Chord:
+    """ Chord class """
 
     def __init__(self):
         self._chord_types = [
@@ -30,14 +32,16 @@ class Chord:
         ]
 
     def get_random_chord_type(self) -> str:
+        """ Retuns random chord types """
         i = random.randint(0, len(self._chord_types) - 1)
         return self._chord_types[i]
 
     def get_random_chords(self, count: int) -> []:
+        """ Returns random chords """
         output = []
         note_obj = Note()
 
-        for c in range(count):
+        for count_pos in range(count): # pylint: disable=W0612
             random_note = note_obj.get_random_note()
             random_chord_type = self.get_random_chord_type()
             random_result = random_note + random_chord_type

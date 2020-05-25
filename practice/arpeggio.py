@@ -1,12 +1,14 @@
+""" Arpeggio """
+import random
 from model import exercise, exercise_step
 from model.guitar import Guitar
 from music_theory import chord, scale
 from music_theory.position import Position
 from practice import abstract_practice
-import random
 
 
 class Arpeggio(abstract_practice.AbstractPractice):
+    """ Arpeggio """
 
     _TITLE = "Arpeggio"
 
@@ -19,6 +21,7 @@ class Arpeggio(abstract_practice.AbstractPractice):
     ]
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        """ Returns arpeggio exercise """
 
         # ---Preparation-----
 
@@ -40,7 +43,7 @@ class Arpeggio(abstract_practice.AbstractPractice):
         try:
             for i in range(len(random_scales)):
                 random_stuff.append(random_scales[i])
-        except:
+        except Exception:
             pass
 
         # ---Build return list-----
@@ -48,7 +51,10 @@ class Arpeggio(abstract_practice.AbstractPractice):
         for random_arp in random_stuff:
             suggested_position = Position.get_random_chord_position()
 
-            random_step = exercise_step.ExerciseStep(random_arp, "Suggested position: " + str(suggested_position))
+            random_step = exercise_step.ExerciseStep(
+                random_arp,
+                "Suggested position: " + str(suggested_position))
+
             random_steps.append(random_step)
 
         output = exercise.Exercise(self._TITLE, self._get_arpeggio_type(), random_steps)

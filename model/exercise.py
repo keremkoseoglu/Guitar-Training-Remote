@@ -1,6 +1,9 @@
-class Exercise:
+""" Exercise module """
 
-    def __init__(self, title:str, description:str, steps=None):
+class Exercise:
+    """ Exercise class """
+
+    def __init__(self, title: str, description: str, steps=None):
         self.title = title
         self.description = description
 

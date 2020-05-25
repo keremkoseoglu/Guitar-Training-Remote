@@ -1,24 +1,27 @@
+""" Scale degree sequence """
+import random
 from model import exercise, exercise_step
 from model.guitar import Guitar
 from music_theory import degree, scale
 from practice import abstract_practice
-import random
 
 
 class ScaleDegreeSequence(abstract_practice.AbstractPractice):
+    """ Scale degree sequence """
 
     _TITLE = "Scale degree sequence"
     _SUBTITLE = "Play the sequence"
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        """ Returns scale degree sequence exercise """
 
         random_steps = []
 
-        for i in range(quantity):
-            random_count = random.randint(2, 7)
+        for quantity_pos in range(quantity): # pylint: disable=W0612
+            random_count = random.randint(2, 7) # pylint: disable=W0612
             random_degrees = degree.Degree().get_random_degrees(7)
             sequence_txt = ""
-            for n in range(random_count):
+            for random_pos in range(random_count): # pylint: disable=W0612
                 if sequence_txt != "":
                     sequence_txt += ", "
                 sequence_txt += str(random_degrees.pop(0))

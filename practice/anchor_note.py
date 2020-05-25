@@ -1,16 +1,20 @@
+""" Anchor note """
+import random
 from model import exercise, exercise_step
 from model.guitar import Guitar
 from practice import abstract_practice
 from music_theory import chord, mode, note, scale
-import random
 
 
 class AnchorNote(abstract_practice.AbstractPractice):
+    """ Anchor note """
 
     _TITLE = "Anchor Note"
     _SUBTITLE = "Anchor note & use over..."
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+        """ Returns anchor note exercise """
+
         random_steps = []
         i = random.randint(0, 1)
 
@@ -29,10 +33,10 @@ class AnchorNote(abstract_practice.AbstractPractice):
                     stuff = scale.Scale().get_random_scales(context_count)
 
                 stuff_txt = ""
-                for s in stuff:
+                for stuff_char in stuff:
                     if stuff_txt != "":
                         stuff_txt += " | "
-                    stuff_txt += s
+                    stuff_txt += stuff_char
 
                 random_step = exercise_step.ExerciseStep(random_note, stuff_txt)
                 random_steps.append(random_step)
