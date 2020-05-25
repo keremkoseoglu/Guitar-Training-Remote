@@ -12,7 +12,7 @@ class RightHandTech(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
         """ Returns right hand technique exercises """
-        if guitar == Guitar.KEYS:
+        if guitar != Guitar.BASS:
             return None
 
         steps = []
