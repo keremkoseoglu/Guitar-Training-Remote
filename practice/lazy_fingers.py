@@ -51,7 +51,7 @@ class LazyFingers(AbstractPractice):
                 pattern += "  " + fingers[pattern_index].name
 
             random_step = exercise_step.ExerciseStep(
-                "Follow the pattern",
+                "Follow",
                 pattern
             )
 
