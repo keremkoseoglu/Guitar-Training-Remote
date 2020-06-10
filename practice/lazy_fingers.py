@@ -45,7 +45,7 @@ class LazyFingers(AbstractPractice):
 
             pattern = ""
             for pattern_index in range(len(strings)):
-                if pattern == "":
+                if pattern != "":
                     pattern += " "
                 pattern += "S" + str(strings[pattern_index])
                 pattern += "  " + fingers[pattern_index].name
