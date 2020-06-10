@@ -10,7 +10,6 @@ class RightHand:
             "4 finger gallop",
             "3 finger scale",
             "Chr. seesaw",
-            "String crossing",
             "Palm mute triplet",
             "Scott's speed test"
         ]

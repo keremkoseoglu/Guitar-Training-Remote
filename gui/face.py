@@ -5,6 +5,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from factory import some_practices
 from gui.button_event import ButtonEvent
+from model.guitar import Guitar
 
 
 _APP_TITLE = "Guitar Training Remote"
@@ -101,6 +102,7 @@ class Face(GridLayout):
         self._workout = None
         self._exercise_step_tick_count = 0
         self._guitar_selected = False
+        self._guitar = Guitar.UNDEFINED
         self._restart()
 
     def _handle_button_click(self, button: int):
@@ -156,16 +158,18 @@ class Face(GridLayout):
         practice_obj = some_practices.SomePractices()
         if self._guitar_selected:
             practice_obj.set_select_guitar(False)
+            self._workout = practice_obj.get_workout(self._guitar)
         else:
             practice_obj.set_select_guitar(True)
             self._guitar_selected = True
+            self._workout = practice_obj.get_workout()
 
-        self._workout = practice_obj.get_workout()
         self._exercise_step_tick_count = -1
         self._paint_exercise()
         self._paint_exercise_step()
         self._buttons.set_next_enabled(True)
         self._refresh_status_text()
+        self._guitar = practice_obj.guitar
 
 
 class GtrApp(App):

@@ -13,20 +13,21 @@ class SomePractices(abstract_factory.AbstractFactory):
     def __init__(self):
         super().__init__()
         self._select_guitar = True
+        self.guitar = Guitar.UNDEFINED
 
     def get_workout(self, guitar: Guitar = Guitar.UNDEFINED) -> workout.WorkOut:
         """ Returns a new workout containing all practices """
         if self._select_guitar:
-            random_guitar = get_random_guitar()
+            self.guitar = get_random_guitar()
         else:
-            random_guitar = guitar
+            self.guitar = guitar
 
-        output = all_practices.AllPractices().get_workout(random_guitar)
+        output = all_practices.AllPractices().get_workout(self.guitar)
         remove_percent = random.randint(self._LOW_PERCENT, self._HIGH_PERCENT)
         output.remove_random_exercies(remove_percent)
 
         if self._select_guitar:
-            output.add_guitar(random_guitar)
+            output.add_guitar(self.guitar)
         return output
 
     def set_select_guitar(self, select: bool):
