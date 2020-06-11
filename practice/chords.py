@@ -1,7 +1,7 @@
 """ Chords """
 import random
 from model import exercise, exercise_step
-from model.guitar import Guitar
+
 from practice import abstract_practice
 from music_theory import chord
 
@@ -12,7 +12,7 @@ class Chords(abstract_practice.AbstractPractice):
     _SUBTITLE = "Play the following chords"
     _POSITIONS = [1, 3, 5, 7]
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random chord exercises """
         random_steps = []
 

@@ -1,7 +1,7 @@
 """ Scale degree sequence """
 import random
 from model import exercise, exercise_step
-from model.guitar import Guitar
+
 from music_theory import degree, scale
 from practice import abstract_practice
 
@@ -12,7 +12,7 @@ class ScaleDegreeSequence(abstract_practice.AbstractPractice):
     _TITLE = "Scale degree sequence"
     _SUBTITLE = "Play the sequence"
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns scale degree sequence exercise """
 
         random_steps = []

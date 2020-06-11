@@ -1,21 +1,20 @@
 """ All practices """
 import random
+from config import get_configuration
 from factory import abstract_factory, all_practices
 from model import workout
-from model.guitar import Guitar, get_random_guitar
+from model.guitar import get_random_guitar
 
 
 class SomePractices(abstract_factory.AbstractFactory):
     """ All practices """
-    _LOW_PERCENT = 50
-    _HIGH_PERCENT = 80
-
     def __init__(self):
         super().__init__()
         self._select_guitar = True
-        self.guitar = Guitar.UNDEFINED
+        self.guitar = {}
+        self._config = get_configuration()
 
-    def get_workout(self, guitar: Guitar = Guitar.UNDEFINED) -> workout.WorkOut:
+    def get_workout(self, guitar: dict = None) -> workout.WorkOut:
         """ Returns a new workout containing all practices """
         if self._select_guitar:
             self.guitar = get_random_guitar()
@@ -23,8 +22,14 @@ class SomePractices(abstract_factory.AbstractFactory):
             self.guitar = guitar
 
         output = all_practices.AllPractices().get_workout(self.guitar)
-        remove_percent = random.randint(self._LOW_PERCENT, self._HIGH_PERCENT)
-        output.remove_random_exercies(remove_percent)
+
+        remove_percent = random.randint(
+            self._config["practice_selection"]["lowest_selection_percentage"],
+            self._config["practice_selection"]["highest_selection_percentage"])
+
+        output.remove_random_exercises(
+            remove_percent,
+            self._config["practice_selection"]["must_select"])
 
         if self._select_guitar:
             output.add_guitar(self.guitar)

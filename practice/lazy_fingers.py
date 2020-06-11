@@ -3,7 +3,6 @@ This module contains exercises for left hand fingers 2, 3, 4
 """
 from random import randint
 from model import exercise, exercise_step
-from model.guitar import Guitar
 from practice.abstract_practice import AbstractPractice
 from body.hand import Hand
 
@@ -13,19 +12,14 @@ class LazyFingers(AbstractPractice):
 
     _TITLE = "Lazy fingers"
     _SUBTITLE = "Work your lazy fingers"
-    _BASS_STRINGS = 4
-    _GUITAR_STRINGS = 6
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns lazy fingers exercises """
         random_steps = []
 
-        if guitar == Guitar.KEYS:
+        string_count = guitar["strings"]
+        if string_count <= 0:
             return None
-        if guitar == Guitar.BASS:
-            string_count = LazyFingers._BASS_STRINGS
-        else:
-            string_count = LazyFingers._GUITAR_STRINGS
 
         for quantity_pos in range(quantity): # pylint: disable=W0612
             random_finger_count = randint(2, 4)

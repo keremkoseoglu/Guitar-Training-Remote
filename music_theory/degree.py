@@ -1,5 +1,6 @@
 """ Degree module """
 import random
+from config import get_configuration
 
 
 class Degree:
@@ -8,7 +9,8 @@ class Degree:
     _OCTAVE_LIMIT = 7
 
     def __init__(self):
-        self._degrees = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        config = get_configuration()
+        self._degrees = config["degrees"]
 
     def get_random_degree(self, limit_octave=False) -> int:
         """ Returns a random degree """

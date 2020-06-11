@@ -1,28 +1,20 @@
 """ Module for notes on strings practice """
 from model import exercise, exercise_step
-from model.guitar import Guitar
 from music_theory import note
 from practice import abstract_practice
 
 
 class NotesOnStrings(abstract_practice.AbstractPractice):
     """ Notes on strings practice class """
-
-    _BASS_STRINGS = 4
-    _GUITAR_STRINGS = 6
-    _KEYBOARD_OCTAVES = 4
     _TITLE = "Note memorization"
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
-        if guitar == Guitar.KEYS:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
+        if guitar["strings"] <= 0:
             subtitle = "Find the given notes on subsequent octaves"
-            strings = NotesOnStrings._KEYBOARD_OCTAVES
-        elif guitar == Guitar.BASS:
-            subtitle = "Find the given notes on subsequent strings"
-            strings = NotesOnStrings._BASS_STRINGS
+            strings = guitar["octaves"]
         else:
             subtitle = "Find the given notes on subsequent strings"
-            strings = NotesOnStrings._GUITAR_STRINGS
+            strings = guitar["strings"]
 
         note_obj = note.Note()
         random_steps = []

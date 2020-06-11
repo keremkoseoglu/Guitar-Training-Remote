@@ -1,7 +1,6 @@
 """ Intervals """
 import random
 from model import exercise, exercise_step
-from model.guitar import Guitar
 from music_theory import degree, mode
 from practice import abstract_practice
 
@@ -13,7 +12,7 @@ class Intervals(abstract_practice.AbstractPractice):
     _TITLE = "Interval practice"
     _SUBTITLE = "Play shifting intervals"
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random interval exercises """
 
         degree_obj = degree.Degree()

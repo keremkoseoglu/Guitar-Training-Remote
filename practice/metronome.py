@@ -1,37 +1,20 @@
 """ Metronome """
 import random
 from model import exercise, exercise_step
-from model.guitar import Guitar
 from practice import abstract_practice
+from config import get_configuration
 
 
 class Metronome(abstract_practice.AbstractPractice):
     """ Metronome """
 
     _TITLE = "Metronome"
-    _BPM_RANGE = [60, 160]
 
-    _METRONOME_EXERCISES = ["Random mute",
-                            "Reducing in half",
-                            "Count 5 over 4",
-                            "1- 2- 3- 4-",
-                            "1- 3-",
-                            "2- 4-",
-                            "1+ 2+ 3+ 4+",
-                            "1+ 3+",
-                            "2+ 4+",
-                            "1+",
-                            "2+",
-                            "3+",
-                            "4+",
-                            "1-",
-                            "2-",
-                            "3-",
-                            "4-"]
+    def __init__(self):
+        self._config = get_configuration()
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns metronome exercises """
-
         random_steps = []
 
         while len(random_steps) < quantity:
@@ -51,8 +34,8 @@ class Metronome(abstract_practice.AbstractPractice):
         return output
 
     def _get_random_bpm(self) -> int:
-        return random.randint(self._BPM_RANGE[0], self._BPM_RANGE[1])
+        return random.randint(self._config["bpm_range"][0], self._config["bpm_range"][1])
 
     def _get_random_metronome_exercise(self) -> str:
-        random_metronome_index = random.randint(0, len(self._METRONOME_EXERCISES) - 1)
-        return self._METRONOME_EXERCISES[random_metronome_index]
+        random_metronome_index = random.randint(0, len(self._config["metronome_exercises"]) - 1)
+        return self._config["metronome_exercises"][random_metronome_index]
