@@ -1,6 +1,7 @@
 """ Improv """
 import random
 from model import exercise, exercise_step
+from model.exercise import ExerciseHelperType, ExerciseHelper
 from practice.abstract_practice import AbstractPractice
 from config import get_configuration
 
@@ -53,6 +54,12 @@ class Improv(AbstractPractice):
             random_steps.append(random_step)
 
         output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        output.helpers = [
+            ExerciseHelper(
+                ExerciseHelperType.BROWSER,
+                {"url": self._config["backing_track_url"]}
+            )
+        ]
         return output
 
     def get_improvs(self, count: int) -> []:
