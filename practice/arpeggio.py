@@ -1,10 +1,10 @@
 """ Arpeggio """
 import random
 from model import exercise, exercise_step
-from model.guitar import Guitar
 from music_theory import chord, scale
 from music_theory.position import Position
 from practice import abstract_practice
+from config import get_configuration
 
 
 class Arpeggio(abstract_practice.AbstractPractice):
@@ -12,15 +12,10 @@ class Arpeggio(abstract_practice.AbstractPractice):
 
     _TITLE = "Arpeggio"
 
-    _ARPEGGIO_TYPES = [
-        "Do an arpeggio on the given scale",
-        "Walk diatonic arpeggios from scale",
-        "Do arpeggio as 1 down 4 up",
-        "Do upper structure from 1 / 3 / 5 / 7",
-        "Do arpeggio - all positions / fingers"
-    ]
+    def __init__(self):
+        self._config = get_configuration()
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns arpeggio exercise """
 
         # ---Preparation-----
@@ -61,5 +56,5 @@ class Arpeggio(abstract_practice.AbstractPractice):
         return output
 
     def _get_arpeggio_type(self) -> str:
-        random_index = random.randint(0, len(self._ARPEGGIO_TYPES) - 1)
-        return self._ARPEGGIO_TYPES[random_index]
+        random_index = random.randint(0, len(self._config["arpeggios"]) - 1)
+        return self._config["arpeggios"][random_index]

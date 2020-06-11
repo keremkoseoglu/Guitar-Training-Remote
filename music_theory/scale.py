@@ -9,11 +9,6 @@ class Scale:
 
     def __init__(self):
         self._scales = Mode().get_mode_list().copy()
-        self._scales.append("Ionian Bebop")
-        self._scales.append("Dorian Bebop")
-        self._scales.append("Mixo Bebop")
-        self._scales.append("Dim WH")
-        self._scales.append("Dim HW")
 
     def get_random_scale(self) -> str:
         """ Returns a random scale """

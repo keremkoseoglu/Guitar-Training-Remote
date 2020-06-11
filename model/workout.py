@@ -1,8 +1,8 @@
 """ Workout module """
 import random
+from typing import List
 from model.exercise import Exercise
 from model.exercise_step import ExerciseStep
-from model.guitar import Guitar
 
 
 class WorkOut:
@@ -12,11 +12,11 @@ class WorkOut:
         self._exercises = exercises
         self._exercise_index = 0
         self._step_index = 0
-        self.guitar = Guitar.UNDEFINED
+        self.guitar = {}
 
-    def add_guitar(self, guitar: Guitar):
+    def add_guitar(self, guitar: dict):
         """ Adds a new instrument """
-        guitar_step = ExerciseStep(guitar.name)
+        guitar_step = ExerciseStep(guitar["type"])
         guitar_exercise = Exercise("Guitar", "Pick the following guitar", [guitar_step])
         self._exercises.insert(0, guitar_exercise)
 
@@ -68,12 +68,28 @@ class WorkOut:
         """ Returns step index """
         return self._step_index
 
-    def remove_random_exercies(self, percentage: int):
+    def remove_random_exercises(self,
+                                percentage: int,
+                                preserve: List[str] = None):
         """ Removes random exercises from the dataset """
+        if preserve is not None:
+            for exercise_title in preserve:
+                found = False
+                for exercise in self._exercises:
+                    if exercise_title == exercise.title:
+                        found = True
+                        break
+                if not found:
+                    raise Exception("Invalid preservable exercise " + exercise_title)
+
         target_count = int(len(self._exercises) * percentage / 100)
 
         while len(self._exercises) > target_count:
             abandon_index = random.randint(0, len(self._exercises) - 1)
+            if preserve is not None:
+                exercise = self._exercises[abandon_index]
+                if exercise.title in preserve:
+                    continue
             self._exercises.pop(abandon_index)
 
     def rewind(self):

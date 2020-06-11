@@ -1,18 +1,14 @@
 """ Right hand techniques """
 import random
+from config import get_configuration
 
 
 class RightHand:
     """ Right hand techniques """
 
     def __init__(self):
-        self._techniques = [
-            "4 finger gallop",
-            "3 finger scale",
-            "Chr. seesaw",
-            "Palm mute triplet",
-            "Scott's speed test"
-        ]
+        config = get_configuration()
+        self._techniques = config["right_hand_exercises"]
 
     def _clone_techniques(self) -> []:
         output = []

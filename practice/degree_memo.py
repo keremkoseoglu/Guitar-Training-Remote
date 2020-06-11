@@ -1,6 +1,6 @@
 """ Degree memo """
 from model import exercise, exercise_step
-from model.guitar import Guitar
+
 from music_theory import chord, degree
 from practice import abstract_practice
 
@@ -11,7 +11,7 @@ class DegreeMemo(abstract_practice.AbstractPractice):
     _TITLE = "Degree memo"
     _SUBTITLE = "Tell the following note"
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns degree memo exercises """
 
         random_steps = []

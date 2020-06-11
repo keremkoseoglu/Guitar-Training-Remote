@@ -1,22 +1,23 @@
 """ Note module """
 import random
-
+from copy import deepcopy
+from config import get_configuration
 
 class Note:
     """ Note class """
     def __init__(self):
-        self._notes = ["C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"] # pylint: disable=C0301
+        self._config = get_configuration()
 
     def get_random_note(self) -> str:
         """ Returns a random note """
-        i = random.randint(0, len(self._notes) - 1)
-        return self._notes[i]
+        i = random.randint(0, len(self._config["notes"]) - 1)
+        return self._config["notes"][i]
 
     def get_random_notes(self, count) -> []:
         """ Returns random notes """
         output = []
 
-        notes = self._notes
+        notes = deepcopy(self._config["notes"])
         for count_pos in range(count): # pylint: disable=W0612
             if len(notes) <= 0:
                 break

@@ -31,11 +31,12 @@ hopefully improve your skills over time.
 You will notice that the content of some practices will be random as
 well, such as the chord or notes you need to work on.
 
-## Modifying instruments
+## Modifying configuration
 
-You can modify your desired instruments in model/guitar.py.
+You can modify the current configuration by editing **config.json** . You can 
+modify or add new instruments, chords, modes, arpeggions, improvs, etc.
 
-## Adding new practices
+## Adding new practice classes
 
 The application builds the practice set completely automatically, based on
 what is found in the package **practice**. The assumptions are;
@@ -65,17 +66,3 @@ objects from within the given package name.
 This technique would be particularly useful if you want your application
 to support plug-ins. Just put a new external **.py** file under the 
 package folder, and there you go!
-
-## Future plans
-
-I will probably be adding new practices over time, depending on my
-own practice needs.
-
-Having mobile in mind, the GUI was developed with Kivy. However;
-Kivy doesn't support mobile publishing for Python 3.6 at this time.
-When it does, I have the intention to publish this application on
-the mobile platforms.
-
-It would be neat if the application included its own metronome, or if
-it could play the given chord progressions. That would decrease the need
-for external support in a practice session.

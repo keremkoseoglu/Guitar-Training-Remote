@@ -1,31 +1,15 @@
 """ Mode module """
 import random
 from music_theory.note import Note
+from config import get_configuration
 
 
 class Mode:
     """ Mode class """
 
     def __init__(self):
-        self._modes = [
-            # Major oriented
-            "Ionian",
-            "Dorian",
-            "Phrygian",
-            "Lydian",
-            "Mixo",
-            "Aeolian",
-            "Locrian",
-
-            # Melodic minor oriented
-            "Jazz minor",
-            "Dorian b2",
-            "Lydian aug",
-            "Lydian dom",
-            "Mixo b6",
-            "Half dim",
-            "Altered"
-        ]
+        config = get_configuration()
+        self._modes = config["modes"]
 
     def get_mode_list(self) -> []:
         """ Returns a mode list """

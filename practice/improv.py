@@ -1,48 +1,20 @@
 """ Improv """
 import random
 from model import exercise, exercise_step
-from model.guitar import Guitar
 from practice.abstract_practice import AbstractPractice
-
+from config import get_configuration
 
 
 class Improv(AbstractPractice):
     """ Improv """
 
-    _IMPROVS = [
-        "Random note",
-        "Simple melody",
-        "Chords",
-        "Distant notes",
-        "Bebop",
-        "Emotion graph",
-
-        "Play out - mel.min.",
-        "Play out - chromatic",
-        "Coltrane patterns",
-        "Phrasing",
-        "Strong beat / note",
-        "Double stops",
-        "Call & response",
-
-        "Dom7 phrygian",
-        "Dom7 altered",
-        "Dom7 3rd Dim",
-
-        "Play the silence",
-        "Whole tone",
-
-        "Accents",
-        "Emphasize chord tones",
-        "Emphasize chord changes",
-        "Side slipping",
-        "Enclosures"
-    ]
-
     _TITLE = "Improv"
     _SUBTITLE = "Practice the improv approaches"
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def __init__(self):
+        self._config = get_configuration()
+
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns improv exercises """
 
         random_steps = []
@@ -50,7 +22,7 @@ class Improv(AbstractPractice):
 
         for quantity_pos in range(0, quantity): # pylint: disable=W0612
             if len(improvs) <= 0:
-                improvs = self._IMPROVS.copy()
+                improvs = self._config["improvs"].copy()
 
             try:
                 random_index = random.randint(0, len(improvs) - 1)
@@ -87,7 +59,7 @@ class Improv(AbstractPractice):
         """ Returns a random number of improv exercises """
         output = []
 
-        improvs = self._IMPROVS
+        improvs = self._config["improvs"]
         for count_pos in range(count): # pylint: disable=W0612
             if len(improvs) <= 0:
                 break

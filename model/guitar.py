@@ -1,32 +1,15 @@
 """ Guitar module """
-from enum import Enum
 import random
+from config import get_configuration
 
 
-class Guitar(Enum):
-    """ Guitar types """
-    UNDEFINED = 0
-    BASS = 1
-    ELECTRIC = 2
-    ACOUSTIC = 3
-    KEYS = 4
-
-
-_GUITARS = [
-    {"type": Guitar.BASS, "from": 1, "to": 50},
-    {"type": Guitar.ELECTRIC, "from": 51, "to": 70},
-    {"type": Guitar.ACOUSTIC, "from": 71, "to": 90},
-    {"type": Guitar.KEYS, "from": 91, "to": 100},
-]
-
-def get_random_guitar() -> Guitar:
+def get_random_guitar() -> dict:
     """ Returns a random guitar """
+    config = get_configuration()
     random_number = random.randint(1, 100)
 
-    output = Guitar.UNDEFINED
-    for guitar in _GUITARS:
+    for guitar in config["instruments"]:
         if guitar["from"] <= random_number and guitar["to"] >= random_number:
-            output = guitar["type"]
-            break
+            return guitar
 
-    return output
+    raise Exception("Couldn't select an instrument")

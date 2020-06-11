@@ -1,7 +1,7 @@
 """ Abstract practice module """
 from abc import ABC, abstractmethod
 from model import exercise
-from model.guitar import Guitar
+
 from music_theory.position import Position
 
 
@@ -11,7 +11,7 @@ class AbstractPractice(ABC):
     """
 
     @abstractmethod
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns the exercise object """
 
     @staticmethod

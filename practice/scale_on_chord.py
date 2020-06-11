@@ -1,7 +1,7 @@
 """ Scale on chord """
 import random
 from model import exercise, exercise_step
-from model.guitar import Guitar
+
 from music_theory import chord
 from practice import abstract_practice
 
@@ -13,7 +13,7 @@ class ScaleOnChord(abstract_practice.AbstractPractice):
     _SUBTITLE = "a scale on top of chord"
     _PLAY_CHOICE = ["Play in", "Play out"]
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random scale on chord exercises """
 
         random_steps = []

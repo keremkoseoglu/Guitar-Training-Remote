@@ -1,6 +1,5 @@
 """ Right hand technique """
 from model import exercise_step, exercise
-from model.guitar import Guitar
 from practice.abstract_practice import AbstractPractice
 import technique.right_hand
 
@@ -10,9 +9,9 @@ class RightHandTech(AbstractPractice):
     _TITLE = "Right hand"
     _SUBTITLE = "Practice right hand techniques"
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns right hand technique exercises """
-        if guitar != Guitar.BASS:
+        if guitar["strings"] <= 0:
             return None
 
         steps = []

@@ -1,9 +1,9 @@
 """ Scale dexterity """
 import random
 from model import exercise, exercise_step
-from model.guitar import Guitar
 from music_theory import scale
 from practice import abstract_practice
+
 
 class ScaleDexterity(abstract_practice.AbstractPractice):
     """ Scale dexterity """
@@ -11,7 +11,7 @@ class ScaleDexterity(abstract_practice.AbstractPractice):
     _TITLE = "Scale dexterity"
     _SUBTITLE = "Play a scale"
 
-    def get_exercise(self, quantity: int, guitar: Guitar) -> exercise.Exercise:
+    def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns exercise """
 
         random_steps = []
@@ -35,13 +35,13 @@ class ScaleDexterity(abstract_practice.AbstractPractice):
         return output
 
     @staticmethod
-    def _get_scale_exercise(guitar: Guitar) -> str:
+    def _get_scale_exercise(guitar: dict) -> str:
         scale_exercises = [
             "Play a simple scale",
             "Play at least 2 octaves"
         ]
 
-        if guitar != Guitar.KEYS:
+        if guitar["strings"] > 0:
             scale_exercises.append("Play scale - all strings / positions / fingers")
 
         random_index = random.randint(0, len(scale_exercises) - 1)
