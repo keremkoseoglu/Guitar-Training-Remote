@@ -1,7 +1,6 @@
 """ Abstract practice module """
 from abc import ABC, abstractmethod
 from model import exercise
-
 from music_theory.position import Position
 
 

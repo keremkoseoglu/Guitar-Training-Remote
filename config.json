@@ -6,10 +6,10 @@
         "must_select": ["Lazy fingers"]
     },
     "instruments": [
-        { "type": "BASS", "strings": 4, "ocaves": 4, "from": 1, "to": 50},
-        { "type": "ELECTRIC", "strings": 6, "ocaves": 5, "from": 51, "to": 70},
-        { "type": "ACOUSTIC", "strings": 6, "ocaves": 5, "from": 71, "to": 90},
-        { "type": "KEYS", "strings": 0, "ocaves": 4, "from": 91, "to": 100}
+        { "type": "BASS", "strings": 4, "octaves": 4, "from": 1, "to": 50},
+        { "type": "ELECTRIC", "strings": 6, "octaves": 5, "from": 51, "to": 70},
+        { "type": "ACOUSTIC", "strings": 6, "octaves": 5, "from": 71, "to": 90},
+        { "type": "KEYS", "strings": 0, "octaves": 4, "from": 91, "to": 100}
     ],
     "chord_types": [
         "", "7", "∆7", "9", "#11", "sus4", "-", "-7", "-9", "-b9", "-11", "-13",
@@ -103,5 +103,6 @@
         "Chr. seesaw",
         "Palm mute triplet",
         "Scott's speed test"
-    ]
+    ],
+    "backing_track_url": "https://www.youtube.com/watch?v=5xINc3rfbBg&list=PLES3BCUQLP6hBBIODciynJr7VAgXSbonF"
 }
