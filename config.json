@@ -6,7 +6,8 @@
         "must_select": ["Lazy fingers"]
     },
     "instruments": [
-        { "type": "BASS", "strings": 4, "octaves": 4, "from": 1, "to": 50},
+        { "type": "P BASS", "strings": 4, "octaves": 4, "from": 1, "to": 40},
+        { "type": "J BASS", "strings": 4, "octaves": 4, "from": 41, "to": 50},
         { "type": "ELECTRIC", "strings": 6, "octaves": 5, "from": 51, "to": 70},
         { "type": "ACOUSTIC", "strings": 6, "octaves": 5, "from": 71, "to": 90},
         { "type": "KEYS", "strings": 0, "octaves": 4, "from": 91, "to": 100}
