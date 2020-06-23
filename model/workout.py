@@ -1,8 +1,7 @@
 """ Workout module """
 import random
 from typing import List
-import webbrowser
-from model.exercise import Exercise, ExerciseHelperType
+from model.exercise import Exercise
 from model.exercise_step import ExerciseStep
 
 
@@ -54,12 +53,6 @@ class WorkOut:
 
         out_exercise = self.get_current_exercise()
         out_step = self.get_current_step()
-
-        if self._step_index == 0:
-            for helper in out_exercise.helpers:
-                if helper.helper_type == ExerciseHelperType.BROWSER:
-                    webbrowser.open(helper.params["url"])
-
         return out_exercise, out_step
 
     def get_exercise_count(self) -> int:

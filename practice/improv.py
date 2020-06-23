@@ -1,7 +1,8 @@
 """ Improv """
 import random
+from copy import deepcopy
 from model import exercise, exercise_step
-from model.exercise import ExerciseHelperType, ExerciseHelper
+from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice.abstract_practice import AbstractPractice
 from config import get_configuration
 
@@ -66,7 +67,7 @@ class Improv(AbstractPractice):
         """ Returns a random number of improv exercises """
         output = []
 
-        improvs = self._config["improvs"]
+        improvs = deepcopy(self._config["improvs"])
         for count_pos in range(count): # pylint: disable=W0612
             if len(improvs) <= 0:
                 break

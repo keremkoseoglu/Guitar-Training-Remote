@@ -1,6 +1,7 @@
 """ Metronome """
 import random
 from model import exercise, exercise_step
+from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice import abstract_practice
 from config import get_configuration
 
@@ -28,6 +29,10 @@ class Metronome(abstract_practice.AbstractPractice):
                     random_bpm > 100:
                 random_bpm = round(random_bpm / 2)
             random_step = exercise_step.ExerciseStep(random_exercise, "BPM: " + str(random_bpm))
+            random_step.helpers = [ExerciseHelper(
+                ExerciseHelperType.METRONOME,
+                {"bpm": random_bpm}
+            )]
             random_steps.append(random_step)
 
         output = exercise.Exercise(self._TITLE, "Run the following exercise", random_steps)
