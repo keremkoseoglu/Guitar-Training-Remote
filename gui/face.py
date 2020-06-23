@@ -1,53 +1,17 @@
 """ Main entry point """
+import webbrowser
+from typing import List
 from kivy.app import App
-from kivy.uix.button import Button
-from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
+from kivy.uix.gridlayout import GridLayout
 from factory import some_practices
-from gui.button_event import ButtonEvent
+from gui.button_row import ButtonRow
+from gui.metronome import Metronome
+from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 
 
 
 _APP_TITLE = "Guitar Training Remote"
-
-
-class ButtonRow(GridLayout):
-    """ Button row """
-    BUTTON_RESTART = 1
-    BUTTON_NEXT = 4
-
-    def __init__(self, **kwargs):
-        super(ButtonRow, self).__init__(**kwargs)
-
-        self._btn_restart = Button()
-        self._btn_restart.text = "Restart"
-        self._btn_restart.bind(on_press=self._btn_restart_clicked) # pylint: disable=E1101
-        self._btn_restart.size_hint = (0.2, 1)
-
-        self._btn_next = Button()
-        self._btn_next.text = "Next >"
-        self._btn_next.bind(on_press=self._btn_next_clicked) # pylint: disable=E1101
-        self._btn_next.size_hint = (0.8, 1)
-
-        self.cols = 2
-        self.add_widget(self._btn_restart)
-        self.add_widget(self._btn_next)
-
-        self._event = ButtonEvent()
-
-    def add_event_listener(self, handler):
-        """ Add new event listener """
-        self._event.add_handler(handler)
-
-    def set_next_enabled(self, enabled: bool):
-        """ Enable or disable next button """
-        self._btn_next.disabled = not enabled
-
-    def _btn_next_clicked(self, instance): # pylint: disable=W0613
-        self._event.button_clicked(self.BUTTON_NEXT)
-
-    def _btn_restart_clicked(self, instance): # pylint: disable=W0613
-        self._event.button_clicked(self.BUTTON_RESTART)
 
 
 class Face(GridLayout):
@@ -89,12 +53,16 @@ class Face(GridLayout):
         self._buttons.size_hint = (1, 0.1)
         self._buttons.add_event_listener(self._handle_button_click)
 
+        self._metronome = Metronome()
+        self._metronome.size_hint = (1, 0.05)
+
         self.cols = 1
         self.add_widget(self._exercise_main_label)
         self.add_widget(self._exercise_sub_label)
         self.add_widget(self._step_main_label)
         self.add_widget(self._step_sub_label)
         self.add_widget(self._stop_watch_label)
+        self.add_widget(self._metronome)
         self.add_widget(self._buttons)
 
         # --- Start workout -----
@@ -106,13 +74,13 @@ class Face(GridLayout):
         self._restart()
 
     def _handle_button_click(self, button: int):
+        self._metronome.stop()
         if button == ButtonRow.BUTTON_NEXT:
             self._next_step()
         elif button == ButtonRow.BUTTON_RESTART:
             self._restart()
 
     def _next_step(self):
-
         try:
             next_exer, next_step = self._workout.get_next_step()
         except Exception:
@@ -133,14 +101,15 @@ class Face(GridLayout):
         exe = self._workout.get_current_exercise()
         self._exercise_main_label.text = exe.title
         self._exercise_sub_label.text = exe.description
+        self._process_helpers(exe.helpers)
 
     def _paint_exercise_step(self):
         step = self._workout.get_current_step()
         self._step_main_label.text = step.main_text
         self._step_sub_label.text = str(step.sub_text)
+        self._process_helpers(step.helpers)
 
     def _refresh_status_text(self):
-
         try:
             status_text = \
                 "Lesson " + str(self._workout.get_exercise_index() + 1) \
@@ -171,6 +140,12 @@ class Face(GridLayout):
         self._refresh_status_text()
         self._guitar = practice_obj.guitar
 
+    def _process_helpers(self, helpers: List[ExerciseHelper]):
+        for helper in helpers:
+            if helper.helper_type == ExerciseHelperType.BROWSER:
+                webbrowser.open(helper.params["url"])
+            elif helper.helper_type == ExerciseHelperType.METRONOME:
+                self._metronome.bpm = helper.params["bpm"]
 
 class GtrApp(App):
     """ Main application """

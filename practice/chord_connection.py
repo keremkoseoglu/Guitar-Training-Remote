@@ -15,7 +15,9 @@ class ChordConnection(abstract_practice.AbstractPractice):
         """ Returns random chord connection exercises """
         random_steps = []
 
-        for random_improv in improv.Improv().get_improvs(quantity):
+        random_improvs = improv.Improv().get_improvs(quantity)
+
+        for random_improv in random_improvs:
             context_count = random.randint(2, 4)
             stuff = chord.Chord().get_random_chords(context_count)
 
