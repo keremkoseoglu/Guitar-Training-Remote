@@ -74,7 +74,7 @@ class Face(GridLayout):
         self._restart()
 
     def _handle_button_click(self, button: int):
-        self._metronome.stop()
+        self._metronome.reset()
         if button == ButtonRow.BUTTON_NEXT:
             self._next_step()
         elif button == ButtonRow.BUTTON_RESTART:

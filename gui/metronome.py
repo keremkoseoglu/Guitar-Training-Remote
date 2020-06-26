@@ -4,6 +4,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.core.audio import SoundLoader
+from config import get_configuration
 
 
 class Metronome(GridLayout):
@@ -22,7 +23,8 @@ class Metronome(GridLayout):
     def __init__(self, **kwargs):
         super(Metronome, self).__init__(**kwargs)
 
-        self._bpm = 60
+        self._config = get_configuration()
+        self._bpm = self._config["default_bpm"]
         self._playing = False
         self._click = self._load_bpm_file()
 
@@ -94,6 +96,11 @@ class Metronome(GridLayout):
             return
         self._click.stop()
         self._playing = False
+
+    def reset(self):
+        """ Stops and resets the metronome """
+        self.stop()
+        self.bpm = self._config["default_bpm"]
 
     def _btn_decrease_clicked(self, instance): # pylint: disable=W0613
         self._change_bpm(Metronome._BPM_STEP * -1)

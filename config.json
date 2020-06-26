@@ -77,7 +77,8 @@
         "3-",
         "4-"
     ],
-    "bpm_range": [60, 160],
+    "bpm_range": [40, 160],
+    "default_bpm": 60,
     "one_liners": [
         "Old licks",
         "New lick",
