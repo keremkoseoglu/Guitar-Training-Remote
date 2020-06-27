@@ -12,9 +12,13 @@ on Star Wars.
 
 Python is needed to run this application. If you don't have it, [download](https://www.python.org/downloads/) and install Python.
 
-### Virtual environment creation
+### Program files
 
 Create a new folder on your computer; presumably called GTR.
+
+Download all files in this repository to that directory.
+
+### Virtual environment creation
 
 Open a terminal window, go to folder GTR and install a Python virtual environment by typing:
 
@@ -46,14 +50,6 @@ pip install git+http://github.com/keremkoseoglu/vibhaga.git
 ```
 
 Note that Kivy installation might be a little trickier than it seems. Check [installation notes](https://kivy.org) in case you need help.
-
-### Guitar training remote installation
-
-Install Guitar Training Remote by typing:
-
-```
-pip install git+http://github.com/keremkoseoglu/Guitar-Training-Remote.git
-```
 
 ## Starting
 
