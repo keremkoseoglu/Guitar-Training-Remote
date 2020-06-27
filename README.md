@@ -22,6 +22,8 @@ pip install git+http://github.com/keremkoseoglu/Guitar-Training-Remote.git
 
 Simply run main.py to start the application.
 
+To customize the practices, you can edit **/config.json** .
+
 ## How it works
 
 This application will build a random set of practices (found in the package
