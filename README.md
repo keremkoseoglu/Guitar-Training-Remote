@@ -4,15 +4,52 @@ I write this Python application for my own bass guitar practice needs. It can be
 used with any instrument though. The name is inspired by the [Jedi Training Remote](https://www.starwars.com/databank/training-remote), seen
 on Star Wars.
 
+![GTR](/screenshot.png?raw=true "GTR")
+
 ## Installation
 
-First, install Vibhaga.
+### Python
+
+Python is needed to run this application. If you don't have it, [download](https://www.python.org/downloads/) and install Python.
+
+### Virtual environment creation
+
+Create a new folder on your computer; presumably called GTR.
+
+Open a terminal window, go to folder GTR and install a Python virtual environment by typing:
 
 ```
+python3 -m venv venv
+```
+
+### Virtual environment activation
+
+Now activate the virtual environment. On Windows, you need to type: 
+
+```
+venv/bin/activate.bat
+```
+
+On Mac and Linux, you need to type:
+
+```
+venv/bin/activate
+```
+
+### Prerequisite installation
+
+While your virtual environment is active, install Kivy and Vibhaga by typing:
+
+```
+pip install kivy
 pip install git+http://github.com/keremkoseoglu/vibhaga.git
 ```
 
-Then, install Guitar Training Remote.
+Note that Kivy installation might be a little trickier than it seems. Check [installation notes](https://kivy.org) in case you need help.
+
+### Guitar training remote installation
+
+Install Guitar Training Remote by typing:
 
 ```
 pip install git+http://github.com/keremkoseoglu/Guitar-Training-Remote.git
@@ -20,7 +57,11 @@ pip install git+http://github.com/keremkoseoglu/Guitar-Training-Remote.git
 
 ## Starting
 
-Simply run main.py to start the application.
+After activating the virtual environment (as described above), run the application by typing:
+
+```
+python3 main.py
+```
 
 To customize the practices, you can edit **/config.json** .
 
@@ -46,7 +87,11 @@ what is found in the package **practice**. The assumptions are;
 single class
 * Every practice must be derived from abstract_practice.AbstractPractice
 
-Just check any class under practice, and see how easily you can add your own 
+Optionally, classes may also get advantage of built-in helpers; such as:
+* Calling URL's
+* Controlling the metronome
+
+Just check a few classes under **/practice**, and see how easily you can add your own 
 practices. If you would like to contribute, feel free to contact me.
 
 ## Adding new workout factories
