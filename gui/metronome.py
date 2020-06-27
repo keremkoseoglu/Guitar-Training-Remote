@@ -87,6 +87,7 @@ class Metronome(GridLayout):
         """ Starts metronome """
         if self._playing:
             return
+        self._click = self._load_bpm_file()
         self._click.play()
         self._playing = True
 
@@ -137,7 +138,6 @@ class Metronome(GridLayout):
             while self._bpm %5 != 0:
                 self._bpm += 1
 
-        self._click = self._load_bpm_file()
         self._refresh_bpm_label()
         if self._playing:
             self.stop()

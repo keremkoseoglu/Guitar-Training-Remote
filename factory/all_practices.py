@@ -19,7 +19,7 @@ class AllPractices(abstract_factory.AbstractFactory): # pylint: disable=R0903
         practice_objects = Inspector.get_classes_in_container(
             Container(["practice"]),
             ["abstract"],
-            ["AbstractPractice", "Position", "Guitar"])
+            ["AbstractPractice", "Position", "Guitar", "SupportPractice"])
 
         while len(practice_objects) > 0:
             random_practice_index = random.randint(0, len(practice_objects) - 1)

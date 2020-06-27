@@ -106,5 +106,6 @@
         "Palm mute triplet",
         "Scott's speed test"
     ],
-    "backing_track_url": "https://www.youtube.com/watch?v=5xINc3rfbBg&list=PLES3BCUQLP6hBBIODciynJr7VAgXSbonF"
+    "backing_track_url": "https://www.youtube.com/watch?v=5xINc3rfbBg&list=PLES3BCUQLP6hBBIODciynJr7VAgXSbonF",
+    "max_accent_notes": 4
 }
