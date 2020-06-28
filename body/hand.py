@@ -23,8 +23,7 @@ class Hand:
     def get_random_fret_fingers(self, quantity: int = 0) -> List[Finger]:
         """ Returns a random list of fretting fingers """
         output = []
-        candidates = copy(self.fingers)
-        candidates.pop(4)
+        candidates = self._get_fret_fingers()
 
         if quantity > 0:
             output_quantity = quantity
@@ -36,4 +35,26 @@ class Hand:
             random_finger = candidates.pop(random_index)
             output.append(random_finger)
 
+        return output
+
+    def get_random_fret_finger_permutation(self) -> List[Finger]:
+        """ Returns a single finger permutation """
+        output = []
+        fret_fingers = self._get_fret_fingers()
+        while len(fret_fingers) > 0:
+            random_index = randint(0, len(fret_fingers)-1)
+            random_finger = fret_fingers.pop(random_index)
+            output.append(random_finger)
+        return output
+
+    def get_random_fret_finger_permutations(self, count: int) -> List[List[Finger]]:
+        """ Returns a list of finger permutations """
+        output = []
+        while len(output) < count:
+            output.append(self.get_random_fret_finger_permutation())
+        return output
+
+    def _get_fret_fingers(self) -> List[Finger]:
+        output = copy(self.fingers)
+        output.pop(4)
         return output
