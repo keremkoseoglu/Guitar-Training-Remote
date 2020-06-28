@@ -11,6 +11,7 @@ from practice.notes_on_strings import NotesOnStrings
 from practice.scale_degree_sequence import ScaleDegreeSequence
 from practice.scale_dexterity import ScaleDexterity
 from practice.arpeggio import Arpeggio
+from practice.left_permutation import LeftFingerPermutations
 from config import get_configuration
 
 
@@ -23,6 +24,7 @@ class SupportPractice(Enum):
     SCALE_DEGREE_SEQUENCE = 5
     SCALE_DEXTERITY = 6
     ARPEGGIO = 7
+    LEFT_PERMUTATION = 8
 
 
 class Accents(abstract_practice.AbstractPractice):
@@ -99,5 +101,8 @@ class Accents(abstract_practice.AbstractPractice):
                     break
                 if practice == SupportPractice.SCALE_DEXTERITY:
                     output = ScaleDexterity()
+                    break
+                if practice == SupportPractice.LEFT_PERMUTATION:
+                    output = LeftFingerPermutations()
                     break
         return output
