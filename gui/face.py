@@ -10,7 +10,6 @@ from gui.metronome import Metronome
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 
 
-
 _APP_TITLE = "Guitar Training Remote"
 
 
@@ -79,6 +78,8 @@ class Face(GridLayout):
             self._next_step()
         elif button == ButtonRow.BUTTON_RESTART:
             self._restart()
+        elif button == ButtonRow.BUTTON_REPICK:
+            self._restart(repick=True)
 
     def _next_step(self):
         try:
@@ -123,9 +124,9 @@ class Face(GridLayout):
 
         self._stop_watch_label.text = status_text
 
-    def _restart(self):
+    def _restart(self, repick=False):
         practice_obj = some_practices.SomePractices()
-        if self._guitar_selected:
+        if self._guitar_selected and (not repick):
             practice_obj.set_select_guitar(False)
             self._workout = practice_obj.get_workout(self._guitar)
         else:

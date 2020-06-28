@@ -75,7 +75,7 @@ class WorkOut:
                                 percentage: int,
                                 preserve: List[str] = None):
         """ Removes random exercises from the dataset """
-        if preserve is not None:
+        if preserve is not None and len(preserve) > 0:
             for exercise_title in preserve:
                 found = False
                 for exercise in self._exercises:
