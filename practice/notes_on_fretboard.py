@@ -1,7 +1,6 @@
 """ Notes on fretboard """
 import random
 from model import exercise, exercise_step
-
 from music_theory import note
 from practice import abstract_practice
 
