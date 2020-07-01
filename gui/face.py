@@ -82,6 +82,7 @@ class Face(GridLayout):
             self._restart(repick=True)
 
     def _next_step(self):
+        prev_exercise_index = self._workout.get_exercise_index()
         try:
             next_exer, next_step = self._workout.get_next_step()
         except Exception:
@@ -94,7 +95,8 @@ class Face(GridLayout):
             self._step_main_label.text = "Finished!"
             self._step_sub_label.text = ""
         else:
-            self._paint_exercise()
+            if prev_exercise_index != self._workout.get_exercise_index():
+                self._paint_exercise()
             self._paint_exercise_step()
             self._refresh_status_text()
 
