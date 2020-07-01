@@ -1,8 +1,8 @@
 {
     "practice_selection": {
         "max_steps_per_exercise": 5,
-        "lowest_selection_percentage": 50,
-        "highest_selection_percentage": 80,
+        "lowest_selection_percentage": 20,
+        "highest_selection_percentage": 40,
         "must_select": ["Lazy fingers"]
     },
     "instruments": [
@@ -78,7 +78,7 @@
         "4-"
     ],
     "bpm_range": [40, 160],
-    "default_bpm": 60,
+    "default_bpm": 90,
     "one_liners": [
         "Old licks",
         "New lick",
