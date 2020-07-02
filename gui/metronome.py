@@ -47,7 +47,7 @@ class Metronome(GridLayout):
         self._refresh_bpm_label()
 
         self._btn_play = Button()
-        self._btn_play.text = "©"
+        self._btn_play.text = "Play/Stop"
         self._btn_play.bind(on_press=self._btn_play_clicked) # pylint: disable=E1101
 
         self._btn_increase = Button()

@@ -9,9 +9,15 @@ class ButtonRow(GridLayout):
     BUTTON_RESTART = 1
     BUTTON_NEXT = 4
     BUTTON_REPICK = 5
+    BUTTON_CONFIG = 6
 
     def __init__(self, **kwargs):
         super(ButtonRow, self).__init__(**kwargs)
+
+        self._btn_config = Button()
+        self._btn_config.text = "..."
+        self._btn_config.bind(on_press=self._btn_config_clicked) # pylint: disable=E1101
+        self._btn_config.size_hint = (0.05, 1)
 
         self._btn_repick = Button()
         self._btn_repick.text = "Repick"
@@ -28,7 +34,8 @@ class ButtonRow(GridLayout):
         self._btn_next.bind(on_press=self._btn_next_clicked) # pylint: disable=E1101
         self._btn_next.size_hint = (0.8, 1)
 
-        self.cols = 3
+        self.cols = 4
+        self.add_widget(self._btn_config)
         self.add_widget(self._btn_repick)
         self.add_widget(self._btn_restart)
         self.add_widget(self._btn_next)
@@ -51,3 +58,6 @@ class ButtonRow(GridLayout):
 
     def _btn_repick_clicked(self, instance): # pylint: disable=W0613
         self._event.button_clicked(self.BUTTON_REPICK)
+
+    def _btn_config_clicked(self, instance): # pylint: disable=W0613
+        self._event.button_clicked(self.BUTTON_CONFIG)
