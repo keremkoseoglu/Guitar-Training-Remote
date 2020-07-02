@@ -8,6 +8,7 @@ from factory import some_practices
 from gui.button_row import ButtonRow
 from gui.metronome import Metronome
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
+import config
 
 
 _APP_TITLE = "Guitar Training Remote"
@@ -80,6 +81,8 @@ class Face(GridLayout):
             self._restart()
         elif button == ButtonRow.BUTTON_REPICK:
             self._restart(repick=True)
+        elif button == ButtonRow.BUTTON_CONFIG:
+            config.edit_configuration()
 
     def _next_step(self):
         prev_exercise_index = self._workout.get_exercise_index()
