@@ -1,6 +1,5 @@
 """ All practices """
 import random
-from copy import copy
 from vibhaga.inspector import Inspector, Container
 from factory import abstract_factory
 from model import workout
