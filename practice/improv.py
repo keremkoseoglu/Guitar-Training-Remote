@@ -58,7 +58,7 @@ class Improv(AbstractPractice):
         output.helpers = [
             ExerciseHelper(
                 ExerciseHelperType.BROWSER,
-                {"url": self._config["backing_track_url"]}
+                {"url": self._get_random_backing_track_url()}
             )
         ]
         return output
@@ -75,3 +75,7 @@ class Improv(AbstractPractice):
             output.append(improvs.pop(i))
 
         return output
+
+    def _get_random_backing_track_url(self) -> str:
+        track_index = random.randint(0, len(self._config["backing_tracks"])-1)
+        return self._config["backing_tracks"][track_index]
