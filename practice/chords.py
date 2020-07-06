@@ -10,7 +10,7 @@ class Chords(abstract_practice.AbstractPractice):
     """ Chords """
     _TITLE = "Chords"
     _SUBTITLE = "Play the following chords"
-    _POSITIONS = [1, 3, 5, 7]
+    _POSITIONS = [1, 3, 5]
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random chord exercises """
