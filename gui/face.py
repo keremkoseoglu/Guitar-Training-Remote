@@ -96,7 +96,7 @@ class Face(GridLayout):
             self._exercise_main_label.text = ""
             self._exercise_sub_label.text = ""
             self._step_main_label.text = "Finished!"
-            self._step_sub_label.text = ""
+            self._step_sub_label.text = "Now play freestyle for fun!"
         else:
             if prev_exercise_index != self._workout.get_exercise_index():
                 self._paint_exercise()
