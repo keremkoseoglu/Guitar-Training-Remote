@@ -48,7 +48,7 @@ class Accents(abstract_practice.AbstractPractice):
 
         output = practice.get_exercise(quantity, guitar)
         accent = self._get_random_accent()
-        output.title = "Accents"
+        output.title = Accents._TITLE
         output.description += "\r\n with accent on: " + accent
         return output
 
