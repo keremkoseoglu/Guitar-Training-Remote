@@ -3,6 +3,7 @@ from random import randint
 from model import exercise, exercise_step
 from practice.abstract_practice import AbstractPractice
 from body.hand import Hand
+from config import get_configuration
 
 class LeftFingerPermutations(AbstractPractice):
     """ Finger permutation class """
@@ -10,7 +11,9 @@ class LeftFingerPermutations(AbstractPractice):
     _TITLE = "Fret finger permutations"
     _SUBTITLE = "Wander strings with the following"
     _AT_LEAST = 1
-    _AT_MOST = 4
+
+    def __init__(self):
+        self._config = get_configuration()
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns lazy fingers exercises """
@@ -23,7 +26,7 @@ class LeftFingerPermutations(AbstractPractice):
         while len(random_steps) < quantity:
             permutation_count = randint(
                 LeftFingerPermutations._AT_LEAST,
-                LeftFingerPermutations._AT_MOST)
+                self._config["max_left_permutation"])
             permutations = hand.get_random_fret_finger_permutations(permutation_count)
             permutation_text = ""
             for permutation in permutations:
