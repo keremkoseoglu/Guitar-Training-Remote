@@ -112,5 +112,6 @@
         "https://www.youtube.com/watch?v=em03BbZJpyE&list=PLC52A9D217EC478CF",
         "https://www.youtube.com/watch?v=WAbMcq7bmA8&list=PLUExMPmFbP3oqsUXN0ukt4VUmfCEfBy4L"
     ],
-    "max_accent_notes": 4
+    "max_accent_notes": 4,
+    "max_left_permutation": 2
 }
