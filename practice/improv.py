@@ -4,7 +4,7 @@ from copy import deepcopy
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice.abstract_practice import AbstractPractice
-from config import get_configuration
+from config import get_configuration, get_storage, save_storage
 
 
 class Improv(AbstractPractice):
@@ -77,5 +77,12 @@ class Improv(AbstractPractice):
         return output
 
     def _get_random_backing_track_url(self) -> str:
-        track_index = random.randint(0, len(self._config["backing_tracks"])-1)
-        return self._config["backing_tracks"][track_index]
+        storage = get_storage()
+        while True:
+            track_index = random.randint(0, len(self._config["backing_tracks"])-1)
+            track_url = self._config["backing_tracks"][track_index]
+            if track_url == storage["last_improv_url"]:
+                continue
+            storage["last_improv_url"] = track_url
+            save_storage(storage)
+            return track_url
