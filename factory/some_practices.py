@@ -23,12 +23,12 @@ class SomePractices(abstract_factory.AbstractFactory):
 
         output = all_practices.AllPractices().get_workout(self.guitar)
 
-        remove_percent = random.randint(
-            self._config["practice_selection"]["lowest_selection_percentage"],
-            self._config["practice_selection"]["highest_selection_percentage"])
+        remain_count = random.randint(
+            self._config["practice_selection"]["min_practice_count"],
+            self._config["practice_selection"]["max_practice_count"])
 
         output.remove_random_exercises(
-            remove_percent,
+            remain_count,
             self._config["practice_selection"]["must_select"])
 
         if self._select_guitar:

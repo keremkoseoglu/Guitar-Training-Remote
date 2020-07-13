@@ -1,8 +1,8 @@
 {
     "practice_selection": {
         "max_steps_per_exercise": 5,
-        "lowest_selection_percentage": 40,
-        "highest_selection_percentage": 60,
+        "min_practice_count": 8,
+        "max_practice_count": 12,
         "must_select": ["Lazy fingers"]
     },
     "instruments": [

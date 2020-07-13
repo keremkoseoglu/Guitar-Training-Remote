@@ -1,7 +1,6 @@
 """ Chords """
 import random
 from model import exercise, exercise_step
-
 from practice import abstract_practice
 from music_theory import chord
 
