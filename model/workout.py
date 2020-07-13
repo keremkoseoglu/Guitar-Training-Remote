@@ -72,7 +72,7 @@ class WorkOut:
         return self._step_index
 
     def remove_random_exercises(self,
-                                percentage: int,
+                                remain: int,
                                 preserve: List[str] = None):
         """ Removes random exercises from the dataset """
         if preserve is not None and len(preserve) > 0:
@@ -85,9 +85,7 @@ class WorkOut:
                 if not found:
                     raise Exception("Invalid preservable exercise " + exercise_title)
 
-        target_count = int(len(self._exercises) * percentage / 100)
-
-        while len(self._exercises) > target_count:
+        while len(self._exercises) > remain:
             abandon_index = random.randint(0, len(self._exercises) - 1)
             if preserve is not None:
                 exercise = self._exercises[abandon_index]
