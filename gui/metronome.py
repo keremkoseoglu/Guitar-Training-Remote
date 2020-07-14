@@ -126,9 +126,9 @@ class Metronome(GridLayout):
         self._click.unload()
         self._bpm += delta
         if self._bpm < Metronome._BPM_LOW:
-            self._bpm = Metronome._BPM_LOW
+            self._bpm = int(self._bpm * 4)
         if self._bpm > Metronome._BPM_HIGH:
-            self._bpm = Metronome._BPM_HIGH
+            self._bpm = int(self._bpm / 2)
 
         remain = self._bpm % 5
         if remain in (1, 2):
