@@ -110,7 +110,7 @@ class Metronome(GridLayout):
         self._change_bpm(Metronome._BPM_STEP * -2)
 
     def _btn_decrease3_clicked(self, instance): # pylint: disable=W0613
-        self._change_bpm(Metronome._BPM_STEP * -100)
+        self._set_bpm(Metronome._BPM_LOW)
 
     def _btn_increase_clicked(self, instance): # pylint: disable=W0613
         self._change_bpm(Metronome._BPM_STEP)
@@ -119,17 +119,20 @@ class Metronome(GridLayout):
         self._change_bpm(Metronome._BPM_STEP * 2)
 
     def _btn_increase3_clicked(self, instance): # pylint: disable=W0613
-        self._change_bpm(Metronome._BPM_STEP * 100)
+        self._set_bpm(Metronome._BPM_HIGH)
 
     def _change_bpm(self, delta: int):
+        new_bpm = self._bpm + delta
+        if new_bpm < Metronome._BPM_LOW:
+            new_bpm = int(new_bpm * 4)
+        if new_bpm > Metronome._BPM_HIGH:
+            new_bpm = int(new_bpm / 2)
+        self._set_bpm(new_bpm)
+
+    def _set_bpm(self, bpm: int):
         self._click.stop()
         self._click.unload()
-        self._bpm += delta
-        if self._bpm < Metronome._BPM_LOW:
-            self._bpm = int(self._bpm * 4)
-        if self._bpm > Metronome._BPM_HIGH:
-            self._bpm = int(self._bpm / 2)
-
+        self._bpm = bpm
         remain = self._bpm % 5
         if remain in (1, 2):
             while self._bpm %5 != 0:
