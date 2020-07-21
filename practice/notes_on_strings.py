@@ -8,6 +8,9 @@ class NotesOnStrings(abstract_practice.AbstractPractice):
     """ Notes on strings practice class """
     _TITLE = "Note memorization"
 
+    def __init__(self):
+        self.max_note_count = 0
+
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         if guitar["strings"] <= 0:
             subtitle = "Find the given notes on subsequent octaves"
@@ -22,7 +25,10 @@ class NotesOnStrings(abstract_practice.AbstractPractice):
         for step_index in range(0, quantity): # pylint: disable=W0612
             step_text = ""
 
-            notes_of_step = note_obj.get_random_notes(strings)
+            note_count = strings
+            if self.max_note_count > 0 and self.max_note_count < strings:
+                note_count = self.max_note_count
+            notes_of_step = note_obj.get_random_notes(note_count)
             for note_of_step in notes_of_step:
                 if step_text != "":
                     step_text += ", "
