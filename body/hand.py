@@ -51,7 +51,9 @@ class Hand:
         """ Returns a list of finger permutations """
         output = []
         while len(output) < count:
-            output.append(self.get_random_fret_finger_permutation())
+            random_permutation = self.get_random_fret_finger_permutation()
+            if random_permutation not in output:
+                output.append(random_permutation)
         return output
 
     def _get_fret_fingers(self) -> List[Finger]:
