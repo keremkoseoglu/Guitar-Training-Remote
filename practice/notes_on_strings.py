@@ -9,7 +9,7 @@ class NotesOnStrings(abstract_practice.AbstractPractice):
     _TITLE = "Note memorization"
 
     def __init__(self):
-        self.max_note_count = 0
+        self.min_note_count = None
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         if guitar["strings"] <= 0:
@@ -26,8 +26,8 @@ class NotesOnStrings(abstract_practice.AbstractPractice):
             step_text = ""
 
             note_count = strings
-            if self.max_note_count > 0 and self.max_note_count < strings:
-                note_count = self.max_note_count
+            if self.min_note_count is not None and self.min_note_count > strings:
+                note_count = self.min_note_count
             notes_of_step = note_obj.get_random_notes(note_count)
             for note_of_step in notes_of_step:
                 if step_text != "":

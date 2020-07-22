@@ -27,6 +27,13 @@ class SupportPractice(Enum):
     LEFT_PERMUTATION = 8
 
 
+class Accent:
+    """ Defines an accent """
+    def __init__(self):
+        self.accent = ""
+        self.max_accent = 0
+
+
 class Accents(abstract_practice.AbstractPractice):
     """ Accent practices """
 
@@ -42,32 +49,34 @@ class Accents(abstract_practice.AbstractPractice):
         if guitar["strings"] <= 0:
             return None
 
-        accent, accent_count = self._get_random_accent()
+        random_accent = self._get_random_accent()
 
-        practice = Accents._get_support_practice(accent_count)
+        practice = Accents._get_support_practice(random_accent)
         if practice is None:
             return None
 
         output = practice.get_exercise(quantity, guitar)
         output.title = Accents._TITLE
-        output.description += "\r\n with accent on: " + accent
+        output.description += "\r\n with accent on: " + random_accent.accent
         return output
 
-    def _get_random_accent(self) -> tuple:
-        output = []
+    def _get_random_accent(self) -> Accent:
+        output = Accent()
+        output_accents = []
         local_accents = copy(self._accents)
         random_accent_count = random.randint(1, len(local_accents)-1)
-        while len(output) < random_accent_count:
+        while len(output_accents) < random_accent_count:
             random_accent_pos = random.randint(0, len(local_accents)-1)
             random_accent = local_accents.pop(random_accent_pos)
-            output.append(random_accent)
-        output.sort()
-        output_str = ""
-        for accent in output:
-            if output_str != "":
-                output_str += " "
-            output_str += accent
-        return output_str, random_accent_count
+            output_accents.append(random_accent)
+        output_accents.sort()
+        for accent in output_accents:
+            if output.accent != "":
+                output.accent += " "
+            output.accent += accent
+            if int(accent) > output.max_accent:
+                output.max_accent = int(accent)
+        return output
 
     def _build_accents(self):
         self._accents = []
@@ -77,7 +86,7 @@ class Accents(abstract_practice.AbstractPractice):
             self._accents.append(str(current_accent))
 
     @staticmethod
-    def _get_support_practice(accent_count: int) -> abstract_practice.AbstractPractice:
+    def _get_support_practice(accent: Accent) -> abstract_practice.AbstractPractice:
         support_index = random.randint(0, len(SupportPractice)-1)
         output = None
         for practice in SupportPractice:
@@ -96,7 +105,7 @@ class Accents(abstract_practice.AbstractPractice):
                     break
                 if practice == SupportPractice.NOTES_ON_STRINGS:
                     output = NotesOnStrings()
-                    output.max_note_count = accent_count
+                    output.min_note_count = accent.max_accent
                     break
                 if practice == SupportPractice.SCALE_DEGREE_SEQUENCE:
                     output = ScaleDegreeSequence()
