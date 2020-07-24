@@ -16,7 +16,8 @@ class OneLiner(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random one liner exercises """
-
+        if guitar["kind"] != "instrument":
+            return None
         random_steps = []
         one_liners = []
 

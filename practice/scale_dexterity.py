@@ -13,7 +13,8 @@ class ScaleDexterity(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns exercise """
-
+        if guitar["kind"] != "instrument":
+            return None
         random_steps = []
         random_scales = scale.Scale().get_random_scales(quantity)
 

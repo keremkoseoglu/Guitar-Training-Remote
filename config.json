@@ -6,11 +6,12 @@
         "must_select": ["Lazy fingers"]
     },
     "instruments": [
-        { "type": "P BASS", "strings": 4, "octaves": 4, "from": 0, "to": 40},
-        { "type": "J BASS", "strings": 4, "octaves": 4, "from": 41, "to": 50},
-        { "type": "ELECTRIC", "strings": 6, "octaves": 5, "from": 51, "to": 70},
-        { "type": "ACOUSTIC", "strings": 6, "octaves": 5, "from": 71, "to": 90},
-        { "type": "KEYS", "strings": 0, "octaves": 4, "from": 91, "to": 100}
+        { "type": "P BASS",     "kind": "instrument",   "strings": 4, "octaves": 4, "from": 0, "to": 40},
+        { "type": "J BASS",     "kind": "instrument",   "strings": 4, "octaves": 4, "from": 41, "to": 50},
+        { "type": "ELECTRIC",   "kind": "instrument",   "strings": 6, "octaves": 5, "from": 51, "to": 70},
+        { "type": "VOCAL",      "kind": "voice",        "strings": 0, "octaves": 3, "from": 71, "to": 80},
+        { "type": "ACOUSTIC",   "kind": "instrument",   "strings": 6, "octaves": 5, "from": 81, "to": 90},
+        { "type": "KEYS",       "kind": "instrument",   "strings": 0, "octaves": 4, "from": 91, "to": 100}
     ],
     "chord_types": [
         "", "7", "∆7", "9", "#11", "sus4", "-", "-7", "-9", "-b9", "-11", "-13",

@@ -83,7 +83,8 @@ class WorkOut:
                         found = True
                         break
                 if not found:
-                    raise Exception("Invalid preservable exercise " + exercise_title)
+                    #raise Exception("Invalid preservable exercise " + exercise_title)
+                    return
 
         while len(self._exercises) > remain:
             abandon_index = random.randint(0, len(self._exercises) - 1)

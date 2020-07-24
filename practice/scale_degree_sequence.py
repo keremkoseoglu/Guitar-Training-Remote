@@ -14,7 +14,8 @@ class ScaleDegreeSequence(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns scale degree sequence exercise """
-
+        if guitar["kind"] != "instrument":
+            return None
         random_steps = []
 
         for quantity_pos in range(quantity): # pylint: disable=W0612

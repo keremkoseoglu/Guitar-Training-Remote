@@ -17,6 +17,8 @@ class Arpeggio(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns arpeggio exercise """
+        if guitar["kind"] != "instrument":
+            return None
 
         # ---Preparation-----
 

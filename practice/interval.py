@@ -14,6 +14,8 @@ class Intervals(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random interval exercises """
+        if guitar["kind"] != "instrument":
+            return None
 
         degree_obj = degree.Degree()
         mode_obj = mode.Mode()

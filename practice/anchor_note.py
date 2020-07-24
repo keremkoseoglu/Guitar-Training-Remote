@@ -14,6 +14,8 @@ class AnchorNote(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns anchor note exercise """
+        if guitar["kind"] != "instrument":
+            return None
 
         random_steps = []
         i = random.randint(0, 1)

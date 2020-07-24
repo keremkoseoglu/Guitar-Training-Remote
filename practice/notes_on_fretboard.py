@@ -13,7 +13,8 @@ class NotesOnFretboard(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns exercise """
-
+        if guitar["kind"] != "instrument":
+            return None
         if guitar["strings"] <= 0:
             subtitle = "Find the given note(s) on each octave"
         else:
