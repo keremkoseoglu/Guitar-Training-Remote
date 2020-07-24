@@ -15,6 +15,9 @@ class LazyFingers(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns lazy fingers exercises """
+        if guitar["kind"] != "instrument":
+            return None
+
         random_steps = []
 
         string_count = guitar["strings"]

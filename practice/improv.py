@@ -18,6 +18,8 @@ class Improv(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns improv exercises """
+        if guitar["kind"] != "instrument":
+            return None
 
         random_steps = []
         improvs = []

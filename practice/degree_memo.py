@@ -13,7 +13,6 @@ class DegreeMemo(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns degree memo exercises """
-
         random_steps = []
         random_chords = chord.Chord().get_random_chords(quantity)
         random_degrees = degree.Degree().get_random_degrees(quantity)

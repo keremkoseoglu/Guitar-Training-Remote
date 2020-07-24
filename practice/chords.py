@@ -13,6 +13,9 @@ class Chords(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random chord exercises """
+        if guitar["kind"] != "instrument":
+            return None
+
         random_steps = []
 
         for chord_pos in range(0, quantity): # pylint: disable=W0612

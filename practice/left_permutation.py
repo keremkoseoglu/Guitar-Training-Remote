@@ -17,6 +17,8 @@ class LeftFingerPermutations(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns lazy fingers exercises """
+        if guitar["kind"] != "instrument":
+            return None
         string_count = guitar["strings"]
         if string_count <= 0:
             return None

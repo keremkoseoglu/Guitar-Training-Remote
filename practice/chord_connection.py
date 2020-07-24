@@ -13,8 +13,10 @@ class ChordConnection(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random chord connection exercises """
-        random_steps = []
+        if guitar["kind"] != "instrument":
+            return None
 
+        random_steps = []
         random_improvs = improv.Improv().get_improvs(quantity)
 
         for random_improv in random_improvs:

@@ -15,7 +15,8 @@ class ScaleOnChord(abstract_practice.AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random scale on chord exercises """
-
+        if guitar["kind"] != "instrument":
+            return None
         random_steps = []
         random_chords = chord.Chord().get_random_chords(quantity)
 

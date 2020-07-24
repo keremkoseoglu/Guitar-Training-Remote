@@ -12,6 +12,8 @@ class NotesOnStrings(abstract_practice.AbstractPractice):
         self.min_note_count = None
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
+        if guitar["kind"] != "instrument":
+            return None
         if guitar["strings"] <= 0:
             subtitle = "Find the given notes on subsequent octaves"
             strings = guitar["octaves"]
