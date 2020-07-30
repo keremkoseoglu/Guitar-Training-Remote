@@ -1,6 +1,7 @@
 """ Main entry point """
 import webbrowser
 from typing import List
+import os
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
@@ -152,6 +153,8 @@ class Face(GridLayout):
                 webbrowser.open(helper.params["url"])
             elif helper.helper_type == ExerciseHelperType.METRONOME:
                 self._metronome.bpm = helper.params["bpm"]
+            elif helper.helper_type == ExerciseHelperType.OS_COMMAND:
+                os.system(helper.params["command"])
 
 class GtrApp(App):
     """ Main application """

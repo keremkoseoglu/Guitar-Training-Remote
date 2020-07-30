@@ -6,6 +6,7 @@ class ExerciseHelperType(Enum):
     Examples: open browser, start metronome, etc """
     BROWSER = 1
     METRONOME = 2
+    OS_COMMAND = 3
 
 
 class ExerciseHelper:

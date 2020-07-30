@@ -1,4 +1,6 @@
 """ Program entry point """
-
 import gui.face
-gui.face.GtrApp().run()
+
+
+if __name__ == "__main__":    
+    gui.face.GtrApp().run()

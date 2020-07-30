@@ -4,7 +4,7 @@ from copy import deepcopy
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice.abstract_practice import AbstractPractice
-from config import get_configuration, get_storage, save_storage
+from config import get_configuration
 
 
 class Improv(AbstractPractice):
@@ -57,12 +57,9 @@ class Improv(AbstractPractice):
             random_steps.append(random_step)
 
         output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
-        output.helpers = [
-            ExerciseHelper(
-                ExerciseHelperType.BROWSER,
-                {"url": self._get_random_backing_track_url()}
-            )
-        ]
+        flukebox_helper = self._get_flukebox_helper()
+        if flukebox_helper is not None:
+            output.helpers = [flukebox_helper]
         return output
 
     def get_improvs(self, count: int) -> []:
@@ -78,13 +75,13 @@ class Improv(AbstractPractice):
 
         return output
 
-    def _get_random_backing_track_url(self) -> str:
-        storage = get_storage()
-        while True:
-            track_index = random.randint(0, len(self._config["backing_tracks"])-1)
-            track_url = self._config["backing_tracks"][track_index]
-            if track_url == storage["last_improv_url"]:
-                continue
-            storage["last_improv_url"] = track_url
-            save_storage(storage)
-            return track_url
+    def _get_flukebox_helper(self) -> ExerciseHelper:
+        if "flukebox" not in self._config:
+            return None
+        command = "cd " + self._config["flukebox"]["path"] + ";"
+        command += " venv/bin/python3 main.py playlist="
+        command += self._config["flukebox"]["playlist"]
+        output = ExerciseHelper(
+            ExerciseHelperType.OS_COMMAND,
+            {"command": command})
+        return output
