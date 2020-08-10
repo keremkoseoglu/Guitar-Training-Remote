@@ -3,7 +3,7 @@
         "max_steps_per_exercise": 5,
         "min_practice_count": 8,
         "max_practice_count": 12,
-        "must_select": ["Lazy fingers"]
+        "must_select": []
     },
     "instruments": [
         { "type": "P BASS",     "kind": "instrument",   "strings": 4, "octaves": 4, "from": 0, "to": 40},
@@ -40,8 +40,10 @@
 
         "Play out - mel.min.",
         "Play out - chromatic",
+        "Play out - pentatonic",
+
         "Coltrane patterns",
-        "Phrasing",
+        "Phrasing (Enjoy)",
         "Strong beat / note",
         "Double stops",
         "Call & response",
