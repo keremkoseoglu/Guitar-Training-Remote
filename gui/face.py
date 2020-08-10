@@ -7,6 +7,7 @@ from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from factory import some_practices
 from gui.button_row import ButtonRow
+from gui.helper_button_row import HelperButtonRow
 from gui.metronome import Metronome
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 import config
@@ -54,6 +55,9 @@ class Face(GridLayout):
         self._buttons.size_hint = (1, 0.1)
         self._buttons.add_event_listener(self._handle_button_click)
 
+        self._helper_buttons = HelperButtonRow()
+        self._helper_buttons.size_hint = (1, 0.05)
+
         self._metronome = Metronome()
         self._metronome.size_hint = (1, 0.05)
 
@@ -63,6 +67,7 @@ class Face(GridLayout):
         self.add_widget(self._step_main_label)
         self.add_widget(self._step_sub_label)
         self.add_widget(self._stop_watch_label)
+        self.add_widget(self._helper_buttons)
         self.add_widget(self._metronome)
         self.add_widget(self._buttons)
 
@@ -77,7 +82,7 @@ class Face(GridLayout):
     def _handle_button_click(self, button: int):
         self._metronome.reset()
         if button == ButtonRow.BUTTON_NEXT:
-            self._next_step()
+            self.next_step()
         elif button == ButtonRow.BUTTON_RESTART:
             self._restart()
         elif button == ButtonRow.BUTTON_REPICK:
@@ -85,7 +90,8 @@ class Face(GridLayout):
         elif button == ButtonRow.BUTTON_CONFIG:
             config.edit_configuration()
 
-    def _next_step(self):
+    def next_step(self):
+        """ Goes to the next step """
         prev_exercise_index = self._workout.get_exercise_index()
         try:
             next_exer, next_step = self._workout.get_next_step()
@@ -155,11 +161,25 @@ class Face(GridLayout):
                 self._metronome.bpm = helper.params["bpm"]
             elif helper.helper_type == ExerciseHelperType.OS_COMMAND:
                 os.system(helper.params["command"])
+            elif helper.helper_type == ExerciseHelperType.BUTTONS:
+                self._helper_buttons.apply_helper(helper.params)
+
+
+class FaceFactory:
+    """ Singleton for face """
+    _FACE: Face = None
+
+    @staticmethod
+    def get_singleton() -> Face:
+        """ Returns singleton instance """
+        if FaceFactory._FACE is None:
+            FaceFactory._FACE = Face()
+        return FaceFactory._FACE
+
 
 class GtrApp(App):
     """ Main application """
-
     def build(self):
         """ Builds application """
         self.title = _APP_TITLE
-        return Face()
+        return FaceFactory.get_singleton()
