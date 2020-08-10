@@ -28,8 +28,8 @@ class Metronome(GridLayout):
         self._playing = False
         self._click = self._load_bpm_file()
 
-        self._metronome_label = Label()
-        self._metronome_label.text = "Metronome"
+        #self._metronome_label = Label()
+        #self._metronome_label.text = "Metronome"
 
         self._btn_decrease = Button()
         self._btn_decrease.text = "-"
@@ -62,8 +62,8 @@ class Metronome(GridLayout):
         self._btn_increase3.text = ">>"
         self._btn_increase3.bind(on_press=self._btn_increase3_clicked) # pylint: disable=E1101
 
-        self.cols = 9
-        self.add_widget(self._metronome_label)
+        self.cols = 8
+        #self.add_widget(self._metronome_label)
         self.add_widget(self._btn_decrease3)
         self.add_widget(self._btn_decrease2)
         self.add_widget(self._btn_decrease)

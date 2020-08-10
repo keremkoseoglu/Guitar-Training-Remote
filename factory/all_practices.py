@@ -22,14 +22,24 @@ class AllPractices(abstract_factory.AbstractFactory): # pylint: disable=R0903
 
         AllPractices._delete_duplicates(practice_objects)
 
+        if "only_select" in self._config["practice_selection"]:
+            only_select = self._config["practice_selection"]["only_select"]
+            if only_select != "":
+                for practice_object in practice_objects:
+                    if practice_object.__module__ == only_select:
+                        random_step_count = self._get_random_step_count()
+                        produced_exercise = practice_object().get_exercise(
+                            random_step_count,
+                            guitar)
+                        exercises.append(produced_exercise)
+                        output = workout.WorkOut(exercises)
+                        return output
+
         while len(practice_objects) > 0:
             random_practice_index = random.randint(0, len(practice_objects) - 1)
             practice_object = practice_objects[random_practice_index]
 
-            random_step_count = random.randint(
-                1,
-                self._config["practice_selection"]["max_steps_per_exercise"])
-
+            random_step_count = self._get_random_step_count()
             produced_exercise = practice_object().get_exercise(random_step_count, guitar)
             if produced_exercise is not None:
                 exercises.append(produced_exercise)
@@ -37,6 +47,11 @@ class AllPractices(abstract_factory.AbstractFactory): # pylint: disable=R0903
 
         output = workout.WorkOut(exercises)
         return output
+
+    def _get_random_step_count(self):
+        return random.randint(
+            1,
+            self._config["practice_selection"]["max_steps_per_exercise"])
 
     @staticmethod
     def _delete_duplicates(practice_objects):

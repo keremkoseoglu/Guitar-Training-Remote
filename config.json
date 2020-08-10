@@ -3,26 +3,133 @@
         "max_steps_per_exercise": 5,
         "min_practice_count": 8,
         "max_practice_count": 12,
-        "must_select": []
+        "must_select": [],
+        "only_select": ""
     },
     "instruments": [
-        { "type": "P BASS",     "kind": "instrument",   "strings": 4, "octaves": 4, "from": 0, "to": 40},
-        { "type": "J BASS",     "kind": "instrument",   "strings": 4, "octaves": 4, "from": 41, "to": 50},
-        { "type": "ELECTRIC",   "kind": "instrument",   "strings": 6, "octaves": 5, "from": 51, "to": 70},
-        { "type": "VOCAL",      "kind": "voice",        "strings": 0, "octaves": 3, "from": 71, "to": 80},
-        { "type": "ACOUSTIC",   "kind": "instrument",   "strings": 6, "octaves": 5, "from": 81, "to": 90},
-        { "type": "KEYS",       "kind": "instrument",   "strings": 0, "octaves": 4, "from": 91, "to": 100}
+        {
+            "type": "P BASS",
+            "kind": "instrument",
+            "strings": 4,
+            "octaves": 4,
+            "from": 0,
+            "to": 40
+        },
+        {
+            "type": "J BASS",
+            "kind": "instrument",
+            "strings": 4,
+            "octaves": 4,
+            "from": 41,
+            "to": 50
+        },
+        {
+            "type": "ELECTRIC",
+            "kind": "instrument",
+            "strings": 6,
+            "octaves": 5,
+            "from": 51,
+            "to": 70
+        },
+        {
+            "type": "VOCAL",
+            "kind": "voice",
+            "strings": 0,
+            "octaves": 3,
+            "from": 71,
+            "to": 80
+        },
+        {
+            "type": "ACOUSTIC",
+            "kind": "instrument",
+            "strings": 6,
+            "octaves": 5,
+            "from": 81,
+            "to": 90
+        },
+        {
+            "type": "KEYS",
+            "kind": "instrument",
+            "strings": 0,
+            "octaves": 4,
+            "from": 91,
+            "to": 100
+        }
     ],
     "chord_types": [
-        "", "7", "∆7", "9", "#11", "sus4", "-", "-7", "-9", "-b9", "-11", "-13",
-        "Ø", "-∆7", "b9sus4", "∆7#5", "7#11", "7b13", "m7b5", "7alt"],
-    "degrees": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-    "modes": [
-        "Ionian", "Dorian", "Phrygian", "Lydian", "Mixo", "Aeolian",
-        "Locrian", "Jazz minor", "Dorian b2", "Lydian aug", "Lydian dom",
-        "Mixo b6", "Half dim", "Altered", "Dim", "Whole"
+        "",
+        "7",
+        "\u22067",
+        "9",
+        "#11",
+        "sus4",
+        "-",
+        "-7",
+        "-9",
+        "-b9",
+        "-11",
+        "-13",
+        "\u00d8",
+        "-\u22067",
+        "b9sus4",
+        "\u22067#5",
+        "7#11",
+        "7b13",
+        "m7b5",
+        "7alt"
     ],
-    "notes": ["C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"],
+    "degrees": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+    ],
+    "modes": [
+        "Ionian",
+        "Dorian",
+        "Phrygian",
+        "Lydian",
+        "Mixo",
+        "Aeolian",
+        "Locrian",
+        "Jazz minor",
+        "Dorian b2",
+        "Lydian aug",
+        "Lydian dom",
+        "Mixo b6",
+        "Half dim",
+        "Altered",
+        "Dim",
+        "Whole"
+    ],
+    "notes": [
+        "C",
+        "C#",
+        "Db",
+        "D",
+        "D#",
+        "Eb",
+        "E",
+        "F",
+        "F#",
+        "Gb",
+        "G",
+        "G#",
+        "Ab",
+        "A",
+        "A#",
+        "Bb",
+        "B"
+    ],
     "arpeggios": [
         "Do an arpeggio on the given scale",
         "Walk diatonic arpeggios from scale",
@@ -37,24 +144,19 @@
         "Distant notes",
         "Bebop",
         "Emotion graph",
-
         "Play out - mel.min.",
         "Play out - chromatic",
         "Play out - pentatonic",
-
         "Coltrane patterns",
         "Phrasing (Enjoy)",
         "Strong beat / note",
         "Double stops",
         "Call & response",
-
         "Dom7 phrygian",
         "Dom7 altered",
         "Dom7 3rd Dim",
-
         "Play the silence",
         "Whole tone",
-
         "Accents",
         "Emphasize chord tones",
         "Emphasize chord changes",
@@ -80,18 +182,18 @@
         "3-",
         "4-"
     ],
-    "bpm_range": [40, 160],
+    "bpm_range": [
+        40,
+        160
+    ],
     "default_bpm": 90,
     "one_liners": [
         "Old licks",
         "New lick",
         "Serve the song",
-
         "Transcribe solo",
         "Transcribe groove",
-
         "New style",
-        "YouTube lesson",
         "Learn a new song you like",
         "Random mute metronome"
     ],
@@ -108,5 +210,35 @@
         "playlist": "backing"
     },
     "max_accent_notes": 4,
-    "max_left_permutation": 2
+    "max_left_permutation": 2,
+    "online_lessons": [
+        {
+            "name": "Herbie Hancock",
+            "url": "http://www.masterclass.com"
+        },
+        {
+            "name": "Open Studio - Samba",
+            "url": "https://www.openstudiojazz.com/courses/samba-pack/204084-lessons/594982-samba-solo-piano-helio-alves"
+        },
+        {
+            "name": "NeoSkola - Alp Ers\u00f6nmez",
+            "url": "https://www.neoskola.com/kategoriler/muzik"
+        },
+        {
+            "name": "SonsuzOda - D\u00fczenleme",
+            "url": "http://www.sonsuzoda.com"
+        },
+        {
+            "name": "Jazz Guitar Channel",
+            "url": "https://www.youtube.com/channel/UCJys8u5V-Yuecjtidv9wfYA/videos"
+        },
+        {
+            "name": "Janek - Transacription",
+            "url": "https://www.janeksbassstudio.com/courses/the-transcription-vault"
+        },
+        {
+            "name": "Open Studio Jazz",
+            "url": "openstudiojazz.com"
+        }
+    ]
 }

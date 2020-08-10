@@ -28,11 +28,18 @@ def get_storage() -> dict:
         output = json.load(storage_file)
     return output
 
+def save_configuration():
+    """ Saves configuration to the disk """
+    global _CONFIGURATION
+    file_path = _get_config_path()
+    with open(file_path, "w") as config_file:
+        json.dump(_CONFIGURATION, config_file)
+
 def save_storage(storage: dict):
     """ Writes storage to disk """
     file_path = _get_storage_path()
     with open(file_path, "w") as storage_file:
-        json.dump(storage, storage_file)
+        json.dump(storage, storage_file, indent=4)
 
 def _get_config_path() -> str:
     return _get_path("config.json")

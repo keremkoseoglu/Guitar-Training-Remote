@@ -7,6 +7,7 @@ class ExerciseHelperType(Enum):
     BROWSER = 1
     METRONOME = 2
     OS_COMMAND = 3
+    BUTTONS = 4
 
 
 class ExerciseHelper:
