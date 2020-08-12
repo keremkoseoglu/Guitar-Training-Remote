@@ -8,19 +8,19 @@
     },
     "instruments": [
         {
-            "type": "P BASS",
+            "type": "G&L",
             "kind": "instrument",
             "strings": 4,
             "octaves": 4,
             "from": 0,
-            "to": 40
+            "to": 25
         },
         {
-            "type": "J BASS",
+            "type": "P-BASS",
             "kind": "instrument",
             "strings": 4,
             "octaves": 4,
-            "from": 41,
+            "from": 26,
             "to": 50
         },
         {
