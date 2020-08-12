@@ -7,7 +7,7 @@ class AnyNoteAnyChord(abstract_practice.AbstractPractice):
     """ Any note any chord class """
 
     _TITLE = "Any note any chord"
-    _SUBTITLE = "Which X chord can contain Y?"
+    _SUBTITLE = "Which X chord can contain Y?\r\n(play them too)"
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random chord exercises """
