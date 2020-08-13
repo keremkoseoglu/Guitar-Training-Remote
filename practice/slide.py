@@ -2,6 +2,7 @@
 from model import exercise
 from practice import abstract_practice
 from practice.notes_on_fretboard import NotesOnFretboard
+from practice.practice_category import PracticeCategory
 
 
 class Slide(abstract_practice.AbstractPractice):
@@ -9,6 +10,11 @@ class Slide(abstract_practice.AbstractPractice):
 
     _TITLE = "Slide guitar"
     _SUBTITLE = "Play the note(s) on each string with slide"
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.LEFT_HAND
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns exercise """

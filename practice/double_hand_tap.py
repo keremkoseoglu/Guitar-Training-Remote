@@ -10,6 +10,7 @@ from practice.notes_on_fretboard import NotesOnFretboard
 from practice.notes_on_strings import NotesOnStrings
 from practice.scale_dexterity import ScaleDexterity
 from practice.scale_on_chord import ScaleOnChord
+from practice.practice_category import PracticeCategory
 
 
 class SupportPractice(Enum):
@@ -26,6 +27,11 @@ class SupportPractice(Enum):
 class DoubleHandTap(abstract_practice.AbstractPractice):
     """ Double hand tap exercise """
     _TITLE = "Double hand tap"
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.RIGHT_HAND
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns double hand tap exercise """

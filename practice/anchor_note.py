@@ -1,8 +1,8 @@
 """ Anchor note """
 import random
 from model import exercise, exercise_step
-
 from practice import abstract_practice
+from practice.practice_category import PracticeCategory
 from music_theory import chord, mode, note, scale
 
 
@@ -11,6 +11,11 @@ class AnchorNote(abstract_practice.AbstractPractice):
 
     _TITLE = "Anchor Note"
     _SUBTITLE = "Anchor note & use over..."
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.DEXTERITY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns anchor note exercise """
@@ -43,5 +48,10 @@ class AnchorNote(abstract_practice.AbstractPractice):
                 random_step = exercise_step.ExerciseStep(random_note, stuff_txt)
                 random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            self._SUBTITLE,
+            random_steps,
+            practice_category=self.category)
+
         return output

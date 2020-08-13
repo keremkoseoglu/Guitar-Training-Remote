@@ -1,8 +1,8 @@
 """ Degree memo """
 from model import exercise, exercise_step
-
 from music_theory import chord, degree
 from practice import abstract_practice
+from practice.practice_category import PracticeCategory
 
 
 class DegreeMemo(abstract_practice.AbstractPractice):
@@ -10,6 +10,11 @@ class DegreeMemo(abstract_practice.AbstractPractice):
 
     _TITLE = "Degree memo"
     _SUBTITLE = "Tell the following note"
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.THEORY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns degree memo exercises """
@@ -23,5 +28,10 @@ class DegreeMemo(abstract_practice.AbstractPractice):
                 "follow by playing")
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            self._SUBTITLE,
+            random_steps,
+            practice_category=self.category)
+
         return output

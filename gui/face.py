@@ -5,7 +5,7 @@ import os
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
-from factory import some_practices
+from factory.category_balance import CategoryBalance
 from gui.button_row import ButtonRow
 from gui.helper_button_row import HelperButtonRow
 from gui.metronome import Metronome
@@ -137,7 +137,7 @@ class Face(GridLayout):
         self._stop_watch_label.text = status_text
 
     def _restart(self, repick=False):
-        practice_obj = some_practices.SomePractices()
+        practice_obj = CategoryBalance()
         if self._guitar_selected and (not repick):
             practice_obj.set_select_guitar(False)
             self._workout = practice_obj.get_workout(self._guitar)

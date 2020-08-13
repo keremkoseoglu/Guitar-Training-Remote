@@ -3,6 +3,7 @@ import random
 from model import exercise, exercise_step
 from music_theory import note
 from practice import abstract_practice
+from practice.practice_category import PracticeCategory
 
 
 class NotesOnFretboard(abstract_practice.AbstractPractice):
@@ -10,6 +11,11 @@ class NotesOnFretboard(abstract_practice.AbstractPractice):
 
     _MAX_NOTE_PER_STEP = 3
     _TITLE = "Single note memorization"
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.DEXTERITY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns exercise """
@@ -36,5 +42,10 @@ class NotesOnFretboard(abstract_practice.AbstractPractice):
             random_step = exercise_step.ExerciseStep(step_text)
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, subtitle, random_steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            subtitle,
+            random_steps,
+            practice_category=self.category)
+
         return output

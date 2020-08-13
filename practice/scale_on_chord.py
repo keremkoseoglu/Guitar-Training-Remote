@@ -1,9 +1,9 @@
 """ Scale on chord """
 import random
 from model import exercise, exercise_step
-
 from music_theory import chord
 from practice import abstract_practice
+from practice.practice_category import PracticeCategory
 
 
 class ScaleOnChord(abstract_practice.AbstractPractice):
@@ -12,6 +12,11 @@ class ScaleOnChord(abstract_practice.AbstractPractice):
     _TITLE = "Scale on chord"
     _SUBTITLE = "a scale on top of chord"
     _PLAY_CHOICE = ["Play in", "Play out"]
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.DEXTERITY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random scale on chord exercises """
@@ -28,7 +33,11 @@ class ScaleOnChord(abstract_practice.AbstractPractice):
 
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, ScaleOnChord._get_subtitle(), random_steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            ScaleOnChord._get_subtitle(),
+            random_steps,
+            practice_category=self.category)
         return output
 
     @staticmethod

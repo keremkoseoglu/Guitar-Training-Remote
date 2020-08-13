@@ -13,6 +13,7 @@ from practice.notes_on_strings import NotesOnStrings
 from practice.scale_degree_sequence import ScaleDegreeSequence
 from practice.scale_dexterity import ScaleDexterity
 from practice.scale_on_chord import ScaleOnChord
+from practice.practice_category import PracticeCategory
 
 
 class SupportPractice(Enum):
@@ -32,6 +33,11 @@ class SupportPractice(Enum):
 class Pick(abstract_practice.AbstractPractice):
     """ Pick exercise """
     _TITLE = "Pick"
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.RIGHT_HAND
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns pick exercises """
