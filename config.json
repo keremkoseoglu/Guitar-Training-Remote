@@ -4,7 +4,7 @@
         "min_practice_count": 8,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "practice.any_note_any_chord"
+        "only_select": ""
     },
     "instruments": [
         {
@@ -215,10 +215,6 @@
         {
             "name": "Herbie Hancock",
             "url": "http://www.masterclass.com"
-        },
-        {
-            "name": "Open Studio - Samba",
-            "url": "https://www.openstudiojazz.com/courses/samba-pack/204084-lessons/594982-samba-solo-piano-helio-alves"
         },
         {
             "name": "NeoSkola - Alp Ers\u00f6nmez",
