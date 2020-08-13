@@ -14,6 +14,11 @@ class WorkOut:
         self._step_index = 0
         self.guitar = {}
 
+    @property
+    def exercises(self) -> []:
+        """ Exercises in workout """
+        return self._exercises
+
     def add_guitar(self, guitar: dict):
         """ Adds a new instrument """
         guitar_step = ExerciseStep(guitar["type"])

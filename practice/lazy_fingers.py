@@ -4,6 +4,7 @@ This module contains exercises for left hand fingers 2, 3, 4
 from random import randint
 from model import exercise, exercise_step
 from practice.abstract_practice import AbstractPractice
+from practice.practice_category import PracticeCategory
 from body.hand import Hand
 
 
@@ -12,6 +13,11 @@ class LazyFingers(AbstractPractice):
 
     _TITLE = "Lazy fingers"
     _SUBTITLE = "Work your lazy fingers"
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.LEFT_HAND
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns lazy fingers exercises """
@@ -54,5 +60,10 @@ class LazyFingers(AbstractPractice):
 
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            self._SUBTITLE,
+            random_steps,
+            practice_category=self.category)
+
         return output

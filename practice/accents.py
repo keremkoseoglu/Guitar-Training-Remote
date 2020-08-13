@@ -12,6 +12,7 @@ from practice.scale_degree_sequence import ScaleDegreeSequence
 from practice.scale_dexterity import ScaleDexterity
 from practice.arpeggio import Arpeggio
 from practice.left_permutation import LeftFingerPermutations
+from practice.practice_category import PracticeCategory
 from config import get_configuration
 
 
@@ -43,6 +44,11 @@ class Accents(abstract_practice.AbstractPractice):
         self._config = get_configuration()
         self._accents = []
         self._build_accents()
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.RIGHT_HAND
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns accent exercise """

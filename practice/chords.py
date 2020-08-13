@@ -2,6 +2,7 @@
 import random
 from model import exercise, exercise_step
 from practice import abstract_practice
+from practice.practice_category import PracticeCategory
 from music_theory import chord
 
 
@@ -10,6 +11,11 @@ class Chords(abstract_practice.AbstractPractice):
     _TITLE = "Chords"
     _SUBTITLE = "Play the following chords"
     _POSITIONS = [1, 3, 5]
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.DEXTERITY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random chord exercises """
@@ -34,7 +40,12 @@ class Chords(abstract_practice.AbstractPractice):
 
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            self._SUBTITLE,
+            random_steps,
+            practice_category=self.category)
+
         return output
 
     @staticmethod

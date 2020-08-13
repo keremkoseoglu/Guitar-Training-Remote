@@ -3,6 +3,7 @@ import random
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice import abstract_practice
+from practice.practice_category import PracticeCategory
 from config import get_configuration
 
 
@@ -13,6 +14,11 @@ class Metronome(abstract_practice.AbstractPractice):
 
     def __init__(self):
         self._config = get_configuration()
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.PERFORMANCE
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns metronome exercises """
@@ -35,7 +41,12 @@ class Metronome(abstract_practice.AbstractPractice):
             )]
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, "Run the following exercise", random_steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            "Run the following exercise",
+            random_steps,
+            practice_category=self.category)
+
         return output
 
     def _get_random_bpm(self) -> int:

@@ -5,6 +5,7 @@ from copy import copy
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice.abstract_practice import AbstractPractice
+from practice.practice_category import PracticeCategory
 from config import get_configuration, save_configuration
 from gui.face import FaceFactory
 
@@ -21,6 +22,11 @@ class OnlineLesson(AbstractPractice):
     def __init__(self):
         self._config = get_configuration()
 
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.EDUCATION
+
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random online lesson """
         if guitar["kind"] != "instrument":
@@ -33,7 +39,11 @@ class OnlineLesson(AbstractPractice):
         lesson = self._current_lesson
         step = exercise_step.ExerciseStep(lesson["name"], lesson["url"])
         steps = [step]
-        output = exercise.Exercise(self._TITLE, self._SUBTITLE, steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            self._SUBTITLE,
+            steps,
+            practice_category=self.category)
         output.helpers = self._produce_helpers()
         return output
 

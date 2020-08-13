@@ -1,6 +1,7 @@
 """ Any note can be used with any chord """
 from model import exercise, exercise_step
 from practice import abstract_practice
+from practice.practice_category import PracticeCategory
 from music_theory.note import Note
 
 class AnyNoteAnyChord(abstract_practice.AbstractPractice):
@@ -8,6 +9,11 @@ class AnyNoteAnyChord(abstract_practice.AbstractPractice):
 
     _TITLE = "Any note any chord"
     _SUBTITLE = "Which X chord can contain Y?\r\n(play them too)"
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.THEORY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random chord exercises """
@@ -32,6 +38,11 @@ class AnyNoteAnyChord(abstract_practice.AbstractPractice):
                 "Notes: " + melody_notes_txt)
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            self._SUBTITLE,
+            random_steps,
+            practice_category=self.category)
+
         return output
             

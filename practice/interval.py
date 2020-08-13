@@ -3,6 +3,7 @@ import random
 from model import exercise, exercise_step
 from music_theory import degree, mode
 from practice import abstract_practice
+from practice.practice_category import PracticeCategory
 
 
 class Intervals(abstract_practice.AbstractPractice):
@@ -11,6 +12,11 @@ class Intervals(abstract_practice.AbstractPractice):
     _DIRECTIONS = ["Up", "Down"]
     _TITLE = "Interval practice"
     _SUBTITLE = "Play shifting intervals"
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.DEXTERITY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random interval exercises """
@@ -44,7 +50,12 @@ class Intervals(abstract_practice.AbstractPractice):
             random_step = exercise_step.ExerciseStep(mode_text, sub_text=step_text)
             random_steps.append(random_step)
 
-        output = exercise.Exercise(self._TITLE, self._SUBTITLE, random_steps)
+        output = exercise.Exercise(
+            self._TITLE,
+            self._SUBTITLE,
+            random_steps,
+            practice_category=self.category)
+
         return output
 
     def _get_direction(self) -> str:

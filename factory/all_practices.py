@@ -18,7 +18,14 @@ class AllPractices(abstract_factory.AbstractFactory): # pylint: disable=R0903
         practice_objects = Inspector.get_classes_in_container(
             Container(["practice"]),
             ["abstract"],
-            ["AbstractPractice", "Position", "Guitar", "SupportPractice", "Accent"])
+            [
+                "AbstractPractice",
+                "Position",
+                "Guitar",
+                "SupportPractice",
+                "Accent",
+                "PracticeCategory"
+            ])
 
         AllPractices._delete_duplicates(practice_objects)
 

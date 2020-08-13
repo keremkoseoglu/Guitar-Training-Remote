@@ -3,6 +3,7 @@ import random
 from model import exercise, exercise_step
 from music_theory import scale
 from practice import abstract_practice
+from practice.practice_category import PracticeCategory
 
 
 class ScaleDexterity(abstract_practice.AbstractPractice):
@@ -10,6 +11,11 @@ class ScaleDexterity(abstract_practice.AbstractPractice):
 
     _TITLE = "Scale dexterity"
     _SUBTITLE = "Play a scale"
+
+    @property
+    def category(self) -> PracticeCategory:
+        """ Returns the category of the practice """
+        return PracticeCategory.DEXTERITY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns exercise """
@@ -32,7 +38,7 @@ class ScaleDexterity(abstract_practice.AbstractPractice):
 
         output = exercise.Exercise(
             self._TITLE, ScaleDexterity._get_scale_exercise(guitar),
-            random_steps)
+            random_steps, practice_category=self.category)
         return output
 
     @staticmethod
