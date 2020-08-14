@@ -28,3 +28,7 @@ class Chord:
             output.append(random_result)
 
         return output
+
+    def get_random_chord(self) -> []:
+        """ Returns a random chord """
+        return self.get_random_chords(1)[0]
