@@ -189,10 +189,7 @@
     "default_bpm": 90,
     "one_liners": [
         "Old licks",
-        "New lick",
         "Serve the song",
-        "Transcribe solo",
-        "Transcribe groove",
         "New style",
         "Learn a new song you like",
         "Random mute metronome"
@@ -235,6 +232,52 @@
         {
             "name": "Open Studio Jazz",
             "url": "openstudiojazz.com"
+        },
+        {
+            "name": "Jerry Bergonzi - Creating a Jazz Vocabulary",
+            "url": ""
+        }
+    ],
+    "transcriptions": [
+        {
+            "name": "The Chicken",
+            "url": "https://www.youtube.com/watch?v=ST9--HWOTA8"
+        },
+        {
+            "name": "bach çello suit no:2 (selka)",
+            "url": ""
+        },
+        {
+            "name": "rhytm changes",
+            "url": "https://www.youtube.com/watch?v=BeJOQ4BQLY0"
+        },
+        {
+            "name": "almee nolte rhytm changes",
+            "url": "https://youtu.be/ip0CShoHWPk?t=261"
+        },
+        {
+            "name": "beato rhythm changes",
+            "url": "https://www.youtube.com/watch?v=oc4tVxAiEjs"
+        },
+        {
+            "name": "Charlie Parker - Perhaps",
+            "url": ""
+        },
+        {
+            "name": "We Like It Here",
+            "url": "https://www.youtube.com/watch?v=L_XJ_s5IsQc"
+        },
+        {
+            "name": "Cory Henry - Lingus",
+            "url": ""
+        },
+        {
+            "name": "Teen Town",
+            "url": "https://youtu.be/0YFNT-gYxtk?t=789"
+        },
+        {
+            "name": "Vulfpeck - Dean Town",
+            "url": ""
         }
     ]
 }
