@@ -24,7 +24,8 @@ class AllPractices(abstract_factory.AbstractFactory): # pylint: disable=R0903
                 "Guitar",
                 "SupportPractice",
                 "Accent",
-                "PracticeCategory"
+                "PracticeCategory",
+                "PracticeCategoryGroup"
             ])
 
         AllPractices._delete_duplicates(practice_objects)
