@@ -106,6 +106,7 @@ class Face(GridLayout):
             self._step_sub_label.text = "Now play freestyle for fun!"
         else:
             if prev_exercise_index != self._workout.get_exercise_index():
+                self._helper_buttons.reset_buttons()
                 self._paint_exercise()
             self._paint_exercise_step()
             self._refresh_status_text()

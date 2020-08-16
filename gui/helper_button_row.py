@@ -27,6 +27,7 @@ class HelperButtonRow(GridLayout):
     def apply_helper(self, params: {}):
         """ Applies button helper """
         self._helper_params = params
+        self.reset_buttons()
         button_index = -1
         for param_button in self._helper_params["buttons"]:
             button_index += 1
@@ -35,7 +36,8 @@ class HelperButtonRow(GridLayout):
             gui_button = self._buttons[button_index]
             gui_button.text = param_button["text"]
 
-    def _reset_buttons(self):
+    def reset_buttons(self):
+        """ Reset buttons """
         for button in self._buttons:
             button.text = ""
 
