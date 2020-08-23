@@ -12,6 +12,8 @@ class LeftFingerPermutations(AbstractPractice):
     _TITLE = "Fret finger permutations"
     _SUBTITLE = "Wander strings with the following"
     _AT_LEAST = 1
+    _LOW_FRET = 1
+    _HIGH_FRET = 12
 
     def __init__(self):
         self._config = get_configuration()
@@ -42,8 +44,9 @@ class LeftFingerPermutations(AbstractPractice):
                     permutation_text += " |"
                 for finger in permutation:
                     permutation_text += " " + str(finger.number)
+            first_fret = LeftFingerPermutations._get_random_fret()
             random_step = exercise_step.ExerciseStep(
-                "Follow",
+                "Fret " + str(first_fret),
                 sub_text=permutation_text)
             random_steps.append(random_step)
 
@@ -54,3 +57,9 @@ class LeftFingerPermutations(AbstractPractice):
             practice_category=self.category)
 
         return output
+
+    @staticmethod
+    def _get_random_fret() -> int:
+        return randint(
+            LeftFingerPermutations._LOW_FRET,
+            LeftFingerPermutations._HIGH_FRET)
