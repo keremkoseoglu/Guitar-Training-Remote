@@ -2,6 +2,7 @@
 import webbrowser
 from typing import List
 import os
+import subprocess
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
@@ -76,6 +77,7 @@ class Face(GridLayout):
         self._workout = None
         self._exercise_step_tick_count = 0
         self._guitar_selected = False
+        self._open_guitar_apps = False
         self._guitar = {}
         self._restart()
 
@@ -110,6 +112,11 @@ class Face(GridLayout):
                 self._paint_exercise()
             self._paint_exercise_step()
             self._refresh_status_text()
+
+        if self._open_guitar_apps:
+            self._open_guitar_apps = False
+            for app in self._guitar["apps"]:
+                subprocess.call(["open", app])
 
     def _paint_exercise(self):
         exe = self._workout.get_current_exercise()
@@ -146,6 +153,7 @@ class Face(GridLayout):
             practice_obj.set_select_guitar(True)
             self._guitar_selected = True
             self._workout = practice_obj.get_workout()
+            self._open_guitar_apps = True
 
         self._exercise_step_tick_count = -1
         self._paint_exercise()

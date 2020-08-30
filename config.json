@@ -13,47 +13,53 @@
             "strings": 4,
             "octaves": 4,
             "from": 0,
-            "to": 25
+            "to": 25,
+            "apps": []
         },
         {
-            "type": "P-BASS",
+            "type": "P-Bass",
             "kind": "instrument",
             "strings": 4,
             "octaves": 4,
             "from": 26,
-            "to": 50
+            "to": 50,
+            "apps": []
         },
         {
-            "type": "ELECTRIC",
+            "type": "Electric",
             "kind": "instrument",
             "strings": 6,
             "octaves": 5,
             "from": 51,
-            "to": 70
+            "to": 70,
+            "apps": []
         },
         {
-            "type": "VOCAL",
+            "type": "Vocal",
             "kind": "voice",
             "strings": 0,
             "octaves": 3,
             "from": 71,
-            "to": 80
+            "to": 80,
+            "apps": []
         },
         {
-            "type": "ACOUSTIC",
+            "type": "Acoustic",
             "kind": "instrument",
             "strings": 6,
             "octaves": 5,
             "from": 81,
-            "to": 90
+            "to": 90,
+            "apps": []
         },
         {
-            "type": "KEYS",
+            "type": "Keys",
             "kind": "instrument",
             "strings": 0,
             "octaves": 4,
             "from": 91,
-            "to": 100
+            "to": 100,
+            "apps": ["/Applications/MainStage 3.app"]
         }
     ],
     "chord_types": [
@@ -210,7 +216,15 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "SonsuzOda - D\u00fczenleme",
+            "name": "SonsuzOda - \u015eark\u0131 Yazmak",
+            "url": "http://www.sonsuzoda.com"
+        },
+        {
+            "name": "SonsuzOda - M\u00fczik Prod\u00fcksiyonu",
+            "url": "http://www.sonsuzoda.com"
+        },
+        {
+            "name": "SonsuzOda - Reklam M\u00fczi\u011fi",
             "url": "http://www.sonsuzoda.com"
         },
         {
@@ -250,6 +264,10 @@
         {
             "name": "rhytm changes",
             "url": "https://www.youtube.com/watch?v=BeJOQ4BQLY0"
+        },
+        {
+            "name": "L2500 slap",
+            "url": "https://www.youtube.com/watch?v=NOZDnX5Dm20"
         },
         {
             "name": "almee nolte rhytm changes",
