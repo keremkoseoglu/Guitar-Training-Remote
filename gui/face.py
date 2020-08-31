@@ -118,6 +118,10 @@ class Face(GridLayout):
             for app in self._guitar["apps"]:
                 subprocess.call(["open", app])
 
+    def set_step_sub_label_text(self, text: str):
+        """ Alt metni günceller """
+        self._step_sub_label.text = text
+
     def _paint_exercise(self):
         exe = self._workout.get_current_exercise()
         self._exercise_main_label.text = exe.title

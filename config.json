@@ -59,7 +59,9 @@
             "octaves": 4,
             "from": 91,
             "to": 100,
-            "apps": ["/Applications/MainStage 3.app"]
+            "apps": [
+                "/Applications/MainStage 3.app"
+            ]
         }
     ],
     "chord_types": [
@@ -217,7 +219,7 @@
     "online_lessons": [
         {
             "name": "SonsuzOda - \u015eark\u0131 Yazmak",
-            "url": "http://www.sonsuzoda.com"
+            "url": "https://sonsuzoda.com/lesson/harun-tekin-temel-kavramlar"
         },
         {
             "name": "SonsuzOda - M\u00fczik Prod\u00fcksiyonu",
@@ -226,6 +228,10 @@
         {
             "name": "SonsuzOda - Reklam M\u00fczi\u011fi",
             "url": "http://www.sonsuzoda.com"
+        },
+        {
+            "name": "My YouTube bookmarks",
+            "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
         },
         {
             "name": "Jazz Guitar Channel",

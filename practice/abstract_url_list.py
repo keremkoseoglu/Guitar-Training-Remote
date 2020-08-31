@@ -2,6 +2,7 @@
 from typing import List
 import webbrowser
 from copy import copy
+import pyperclip
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice.abstract_practice import AbstractPractice
@@ -18,6 +19,7 @@ class AbstractUrlList(AbstractPractice):
     _BUTTON_START = "start"
     _BUTTON_REMOVE = "remove"
     _BUTTON_REQUEUE = "requeue"
+    _BUTTON_PASTE_URL = "paste"
 
     def __init__(self):
         self._config = get_configuration()
@@ -79,6 +81,13 @@ class AbstractUrlList(AbstractPractice):
             save_configuration()
             face.next_step()
 
+        if args["button"] == AbstractUrlList._BUTTON_PASTE_URL:
+            new_url = pyperclip.paste()
+            if new_url != "":
+                self._config[self._config_section][self._current_lesson_index]["url"] = new_url
+                save_configuration()
+                face.set_step_sub_label_text(new_url)
+
     @property
     def _current_lesson(self) -> dict:
         return self._config[self._config_section][self._current_lesson_index]
@@ -105,6 +114,11 @@ class AbstractUrlList(AbstractPractice):
                     "text": "Requeue",
                     "callback": self.helper_clicked,
                     "args": {"button": AbstractUrlList._BUTTON_REQUEUE}
+                },
+                {
+                    "text": "Paste bookmark",
+                    "callback": self.helper_clicked,
+                    "args": {"button": AbstractUrlList._BUTTON_PASTE_URL}
                 }
             ]}
         )
