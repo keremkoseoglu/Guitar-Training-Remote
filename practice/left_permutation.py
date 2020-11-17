@@ -12,7 +12,7 @@ class LeftFingerPermutations(AbstractPractice):
     _TITLE = "Fret finger permutations"
     _SUBTITLE = "Wander strings with the following"
     _AT_LEAST = 1
-    _LOW_FRET = 1
+    _LOW_FRET = 4
     _HIGH_FRET = 12
 
     def __init__(self):
