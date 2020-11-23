@@ -3,8 +3,10 @@ This module contains exercises for left hand fingers 2, 3, 4
 """
 from random import randint
 from model import exercise, exercise_step
+from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
+from practice.metronome import Metronome
 from body.hand import Hand
 
 
@@ -24,11 +26,12 @@ class LazyFingers(AbstractPractice):
         if guitar["kind"] != "instrument":
             return None
 
-        random_steps = []
-
         string_count = guitar["strings"]
         if string_count <= 0:
             return None
+
+        metronome = Metronome()
+        random_steps = []
 
         for quantity_pos in range(quantity): # pylint: disable=W0612
             random_finger_count = randint(2, 4)
@@ -53,10 +56,15 @@ class LazyFingers(AbstractPractice):
                 pattern += "S" + str(strings[pattern_index])
                 pattern += "  " + fingers[pattern_index].name
 
+            random_bpm = metronome.get_random_bpm()
+
             random_step = exercise_step.ExerciseStep(
-                "Follow",
-                pattern
-            )
+                str(random_bpm) + " bpm",
+                pattern)
+
+            random_step.helpers = [ExerciseHelper(
+                ExerciseHelperType.METRONOME,
+                {"bpm": random_bpm})]
 
             random_steps.append(random_step)
 

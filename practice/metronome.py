@@ -26,7 +26,7 @@ class Metronome(abstract_practice.AbstractPractice):
 
         while len(random_steps) < quantity:
             random_exercise = self._get_random_metronome_exercise()
-            random_bpm = self._get_random_bpm()
+            random_bpm = self.get_random_bpm()
             if len(random_exercise) <= 5 and \
                     (random_exercise[:1] == "1" or
                      random_exercise[:1] == "2" or
@@ -49,7 +49,8 @@ class Metronome(abstract_practice.AbstractPractice):
 
         return output
 
-    def _get_random_bpm(self) -> int:
+    def get_random_bpm(self) -> int:
+        """ Returns a random BPM value """
         return random.randint(self._config["bpm_range"][0], self._config["bpm_range"][1])
 
     def _get_random_metronome_exercise(self) -> str:

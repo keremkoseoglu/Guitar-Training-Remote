@@ -1,8 +1,10 @@
 """ Left hand permutations module """
 from random import randint
 from model import exercise, exercise_step
+from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
+from practice.metronome import Metronome
 from body.hand import Hand
 from config import get_configuration
 
@@ -31,6 +33,7 @@ class LeftFingerPermutations(AbstractPractice):
         if string_count <= 0:
             return None
 
+        metronome = Metronome()
         random_steps = []
         hand = Hand()
         while len(random_steps) < quantity:
@@ -45,9 +48,15 @@ class LeftFingerPermutations(AbstractPractice):
                 for finger in permutation:
                     permutation_text += " " + str(finger.number)
             first_fret = LeftFingerPermutations._get_random_fret()
+            random_bpm = metronome.get_random_bpm()
             random_step = exercise_step.ExerciseStep(
-                "Fret " + str(first_fret),
+                "Fret " + str(first_fret) + " (" + str(random_bpm) + " bpm)",
                 sub_text=permutation_text)
+
+            random_step.helpers = [ExerciseHelper(
+                ExerciseHelperType.METRONOME,
+                {"bpm": random_bpm})]
+
             random_steps.append(random_step)
 
         output = exercise.Exercise(
