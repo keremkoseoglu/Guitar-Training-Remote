@@ -41,9 +41,14 @@ class AbstractUrlList(AbstractPractice):
     def _config_section(self) -> str:
         return ""
 
+    def _is_guitar_eligible(self, guitar: dict) -> bool:
+        return guitar is not None
+
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random online lesson """
         if guitar["kind"] != "instrument":
+            return None
+        if not self._is_guitar_eligible(guitar):
             return None
         if self._config_section not in self._config:
             return None

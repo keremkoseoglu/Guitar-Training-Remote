@@ -17,12 +17,12 @@
             "apps": []
         },
         {
-            "type": "Electric",
+            "type": "Guitar",
             "kind": "instrument",
             "strings": 6,
             "octaves": 5,
             "from": 51,
-            "to": 70,
+            "to": 80,
             "apps": []
         },
         {
@@ -30,15 +30,6 @@
             "kind": "voice",
             "strings": 0,
             "octaves": 3,
-            "from": 71,
-            "to": 80,
-            "apps": []
-        },
-        {
-            "type": "Acoustic",
-            "kind": "instrument",
-            "strings": 6,
-            "octaves": 5,
             "from": 81,
             "to": 90,
             "apps": []
@@ -208,26 +199,25 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "YouTube bookmarks",
-            "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
-        },
-        {
-            "name": "Jazz Guitar Channel",
-            "url": "https://www.youtube.com/channel/UCJys8u5V-Yuecjtidv9wfYA/videos"
-        },
-        {
-            "name": "YouTube funk bass",
-            "url": "https://www.youtube.com/results?search_query=funk+bass+(lesson+OR+tutorial)"
-        },
-        {
             "name": "YouTube mix mastering",
             "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
+        },
+        {
+            "name": "YouTube bookmarks",
+            "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
         }
     ],
-    "transcriptions": [
+    "transcriptions": [],
+    "bass_accompany": [
         {
-            "name": "Lax",
-            "url": "https://www.youtube.com/watch?v=NzxW8nxgENA"
+            "name": "Bass accompany",
+            "url": "https://www.youtube.com/results?search_query=backing+track+no+bass"
+        }
+    ],
+    "guitar_accompany": [
+        {
+            "name": "Guitar accompany",
+            "url": "https://www.youtube.com/results?search_query=backing+track+no+guitar"
         }
     ]
 }
