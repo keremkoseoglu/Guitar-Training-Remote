@@ -1,5 +1,6 @@
 """ Exercise helper module """
 from enum import Enum
+from config import get_configuration
 
 class ExerciseHelperType(Enum):
     """ Defines an exercise helper type
@@ -18,3 +19,17 @@ class ExerciseHelper:
             self.params = {}
         else:
             self.params = params
+
+
+def get_flukebox_helper(playlist: str) -> ExerciseHelper:
+    """ Returns a FlukeBox helper Exercise """
+    config = get_configuration()
+    if "flukebox" not in config:
+        return None
+    command = "cd " + config["flukebox"]["path"] + ";"
+    command += " venv/bin/python3 main.py playlist="
+    command += config["flukebox"][playlist]
+    output = ExerciseHelper(
+        ExerciseHelperType.OS_COMMAND,
+        {"command": command})
+    return output

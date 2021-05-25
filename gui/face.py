@@ -10,12 +10,10 @@ from factory.category_balance import CategoryBalance
 from gui.button_row import ButtonRow
 from gui.helper_button_row import HelperButtonRow
 from gui.metronome import Metronome
-from model.exercise_helper import ExerciseHelperType, ExerciseHelper
+from model.exercise_helper import ExerciseHelperType, ExerciseHelper, get_flukebox_helper
 import config
 
-
 _APP_TITLE = "Guitar Training Remote"
-
 
 class Face(GridLayout):
     """ Main form """
@@ -106,6 +104,11 @@ class Face(GridLayout):
             self._exercise_sub_label.text = ""
             self._step_main_label.text = "Finished!"
             self._step_sub_label.text = "Now play freestyle for fun!"
+
+            flukebox = get_flukebox_helper("final_playlist")
+            if flukebox is not None:
+                self._process_helpers([flukebox])
+
         else:
             if prev_exercise_index != self._workout.get_exercise_index():
                 self._helper_buttons.reset_buttons()

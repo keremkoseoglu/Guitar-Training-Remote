@@ -2,7 +2,7 @@
 import random
 from copy import deepcopy
 from model import exercise, exercise_step
-from model.exercise_helper import ExerciseHelperType, ExerciseHelper
+from model.exercise_helper import get_flukebox_helper
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from config import get_configuration
@@ -68,7 +68,7 @@ class Improv(AbstractPractice):
             random_steps,
             practice_category=self.category)
 
-        flukebox_helper = self._get_flukebox_helper()
+        flukebox_helper = get_flukebox_helper("backing_playlist")
         if flukebox_helper is not None:
             output.helpers = [flukebox_helper]
         return output
@@ -84,15 +84,4 @@ class Improv(AbstractPractice):
             i = random.randint(0, len(improvs) - 1)
             output.append(improvs.pop(i))
 
-        return output
-
-    def _get_flukebox_helper(self) -> ExerciseHelper:
-        if "flukebox" not in self._config:
-            return None
-        command = "cd " + self._config["flukebox"]["path"] + ";"
-        command += " venv/bin/python3 main.py playlist="
-        command += self._config["flukebox"]["playlist"]
-        output = ExerciseHelper(
-            ExerciseHelperType.OS_COMMAND,
-            {"command": command})
         return output
