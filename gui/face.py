@@ -3,6 +3,7 @@ import webbrowser
 from typing import List
 import os
 import subprocess
+import sys
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
@@ -108,6 +109,7 @@ class Face(GridLayout):
             flukebox = get_flukebox_helper("final_playlist")
             if flukebox is not None:
                 self._process_helpers([flukebox])
+                sys.exit()
 
         else:
             if prev_exercise_index != self._workout.get_exercise_index():
