@@ -182,7 +182,7 @@
     "default_bpm": 90,
     "one_liners": [
         "New style",
-        "Learn a new song you like"
+        "New song"
     ],
     "right_hand_exercises": [
         "4 finger gallop",
@@ -227,6 +227,99 @@
         {
             "name": "Guitar accompany",
             "url": "https://www.youtube.com/watch?v=UmQ8Dkz8H8Q&list=PLPwYR-WkPQ2UwGR33CCCwPoI-F-18kMc6"
+        }
+    ],
+    "key_signature_url": "https://en.wikipedia.org/wiki/Key_signature",
+    "key_signatures": [
+        { 
+            "major": "C", 
+            "minor": "A",
+            "sharps": [], 
+            "flats": []  
+        },
+        { 
+            "major": "G", 
+            "minor": "E",
+            "sharps": ["F#"], 
+            "flats": []  
+        },
+        { 
+            "major": "D", 
+            "minor": "A",
+            "sharps": ["F#", "C#"], 
+            "flats": []  
+        },
+        { 
+            "major": "A", 
+            "minor": "F#",
+            "sharps": ["F#", "C#", "G#"], 
+            "flats": []  
+        },
+        { 
+            "major": "E", 
+            "minor": "C#",
+            "sharps": ["F#", "C#", "G#", "D#"], 
+            "flats": []  
+        },
+        { 
+            "major": "B", 
+            "minor": "G#",
+            "sharps": ["F#", "C#", "G#", "D#", "A#"], 
+            "flats": []  
+        },
+        { 
+            "major": "F#", 
+            "minor": "D#",
+            "sharps": ["F#", "C#", "G#", "D#", "A#", "E#"], 
+            "flats": []  
+        },
+        { 
+            "major": "C#", 
+            "minor": "A#",
+            "sharps": ["F#", "C#", "G#", "D#", "A#", "E#", "B#"], 
+            "flats": []  
+        },
+        { 
+            "major": "F", 
+            "minor": "D",
+            "sharps": [], 
+            "flats": ["Bb"]  
+        },
+        { 
+            "major": "Bb", 
+            "minor": "G",
+            "sharps": [], 
+            "flats": ["Bb", "Eb"]  
+        },
+        { 
+            "major": "Eb", 
+            "minor": "C",
+            "sharps": [], 
+            "flats": ["Bb", "Eb", "Ab"]  
+        },
+        { 
+            "major": "Ab", 
+            "minor": "F",
+            "sharps": [], 
+            "flats": ["Bb", "Eb", "Ab", "Db"]  
+        },
+        { 
+            "major": "Db", 
+            "minor": "Bb",
+            "sharps": [], 
+            "flats": ["Bb", "Eb", "Ab", "Db", "Gb"]  
+        },
+        { 
+            "major": "Gb", 
+            "minor": "Eb",
+            "sharps": [], 
+            "flats": ["Bb", "Eb", "Ab", "Db", "Gb", "Cb"]  
+        },
+        { 
+            "major": "Cb", 
+            "minor": "Ab",
+            "sharps": [], 
+            "flats": ["Bb", "Eb", "Ab", "Db", "Gb", "Cb", "Fb"]  
         }
     ]
 }
