@@ -155,7 +155,9 @@
         "Think about next chord",
         "Target notes",
         "Mental sentences",
-        "Sing along"
+        "Sing along",
+        "Maj over min",
+        "Min over maj"
     ],
     "metronome_exercises": [
         "Random mute",
