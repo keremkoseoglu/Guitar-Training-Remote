@@ -203,12 +203,12 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "YouTube mix mastering",
-            "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
-        },
-        {
             "name": "YouTube bookmarks",
             "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
+        },
+        {
+            "name": "YouTube mix mastering",
+            "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
         }
     ],
     "transcriptions": [
@@ -231,95 +231,165 @@
     ],
     "key_signature_url": "https://en.wikipedia.org/wiki/Key_signature",
     "key_signatures": [
-        { 
-            "major": "C", 
+        {
+            "major": "C",
             "minor": "A",
-            "sharps": [], 
-            "flats": []  
+            "sharps": [],
+            "flats": []
         },
-        { 
-            "major": "G", 
+        {
+            "major": "G",
             "minor": "E",
-            "sharps": ["F#"], 
-            "flats": []  
+            "sharps": [
+                "F#"
+            ],
+            "flats": []
         },
-        { 
-            "major": "D", 
+        {
+            "major": "D",
             "minor": "A",
-            "sharps": ["F#", "C#"], 
-            "flats": []  
+            "sharps": [
+                "F#",
+                "C#"
+            ],
+            "flats": []
         },
-        { 
-            "major": "A", 
+        {
+            "major": "A",
             "minor": "F#",
-            "sharps": ["F#", "C#", "G#"], 
-            "flats": []  
+            "sharps": [
+                "F#",
+                "C#",
+                "G#"
+            ],
+            "flats": []
         },
-        { 
-            "major": "E", 
+        {
+            "major": "E",
             "minor": "C#",
-            "sharps": ["F#", "C#", "G#", "D#"], 
-            "flats": []  
+            "sharps": [
+                "F#",
+                "C#",
+                "G#",
+                "D#"
+            ],
+            "flats": []
         },
-        { 
-            "major": "B", 
+        {
+            "major": "B",
             "minor": "G#",
-            "sharps": ["F#", "C#", "G#", "D#", "A#"], 
-            "flats": []  
+            "sharps": [
+                "F#",
+                "C#",
+                "G#",
+                "D#",
+                "A#"
+            ],
+            "flats": []
         },
-        { 
-            "major": "F#", 
+        {
+            "major": "F#",
             "minor": "D#",
-            "sharps": ["F#", "C#", "G#", "D#", "A#", "E#"], 
-            "flats": []  
+            "sharps": [
+                "F#",
+                "C#",
+                "G#",
+                "D#",
+                "A#",
+                "E#"
+            ],
+            "flats": []
         },
-        { 
-            "major": "C#", 
+        {
+            "major": "C#",
             "minor": "A#",
-            "sharps": ["F#", "C#", "G#", "D#", "A#", "E#", "B#"], 
-            "flats": []  
+            "sharps": [
+                "F#",
+                "C#",
+                "G#",
+                "D#",
+                "A#",
+                "E#",
+                "B#"
+            ],
+            "flats": []
         },
-        { 
-            "major": "F", 
+        {
+            "major": "F",
             "minor": "D",
-            "sharps": [], 
-            "flats": ["Bb"]  
+            "sharps": [],
+            "flats": [
+                "Bb"
+            ]
         },
-        { 
-            "major": "Bb", 
+        {
+            "major": "Bb",
             "minor": "G",
-            "sharps": [], 
-            "flats": ["Bb", "Eb"]  
+            "sharps": [],
+            "flats": [
+                "Bb",
+                "Eb"
+            ]
         },
-        { 
-            "major": "Eb", 
+        {
+            "major": "Eb",
             "minor": "C",
-            "sharps": [], 
-            "flats": ["Bb", "Eb", "Ab"]  
+            "sharps": [],
+            "flats": [
+                "Bb",
+                "Eb",
+                "Ab"
+            ]
         },
-        { 
-            "major": "Ab", 
+        {
+            "major": "Ab",
             "minor": "F",
-            "sharps": [], 
-            "flats": ["Bb", "Eb", "Ab", "Db"]  
+            "sharps": [],
+            "flats": [
+                "Bb",
+                "Eb",
+                "Ab",
+                "Db"
+            ]
         },
-        { 
-            "major": "Db", 
+        {
+            "major": "Db",
             "minor": "Bb",
-            "sharps": [], 
-            "flats": ["Bb", "Eb", "Ab", "Db", "Gb"]  
+            "sharps": [],
+            "flats": [
+                "Bb",
+                "Eb",
+                "Ab",
+                "Db",
+                "Gb"
+            ]
         },
-        { 
-            "major": "Gb", 
+        {
+            "major": "Gb",
             "minor": "Eb",
-            "sharps": [], 
-            "flats": ["Bb", "Eb", "Ab", "Db", "Gb", "Cb"]  
+            "sharps": [],
+            "flats": [
+                "Bb",
+                "Eb",
+                "Ab",
+                "Db",
+                "Gb",
+                "Cb"
+            ]
         },
-        { 
-            "major": "Cb", 
+        {
+            "major": "Cb",
             "minor": "Ab",
-            "sharps": [], 
-            "flats": ["Bb", "Eb", "Ab", "Db", "Gb", "Cb", "Fb"]  
+            "sharps": [],
+            "flats": [
+                "Bb",
+                "Eb",
+                "Ab",
+                "Db",
+                "Gb",
+                "Cb",
+                "Fb"
+            ]
         }
     ]
 }

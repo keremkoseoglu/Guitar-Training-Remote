@@ -23,15 +23,31 @@ class KeySignature:
         type_index = random.randint(0, 1)
         return self._CHORD_TYPES[type_index]
 
-    def get_random_chord(self) -> str:
-        """ Returns random chord """
+    def get_random_chord_and_key_sig(self) -> tuple:
+        """ Returns random chord and key signature """
         key_sig_idx = random.randint(0, len(self._signatures) - 1)
         key_sig = self._signatures[key_sig_idx]
         chord_type = self.get_random_chord_type()
-        result = key_sig[chord_type]
+        chord = key_sig[chord_type]
         if chord_type == "minor":
-            result += "m"
-        return result
+            chord += "m"
+        return chord, key_sig
+
+    def get_random_chord(self) -> str:
+        """ Returns random chord """
+        chord, key_sig = self.get_random_chord_and_key_sig() # pylint: disable=W0612
+        return chord
+
+    def get_random_chord_and_oddity(self) -> tuple:
+        """ Returns random chord and oddity """
+        chord, key_sig = self.get_random_chord_and_key_sig()
+
+        for oddity_candidate in self._ODDITIES:
+            if len(key_sig[oddity_candidate]) > 0:
+                oddity = oddity_candidate
+                break
+
+        return chord, oddity
 
     def get_random_oddity(self) -> str:
         """ Returns random oddity """
