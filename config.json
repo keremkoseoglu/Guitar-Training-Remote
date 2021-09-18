@@ -205,12 +205,12 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "YouTube bookmarks",
-            "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
-        },
-        {
             "name": "YouTube mix mastering",
             "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
+        },
+        {
+            "name": "YouTube bookmarks",
+            "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
         }
     ],
     "transcriptions": [
