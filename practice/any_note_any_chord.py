@@ -2,7 +2,7 @@
 from model import exercise, exercise_step
 from practice import abstract_practice
 from practice.practice_category import PracticeCategory
-from music_theory.note import Note
+from music_theory.key_signature import KeySignature
 
 class AnyNoteAnyChord(abstract_practice.AbstractPractice):
     """ Any note any chord class """
@@ -18,14 +18,14 @@ class AnyNoteAnyChord(abstract_practice.AbstractPractice):
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns random chord exercises """
         random_steps = []
-        note = Note()
+        key_signature = KeySignature()
 
         while len(random_steps) < quantity:
-            chord_note = note.get_random_note()
+            chord_note = key_signature.get_random_note()
             melody_notes = []
             melody_notes_txt = ""
             while len(melody_notes) < 4:
-                melody_note = note.get_random_note()
+                melody_note = key_signature.get_random_relative_note(chord_note)
                 if any([melody_note in melody_notes, melody_note == chord_note]):
                     continue
                 melody_notes.append(melody_note)

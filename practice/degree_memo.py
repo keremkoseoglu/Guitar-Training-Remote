@@ -20,7 +20,7 @@ class DegreeMemo(abstract_practice.AbstractPractice):
         """ Returns degree memo exercises """
         random_steps = []
         random_chords = chord.Chord().get_random_chords(quantity)
-        random_degrees = degree.Degree().get_random_degrees(quantity)
+        random_degrees = degree.Degree().get_random_degrees(quantity, exclude_unison=True)
 
         for quantity_pos in range(quantity):
             random_step = exercise_step.ExerciseStep(

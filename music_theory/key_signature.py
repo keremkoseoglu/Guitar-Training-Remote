@@ -23,6 +23,29 @@ class KeySignature:
         type_index = random.randint(0, 1)
         return self._CHORD_TYPES[type_index]
 
+    def get_random_note(self) -> str:
+        """ Returns a random note """
+        key_sig_idx = random.randint(0, len(self._signatures) - 1)
+        key_sig = self._signatures[key_sig_idx]
+        chord_type = self.get_random_chord_type()
+        note = key_sig[chord_type]
+        return note
+
+    def get_random_relative_note(self, relative: str) -> str:
+        """ Returns a random relative note """
+        while True:
+            random_note = self.get_random_note()
+            if not ("b" in random_note or "#" in random_note):
+                return random_note
+            if "b" in relative:
+                if "b" in random_note:
+                    return random_note
+            elif "#" in relative:
+                if "#" in random_note:
+                    return random_note
+            else:
+                return random_note
+
     def get_random_chord_and_key_sig(self) -> tuple:
         """ Returns random chord and key signature """
         key_sig_idx = random.randint(0, len(self._signatures) - 1)

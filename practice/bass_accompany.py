@@ -18,4 +18,4 @@ class BassAccompany(AbstractUrlList):
         return "bass_accompany"
 
     def _is_guitar_eligible(self, guitar: dict) -> bool:
-        return guitar["type"] == "Bass"
+        return "Bass" in guitar["type"]

@@ -8,11 +8,20 @@
     },
     "instruments": [
         {
-            "type": "Bass",
+            "type": "J Bass",
             "kind": "instrument",
             "strings": 4,
             "octaves": 4,
             "from": 0,
+            "to": 20,
+            "apps": []
+        },
+        {
+            "type": "P Bass",
+            "kind": "instrument",
+            "strings": 4,
+            "octaves": 4,
+            "from": 21,
             "to": 40,
             "apps": []
         },

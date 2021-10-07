@@ -15,6 +15,7 @@ class LazyFingers(AbstractPractice):
 
     _TITLE = "Lazy fingers"
     _SUBTITLE = "Work your lazy fingers"
+    _MAX_STRING_JUMP = 2
 
     @property
     def category(self) -> PracticeCategory:
@@ -38,12 +39,22 @@ class LazyFingers(AbstractPractice):
             random_fingers = Hand().get_random_fret_fingers(random_finger_count)
             strings = []
             fingers = []
+            prev_rand_string = -1
 
             while len(random_fingers) > 0:
                 random_finger_index = randint(0, len(random_fingers)-1)
                 random_finger = random_fingers.pop(random_finger_index)
                 fingers.append(random_finger)
-                random_string = randint(1, string_count)
+
+                while True:
+                    random_string = randint(1, string_count)
+                    if prev_rand_string == -1:
+                        break
+                    string_jump = abs(random_string - prev_random_string)
+                    if string_jump <= LazyFingers._MAX_STRING_JUMP:
+                        break
+
+                prev_random_string = random_string
                 strings.append(random_string)
 
             sorted(strings, key=lambda string: string)
