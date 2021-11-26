@@ -26,11 +26,20 @@
             "apps": []
         },
         {
+            "type": "PM Bass",
+            "kind": "instrument",
+            "strings": 4,
+            "octaves": 4,
+            "from": 41,
+            "to": 60,
+            "apps": []
+        },
+        {
             "type": "Guitar",
             "kind": "instrument",
             "strings": 6,
             "octaves": 5,
-            "from": 41,
+            "from": 61,
             "to": 80,
             "apps": []
         },
@@ -170,6 +179,7 @@
     ],
     "metronome_exercises": [
         "Random mute",
+        "Play ahead beat",
         "Play behind beat",
         "1- 2- 3- 4-",
         "1- 3-",
