@@ -64,6 +64,7 @@ class KeySignature:
     def get_random_chord_and_oddity(self) -> tuple:
         """ Returns random chord and oddity """
         chord, key_sig = self.get_random_chord_and_key_sig()
+        oddity = ""
 
         for oddity_candidate in self._ODDITIES:
             if len(key_sig[oddity_candidate]) > 0:
