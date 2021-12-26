@@ -34,7 +34,7 @@ class TranscribeRepertoirAsOriginal(AbstractPractice):
             random_steps,
             practice_category=self.category)
 
-        flukebox_helper = get_flukebox_helper("final_playlist")
+        flukebox_helper = get_flukebox_helper("final_playlist", no_local=True)
         if flukebox_helper is not None:
             output.helpers = [flukebox_helper]
         return output

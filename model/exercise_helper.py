@@ -21,7 +21,7 @@ class ExerciseHelper:
             self.params = params
 
 
-def get_flukebox_helper(playlist: str) -> ExerciseHelper:
+def get_flukebox_helper(playlist: str, no_local: bool = False) -> ExerciseHelper:
     """ Returns a FlukeBox helper Exercise """
     config = get_configuration()
     if "flukebox" not in config:
@@ -29,6 +29,8 @@ def get_flukebox_helper(playlist: str) -> ExerciseHelper:
     command = "cd " + config["flukebox"]["path"] + ";"
     command += " venv/bin/python3 main.py playlist="
     command += config["flukebox"][playlist]
+    if no_local:
+        command += " no_local"
     output = ExerciseHelper(
         ExerciseHelperType.OS_COMMAND,
         {"command": command})
