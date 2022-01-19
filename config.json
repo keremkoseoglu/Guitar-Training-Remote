@@ -2,7 +2,7 @@
     "practice_selection": {
         "max_steps_per_exercise": 5,
         "min_practice_count": 8,
-        "max_practice_count": 12,
+        "max_practice_count": 16,
         "must_select": [],
         "only_select": ""
     },
@@ -215,6 +215,7 @@
         "Joe Dart",
         "Double thumb"
     ],
+    "final_url" : "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2qFYrBUuc8U3Cea-ETDAMv",
     "flukebox": {
         "path": "/Users/kerem/Documents/software/Kerem/Development/flukebox/",
         "backing_playlist": "backing",
@@ -224,12 +225,12 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "YouTube mix mastering",
-            "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
-        },
-        {
             "name": "YouTube bookmarks",
             "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
+        },
+        {
+            "name": "YouTube mix mastering",
+            "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
         }
     ],
     "transcriptions": [

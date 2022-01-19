@@ -109,7 +109,12 @@ class Face(GridLayout):
             flukebox = get_flukebox_helper("final_playlist")
             if flukebox is not None:
                 self._process_helpers([flukebox])
-                sys.exit()
+
+            fconfig = config.get_configuration()
+            if "final_url" in fconfig and fconfig["final_url"] != "":
+                webbrowser.open(fconfig["final_url"])
+
+            sys.exit()
 
         else:
             if prev_exercise_index != self._workout.get_exercise_index():
