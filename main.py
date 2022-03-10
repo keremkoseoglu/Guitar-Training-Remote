@@ -1,10 +1,10 @@
 """ Program entry point """
 import gui.face
-#from practice.left_permutation import LeftFingerPermutations
+# from practice.double_thumb import DoubleThumb
 
 if __name__ == "__main__":
     """
-    ks = LeftFingerPermutations()
+    ks = DoubleThumb()
     bass = { "type": "J Bass",
              "kind": "instrument",
              "strings": 4,
@@ -13,6 +13,5 @@ if __name__ == "__main__":
              "to": 20,
              "apps": [] }
     exercise = ks.get_exercise(20, bass)
-    print(exercise)
-    """
+    print(exercise) """
     gui.face.GtrApp().run()

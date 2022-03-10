@@ -1,8 +1,11 @@
-""" Pick practices """
-import random
+""" Right hand """
 from enum import Enum
+import random
 from model import exercise
-from practice import abstract_practice
+from model.exercise_helper import ExerciseHelperType, ExerciseHelper
+from practice.abstract_practice import AbstractPractice
+from practice.practice_category import PracticeCategory
+from practice.metronome import Metronome
 from practice.accents import Accents
 from practice.anchor_note import AnchorNote
 from practice.arpeggio import Arpeggio
@@ -13,7 +16,9 @@ from practice.notes_on_strings import NotesOnStrings
 from practice.scale_degree_sequence import ScaleDegreeSequence
 from practice.scale_dexterity import ScaleDexterity
 from practice.scale_on_chord import ScaleOnChord
-from practice.practice_category import PracticeCategory
+from practice.chord_connection import ChordConnection
+from practice.chords import Chords
+import technique.right_hand
 
 
 class SupportPractice(Enum):
@@ -28,33 +33,48 @@ class SupportPractice(Enum):
     SCALE_DEGREE_SEQUENCE = 8
     SCALE_DEXTERITY = 9
     SCALE_ON_CHORD = 10
+    CHORD_CONNECTION = 11
+    CHORDS = 12
 
-
-class Pick(abstract_practice.AbstractPractice):
-    """ Pick exercise """
-    _TITLE = "Pick"
-
+class RightHand(AbstractPractice):
+    """ Right hand exercises """
     @property
     def category(self) -> PracticeCategory:
         """ Returns the category of the practice """
         return PracticeCategory.RIGHT_HAND
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
-        """ Returns pick exercises """
-        if guitar["strings"] != 4:
+        """ Returns double thumb exercises """
+        techs = technique.right_hand.RightHand().get_random_techniques(1)
+        if techs is None:
             return None
+        tech = techs[0]
 
-        practice = Pick._get_support_practice()
+        practice = RightHand._get_support_practice()
         if practice is None:
             return None
 
         output = practice.get_exercise(quantity, guitar)
-        output.title = Pick._TITLE
-        output.description += "\r\n with pick"
+        if output is None:
+            return None
+        output.title = tech
+
+        metronome = Metronome()
+
+        for step_pos in range(0, len(output.steps)):
+            step = output.steps[step_pos]
+            random_bpm = metronome.get_random_bpm()
+
+            if step.helpers is None:
+                step.helpers = []
+
+            step.helpers.append(ExerciseHelper(ExerciseHelperType.METRONOME,
+                                               {"bpm": random_bpm}))
+
         return output
 
     @staticmethod
-    def _get_support_practice() -> abstract_practice.AbstractPractice:
+    def _get_support_practice() -> AbstractPractice:
         support_index = random.randint(0, len(SupportPractice)-1)
         output = None
         for practice in SupportPractice:
@@ -88,5 +108,11 @@ class Pick(abstract_practice.AbstractPractice):
                     break
                 if practice == SupportPractice.SCALE_ON_CHORD:
                     output = ScaleOnChord()
+                    break
+                if practice == SupportPractice.CHORD_CONNECTION:
+                    output = ChordConnection()
+                    break
+                if practice == SupportPractice.CHORDS:
+                    output = Chords()
                     break
         return output
