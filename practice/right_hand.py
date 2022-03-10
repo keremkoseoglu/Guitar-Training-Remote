@@ -58,6 +58,8 @@ class RightHand(AbstractPractice):
         if output is None:
             return None
         output.title = tech
+        output.description += "\r\nwith " + tech
+        output.practice_category = self.category
 
         metronome = Metronome()
 
