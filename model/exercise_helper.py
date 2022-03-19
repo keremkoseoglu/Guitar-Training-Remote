@@ -9,6 +9,7 @@ class ExerciseHelperType(Enum):
     METRONOME = 2
     OS_COMMAND = 3
     BUTTONS = 4
+    EXTERNAL_METRONOME = 5
 
 
 class ExerciseHelper:
@@ -31,7 +32,17 @@ def get_flukebox_helper(playlist: str, no_local: bool = False) -> ExerciseHelper
     command += config["flukebox"][playlist]
     if no_local:
         command += " no_local"
-    output = ExerciseHelper(
-        ExerciseHelperType.OS_COMMAND,
-        {"command": command})
+    output = ExerciseHelper(ExerciseHelperType.OS_COMMAND,
+                            {"command": command})
+    return output
+
+def get_external_metronome_helper(bpm: int) -> ExerciseHelper:
+    """ Returns a metronome helper Exercise """
+    config = get_configuration()
+    if "metronome_app" not in config:
+        return None
+    command = config["metronome_app"]["path"].replace(" ", "\ ")
+    command = "open " + command
+    output = ExerciseHelper(ExerciseHelperType.OS_COMMAND,
+                            {"command": command, "clipboard": str(bpm)})
     return output

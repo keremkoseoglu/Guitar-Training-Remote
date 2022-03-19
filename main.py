@@ -1,10 +1,15 @@
 """ Program entry point """
 import gui.face
-# from practice.double_thumb import DoubleThumb
+#from practice.metronome import Metronome
+
+""" todo 
+test
+geçici kodları sil buradan
+"""
 
 if __name__ == "__main__":
     """
-    ks = DoubleThumb()
+    ks = Metronome()
     bass = { "type": "J Bass",
              "kind": "instrument",
              "strings": 4,

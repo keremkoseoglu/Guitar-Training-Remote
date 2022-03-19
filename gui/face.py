@@ -183,6 +183,9 @@ class Face(GridLayout):
             elif helper.helper_type == ExerciseHelperType.METRONOME:
                 self._metronome.bpm = helper.params["bpm"]
             elif helper.helper_type == ExerciseHelperType.OS_COMMAND:
+                if "clipboard" in helper.params:
+                    clp_cmd = "echo " + helper.params["clipboard"] + "|pbcopy"
+                    subprocess.check_call(clp_cmd, shell=True)
                 os.system(helper.params["command"])
             elif helper.helper_type == ExerciseHelperType.BUTTONS:
                 self._helper_buttons.apply_helper(helper.params)
