@@ -28,7 +28,9 @@ class Metronome(abstract_practice.AbstractPractice):
             random_dict = self._get_random_metronome_exercise()
             random_exercise = random_dict["exercise"]
             random_bpm = self._get_adjusted_random_bpm(random_dict)
-            random_step = exercise_step.ExerciseStep(random_exercise, "BPM: " + str(random_bpm))
+            sub_text_prefix = "External BPM:" if random_dict["external"] else "Internal BPM:"
+            sub_text = sub_text_prefix + " " + str(random_bpm)
+            random_step = exercise_step.ExerciseStep(random_exercise, sub_text)
 
             if random_dict["external"]:
                 helper = get_external_metronome_helper(random_bpm)
