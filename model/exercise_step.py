@@ -1,15 +1,15 @@
 """ Exercise step """
+from dataclasses import dataclass
 from typing import List
 from model.exercise_helper import ExerciseHelper
 
+@dataclass
 class ExerciseStep:
     """ Exercise step """
-    def __init__(self, main_text: str, sub_text: str = "", helpers: List[ExerciseHelper] = None):
-        self.main_text = main_text
-        self.sub_text = sub_text
+    main_text: str
+    sub_text: str = ""
+    helpers: List[ExerciseHelper] = None
 
-
-        if helpers is None:
+    def __post_init__(self):
+        if self.helpers is None:
             self.helpers = []
-        else:
-            self.helpers = helpers

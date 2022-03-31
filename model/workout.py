@@ -8,14 +8,14 @@ from model.exercise_step import ExerciseStep
 class WorkOut:
     """ Workout class """
 
-    def __init__(self, exercises: []):
+    def __init__(self, exercises: List):
         self._exercises = exercises
         self._exercise_index = 0
         self._step_index = 0
         self.guitar = {}
 
     @property
-    def exercises(self) -> []:
+    def exercises(self) -> List:
         """ Exercises in workout """
         return self._exercises
 

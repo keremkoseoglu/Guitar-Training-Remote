@@ -1,28 +1,20 @@
 """ Exercise module """
+from dataclasses import dataclass
 from typing import List
 from model.exercise_helper import ExerciseHelper
 from practice.practice_category import PracticeCategory
 
-
+@dataclass
 class Exercise:
     """ Exercise class """
+    title: str
+    description: str
+    steps: List = None
+    helpers: List[ExerciseHelper] = None
+    practice_category: PracticeCategory = PracticeCategory.UNDEFINED
 
-    def __init__(self, # pylint: disable=R0913
-                 title: str,
-                 description: str,
-                 steps=None,
-                 helpers: List[ExerciseHelper] = None,
-                 practice_category: PracticeCategory = PracticeCategory.UNDEFINED):
-        self.title = title
-        self.description = description
-        self.practice_category = practice_category
-
-        if steps is None:
+    def __post_init__(self):
+        if self.steps is None:
             self.steps = []
-        else:
-            self.steps = steps
-
-        if helpers is None:
+        if self.helpers is None:
             self.helpers = []
-        else:
-            self.helpers = helpers

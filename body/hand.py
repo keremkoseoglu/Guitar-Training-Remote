@@ -1,13 +1,15 @@
 """ Module for human hand """
+from dataclasses import dataclass
 from typing import List
 from copy import copy
 from random import randint
 
+@dataclass
 class Finger:
     """ Finger class """
-    def __init__(self, number: int, name: str):
-        self.number = number
-        self.name = name
+    number: int
+    name: str
+
 
 class Hand:
     """ Hand class """
