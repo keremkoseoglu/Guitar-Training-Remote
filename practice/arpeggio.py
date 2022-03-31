@@ -56,7 +56,7 @@ class Arpeggio(abstract_practice.AbstractPractice):
 
             random_step = exercise_step.ExerciseStep(
                 random_arp,
-                "Suggested position: " + str(suggested_position))
+                f"Suggested position: {str(suggested_position)}")
 
             random_steps.append(random_step)
 

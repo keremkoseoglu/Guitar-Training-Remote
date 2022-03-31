@@ -19,7 +19,7 @@ class Mode:
         """ Returns a random mode """
         random_note = Note().get_random_note()
         random_mode = self.get_random_mode_type()
-        return random_note + " " + random_mode
+        return f"{random_note} {random_mode}"
 
     def get_random_mode_type(self) -> str:
         """ Returns a random mode type """
@@ -33,7 +33,7 @@ class Mode:
 
         for range_pos in range(count): # pylint: disable=W0612
             if with_note:
-                random_note = note_obj.get_random_note() + " "
+                random_note = f"{note_obj.get_random_note()} "
             else:
                 random_note = ""
             random_mode = self.get_random_mode_type()

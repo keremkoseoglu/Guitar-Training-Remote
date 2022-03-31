@@ -70,7 +70,7 @@ class LazyFingers(AbstractPractice):
             random_bpm = metronome.get_random_bpm()
 
             random_step = exercise_step.ExerciseStep(
-                str(random_bpm) + " bpm",
+                f"{str(random_bpm)} bpm",
                 pattern)
 
             random_step.helpers = [ExerciseHelper(

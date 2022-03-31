@@ -47,4 +47,4 @@ class ScaleOnChord(abstract_practice.AbstractPractice):
 
     @staticmethod
     def _get_subtitle() -> str:
-        return ScaleOnChord._get_random_play_choice() + " " + ScaleOnChord._SUBTITLE
+        return f"{ScaleOnChord._get_random_play_choice()} {ScaleOnChord._SUBTITLE}"

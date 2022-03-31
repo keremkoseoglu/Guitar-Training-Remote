@@ -50,7 +50,7 @@ class LeftFingerPermutations(AbstractPractice):
             first_fret = LeftFingerPermutations._get_random_fret()
             random_bpm = metronome.get_random_bpm()
             random_step = exercise_step.ExerciseStep(
-                "Fret " + str(first_fret) + " (" + str(random_bpm) + " bpm)",
+                f"Fret {str(first_fret)} ({str(random_bpm)} bpm)",
                 sub_text=permutation_text)
 
             random_step.helpers = [ExerciseHelper(

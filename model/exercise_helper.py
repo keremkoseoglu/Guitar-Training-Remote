@@ -27,11 +27,11 @@ def get_flukebox_helper(playlist: str, no_local: bool = False) -> ExerciseHelper
     config = get_configuration()
     if "flukebox" not in config:
         return None
-    command = "cd " + config["flukebox"]["path"] + ";"
-    command += " venv/bin/python3 main.py playlist="
-    command += config["flukebox"][playlist]
-    if no_local:
-        command += " no_local"
+
+    command = f"cd {config['flukebox']['path']} ;" \
+              f" venv/bin/python3 main.py playlist={config['flukebox'][playlist]}" \
+              f"{' no_local' if no_local else ''}"
+
     output = ExerciseHelper(ExerciseHelperType.OS_COMMAND,
                             {"command": command})
     return output

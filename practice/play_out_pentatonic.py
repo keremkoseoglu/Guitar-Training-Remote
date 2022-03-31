@@ -29,7 +29,7 @@ class PlayOutPentatonic(AbstractPractice):
             pentatonic_key = note.get_random_note()
             target_chord = chord.get_random_chord()
             step = ExerciseStep(
-                pentatonic_key + " Pentatonic",
+                f"{pentatonic_key} Pentatonic",
                 target_chord)
             random_steps.append(step)
 

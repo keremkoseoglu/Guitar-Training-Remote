@@ -23,4 +23,4 @@ class AbstractPractice(ABC):
     def get_random_position_suggestion_text() -> str:
         """ Random suggestion position text """
         random_position = str(Position.get_random_position())
-        return "Suggested position: " + random_position
+        return f"Suggested position: {random_position}"

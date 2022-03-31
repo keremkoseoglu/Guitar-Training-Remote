@@ -153,7 +153,7 @@ class Metronome(GridLayout):
             self.start()
 
     def _refresh_bpm_label(self):
-        self._bpm_label.text = str(self._bpm) + " BPM"
+        self._bpm_label.text = f"{str(self._bpm)}  BPM"
 
     def _load_bpm_file(self) -> SoundLoader:
         file_name = Metronome._CLICK_PREFIX + Metronome._CLICK_SEPARATOR + str(self._bpm)

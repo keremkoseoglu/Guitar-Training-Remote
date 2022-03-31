@@ -28,7 +28,7 @@ class Intervals(abstract_practice.AbstractPractice):
         random_steps = []
 
         for step_index in range(0, quantity): # pylint: disable=W0612
-            mode_text = mode_obj.get_random_mode() + " " + self._get_direction()
+            mode_text = f"{mode_obj.get_random_mode()} {self._get_direction()}"
 
             step_text = ""
 

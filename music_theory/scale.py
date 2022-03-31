@@ -14,7 +14,7 @@ class Scale:
         """ Returns a random scale """
         random_note = Note().get_random_note()
         random_scale = self.get_random_scale_type()
-        return random_note + " " + random_scale
+        return f"{random_note} {random_scale}"
 
     def get_random_scale_type(self) -> str:
         """ Returns a random scale type """

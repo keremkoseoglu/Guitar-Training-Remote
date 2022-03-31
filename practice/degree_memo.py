@@ -24,7 +24,7 @@ class DegreeMemo(abstract_practice.AbstractPractice):
 
         for quantity_pos in range(quantity):
             random_step = exercise_step.ExerciseStep(
-                random_chords[quantity_pos] + " deg " + str(random_degrees[quantity_pos]),
+                f"{random_chords[quantity_pos]} deg {str(random_degrees[quantity_pos])}",
                 "follow by playing")
             random_steps.append(random_step)
 

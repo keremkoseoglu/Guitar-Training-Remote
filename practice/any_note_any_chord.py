@@ -34,8 +34,8 @@ class AnyNoteAnyChord(abstract_practice.AbstractPractice):
                 melody_notes_txt += melody_note
 
             random_step = exercise_step.ExerciseStep(
-                "Chord: " + chord_note,
-                "Notes: " + melody_notes_txt)
+                f"Chord: {chord_note}",
+                f"Notes: {melody_notes_txt}")
             random_steps.append(random_step)
 
         output = exercise.Exercise(

@@ -146,13 +146,11 @@ class Face(GridLayout):
 
     def _refresh_status_text(self):
         try:
-            status_text = \
-                "Lesson " + str(self._workout.get_exercise_index() + 1) \
-                + " / " + str(self._workout.get_exercise_count())
+            status_text = f"Lesson {str(self._workout.get_exercise_index() + 1)}" \
+                          f" / {str(self._workout.get_exercise_count())}" \
+                          f", step {str(self._workout.get_step_index() + 1)}" \
+                          f" / {str(self._workout.get_step_count())}"
 
-            status_text += \
-                ", step " + str(self._workout.get_step_index() + 1) \
-                + " / " + str(self._workout.get_step_count())
         except Exception:
             status_text = ""
 
@@ -184,7 +182,7 @@ class Face(GridLayout):
                 self._metronome.bpm = helper.params["bpm"]
             elif helper.helper_type == ExerciseHelperType.OS_COMMAND:
                 if "clipboard" in helper.params:
-                    clp_cmd = "echo " + helper.params["clipboard"] + "|pbcopy"
+                    clp_cmd = f"echo {helper.params['clipboard']}|pbcopy"
                     subprocess.check_call(clp_cmd, shell=True)
                 os.system(helper.params["command"])
             elif helper.helper_type == ExerciseHelperType.BUTTONS:

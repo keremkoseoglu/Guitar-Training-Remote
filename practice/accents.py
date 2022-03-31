@@ -65,7 +65,7 @@ class Accents(abstract_practice.AbstractPractice):
 
         output = practice.get_exercise(quantity, guitar)
         output.title = Accents._TITLE
-        output.description += "\r\n with accent on: " + random_accent.accent
+        output.description += f"\r\n with accent on: {random_accent.accent}"
         return output
 
     def _get_random_accent(self) -> Accent:

@@ -33,16 +33,16 @@ class KeySignatureQuiz(abstract_practice.AbstractPractice):
 
             if quiz_type == 0: # How many flats does Cm have
                 chord, oddity = self._key_sig.get_random_chord_and_oddity()
-                step_text = "? " + oddity + " in " + chord
+                step_text = f"? {oddity} in {chord}"
             elif quiz_type == 1: # Which maj has 2 flats
                 chord_type = self._key_sig.get_random_chord_type()
                 oddity_cnt = str(self._key_sig.get_random_oddity_count())
                 oddity = self._key_sig.get_random_oddity()
-                step_text = "? " + chord_type + " has " + oddity_cnt + " " + oddity
+                step_text = f"? {chord_type} has {oddity_cnt} {oddity}"
             elif quiz_type == 2: # Name maj chords containing C
                 chord_type = self._key_sig.get_random_chord_type()
                 odd_note = self._key_sig.get_random_odd_node()
-                step_text = "? " + chord_type + " has " + odd_note
+                step_text = f"? {chord_type} has {odd_note}"
 
             random_step = exercise_step.ExerciseStep(step_text)
             random_steps.append(random_step)

@@ -18,7 +18,7 @@ def get_configuration() -> dict:
 def edit_configuration():
     """ Edits the configuration file """
     file_path = _get_config_path()
-    os.system("open " + file_path)
+    os.system(f"open {file_path}")
 
 def get_storage() -> dict:
     """ Returns storage """

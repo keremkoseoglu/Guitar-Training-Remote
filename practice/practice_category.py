@@ -34,4 +34,4 @@ def get_category_group(category: PracticeCategory) -> PracticeCategoryGroup:
         return PracticeCategoryGroup.PERFORMANCE
     if category == PracticeCategory.EDUCATION:
         return PracticeCategoryGroup.EDUCATION
-    raise Exception("Undefined category " + category.name)
+    raise Exception(f"Undefined category {category.name}")
