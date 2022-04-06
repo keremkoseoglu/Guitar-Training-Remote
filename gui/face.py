@@ -1,7 +1,6 @@
 """ Main entry point """
 import webbrowser
 from typing import List
-import os
 import subprocess
 import sys
 from kivy.app import App
@@ -184,7 +183,7 @@ class Face(GridLayout):
                 if "clipboard" in helper.params:
                     clp_cmd = f"echo {helper.params['clipboard']}|pbcopy"
                     subprocess.check_call(clp_cmd, shell=True)
-                os.system(helper.params["command"])
+                subprocess.Popen(helper.params["command"], shell=True)
             elif helper.helper_type == ExerciseHelperType.BUTTONS:
                 self._helper_buttons.apply_helper(helper.params)
 
