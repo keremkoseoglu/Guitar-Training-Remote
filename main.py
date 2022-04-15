@@ -1,22 +1,24 @@
 """ Program entry point """
 import gui.face
-#from practice.metronome import Metronome
+from practice.random_note_into_chord import RandomNoteIntoChord
 
-""" todo 
-test
-geçici kodları sil buradan
-"""
+def run_app():
+    """ Main """
+    gui.face.GtrApp().run()
+
+def test_app():
+    """ Test """
+    test_exercise = RandomNoteIntoChord()
+    bass = {"type": "J Bass",
+            "kind": "instrument",
+            "strings": 4,
+            "octaves": 4,
+            "from": 0,
+            "to": 20,
+            "apps": []}
+    exercise = test_exercise.get_exercise(20, bass)
+    print(exercise)
 
 if __name__ == "__main__":
-    """
-    ks = Metronome()
-    bass = { "type": "J Bass",
-             "kind": "instrument",
-             "strings": 4,
-             "octaves": 4,
-             "from": 0,
-             "to": 20,
-             "apps": [] }
-    exercise = ks.get_exercise(20, bass)
-    print(exercise) """
-    gui.face.GtrApp().run()
+    #test_app()
+    run_app()
