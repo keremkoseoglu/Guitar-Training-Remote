@@ -1,11 +1,12 @@
 """ Any note can be used with any chord """
 from model import exercise, exercise_step
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 from music_theory.key_signature import KeySignature
 
-class AnyNoteAnyChord(abstract_practice.AbstractPractice):
-    """ Any note any chord class """
+class AnyNoteAnyChord():
+    """ Any note any chord class
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Any note any chord"
     _SUBTITLE = "Which X chord can contain Y?\r\n(play them too)"

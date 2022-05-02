@@ -1,12 +1,13 @@
 """ Degree memo """
 from model import exercise, exercise_step
 from music_theory import chord, degree
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 
 
-class DegreeMemo(abstract_practice.AbstractPractice):
-    """ Degree memo """
+class DegreeMemo():
+    """ Degree memo
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Degree memo"
     _SUBTITLE = "Tell the following note"

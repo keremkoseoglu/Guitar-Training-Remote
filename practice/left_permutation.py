@@ -2,14 +2,15 @@
 from random import randint
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
-from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from practice.metronome import Metronome
 from body.hand import Hand
 from config import get_configuration
 
-class LeftFingerPermutations(AbstractPractice):
-    """ Finger permutation class """
+class LeftFingerPermutations():
+    """ Finger permutation class
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Fret finger permutations"
     _SUBTITLE = "Wander strings with the following"

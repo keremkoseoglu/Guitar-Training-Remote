@@ -1,13 +1,14 @@
 """ Chords """
 import random
 from model import exercise, exercise_step
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 from music_theory import chord
 
 
-class Chords(abstract_practice.AbstractPractice):
-    """ Chords """
+class Chords():
+    """ Chords
+    PROTOCOL: AbstractPractice
+    """
     _TITLE = "Chords"
     _SUBTITLE = "Play the following chords"
     _POSITIONS = [1, 3, 5]

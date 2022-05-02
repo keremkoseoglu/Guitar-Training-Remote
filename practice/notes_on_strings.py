@@ -1,12 +1,13 @@
 """ Module for notes on strings practice """
 from model import exercise, exercise_step
 from music_theory import note
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 
 
-class NotesOnStrings(abstract_practice.AbstractPractice):
-    """ Notes on strings practice class """
+class NotesOnStrings():
+    """ Notes on strings practice class
+    PROTOCOL: AbstractPractice
+    """
     _TITLE = "Note memorization"
 
     def __init__(self):
@@ -18,6 +19,7 @@ class NotesOnStrings(abstract_practice.AbstractPractice):
         return PracticeCategory.DEXTERITY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
+        """ Returns exercise """
         if guitar["kind"] != "instrument":
             return None
         if guitar["strings"] <= 0:

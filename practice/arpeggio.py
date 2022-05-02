@@ -3,13 +3,14 @@ import random
 from model import exercise, exercise_step
 from music_theory import chord, scale
 from music_theory.position import Position
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 from config import get_configuration
 
 
-class Arpeggio(abstract_practice.AbstractPractice):
-    """ Arpeggio """
+class Arpeggio():
+    """ Arpeggio
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Arpeggio"
 

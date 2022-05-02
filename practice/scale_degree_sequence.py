@@ -2,12 +2,13 @@
 import random
 from model import exercise, exercise_step
 from music_theory import degree, scale
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 
 
-class ScaleDegreeSequence(abstract_practice.AbstractPractice):
-    """ Scale degree sequence """
+class ScaleDegreeSequence():
+    """ Scale degree sequence
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Scale degree sequence"
     _SUBTITLE = "Play the sequence"

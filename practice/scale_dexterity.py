@@ -2,12 +2,14 @@
 import random
 from model import exercise, exercise_step
 from music_theory import scale
-from practice import abstract_practice
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 
 
-class ScaleDexterity(abstract_practice.AbstractPractice):
-    """ Scale dexterity """
+class ScaleDexterity():
+    """ Scale dexterity
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Scale dexterity"
     _SUBTITLE = "Play a scale"
@@ -28,7 +30,7 @@ class ScaleDexterity(abstract_practice.AbstractPractice):
 
             # Build random secondary text
             if random.randint(0, 1) == 0:
-                secondary_text = abstract_practice.AbstractPractice.get_random_position_suggestion_text() # pylint: disable=C0301
+                secondary_text = AbstractPractice.get_random_position_suggestion_text() # pylint: disable=C0301
             else:
                 secondary_text = "Play at least 2 octaves"
 

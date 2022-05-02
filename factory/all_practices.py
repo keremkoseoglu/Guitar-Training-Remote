@@ -1,13 +1,14 @@
 """ All practices """
 import random
 from vibhaga.inspector import Inspector, Container
-from factory import abstract_factory
 from model import workout
 from config import get_configuration
 
 
-class AllPractices(abstract_factory.AbstractFactory): # pylint: disable=R0903
-    """ All practices """
+class AllPractices(): # pylint: disable=R0903
+    """ All practices
+    PROTOCOL: AbstractFactory
+    """
 
     def __init__(self):
         self._config = get_configuration()

@@ -36,8 +36,10 @@ class SupportPractice(Enum):
     CHORD_CONNECTION = 11
     CHORDS = 12
 
-class RightHand(AbstractPractice):
-    """ Right hand exercises """
+class RightHand():
+    """ Right hand exercises
+    PROTOCOL: AbstractPractice
+    """
     @property
     def category(self) -> PracticeCategory:
         """ Returns the category of the practice """
