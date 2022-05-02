@@ -5,11 +5,13 @@ import webbrowser
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from music_theory import key_signature
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 
-class KeySignatureQuiz(abstract_practice.AbstractPractice):
-    """ Key signature quiz """
+class KeySignatureQuiz():
+    """ Key signature quiz
+    PROTOCOL: AbstractPractice
+    """
+
     _TITLE = "Key signature quiz"
     _SUBTITLE = "Answer the following questions"
     _BUTTON_START = "start"

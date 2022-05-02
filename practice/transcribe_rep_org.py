@@ -1,13 +1,14 @@
 """ Repertoir transcription (original riffs) """
 from model import exercise, exercise_step
 from model.exercise_helper import get_flukebox_helper
-from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from config import get_configuration
 
 
-class TranscribeRepertoirAsOriginal(AbstractPractice):
-    """ Repertoir transcription (original riffs) """
+class TranscribeRepertoirAsOriginal():
+    """ Repertoir transcription (original riffs)
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Transcribe rep."
     _SUBTITLE = "Transcribe songs as original"

@@ -1,11 +1,11 @@
 """ Abstract practice factory """
-from abc import ABC, abstractmethod
+from typing import Protocol
 from model import workout
 
 
 
-class AbstractFactory(ABC): # pylint: disable=R0903
+class AbstractFactory(Protocol): # pylint: disable=R0903
     """ Abstract factory for practices """
-    @abstractmethod
     def get_workout(self, guitar: dict = None) -> workout.WorkOut:
         """ Returns a new workout """
+        ...

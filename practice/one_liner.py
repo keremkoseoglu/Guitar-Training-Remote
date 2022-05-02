@@ -1,13 +1,14 @@
 """ One liner """
 import random
 from model import exercise, exercise_step
-from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from config import get_configuration
 
 
-class OneLiner(AbstractPractice):
-    """ One liner """
+class OneLiner():
+    """ One liner
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "One-Liner"
     _SUBTITLE = "Go over the one-liners"

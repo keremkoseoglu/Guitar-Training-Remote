@@ -2,12 +2,14 @@
 import random
 from model import exercise, exercise_step
 from music_theory import chord
-from practice import abstract_practice
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 
 
-class ScaleOnChord(abstract_practice.AbstractPractice):
-    """ Scale on chord """
+class ScaleOnChord():
+    """ Scale on chord
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Scale on chord"
     _SUBTITLE = "a scale on top of chord"
@@ -28,7 +30,7 @@ class ScaleOnChord(abstract_practice.AbstractPractice):
         for random_chord in random_chords:
             random_step = exercise_step.ExerciseStep(
                 random_chord,
-                abstract_practice.AbstractPractice.get_random_position_suggestion_text()
+                AbstractPractice.get_random_position_suggestion_text()
             )
 
             random_steps.append(random_step)

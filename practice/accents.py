@@ -3,7 +3,7 @@ import random
 from copy import copy
 from enum import Enum
 from model import exercise
-from practice import abstract_practice
+from practice.abstract_practice import AbstractPractice
 from practice.interval import Intervals
 from practice.lazy_fingers import LazyFingers
 from practice.notes_on_fretboard import NotesOnFretboard
@@ -35,8 +35,10 @@ class Accent:
         self.max_accent = 0
 
 
-class Accents(abstract_practice.AbstractPractice):
-    """ Accent practices """
+class Accents():
+    """ Accent practices
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Accents"
 
@@ -94,7 +96,7 @@ class Accents(abstract_practice.AbstractPractice):
             self._accents.append(str(current_accent))
 
     @staticmethod
-    def _get_support_practice(accent: Accent) -> abstract_practice.AbstractPractice:
+    def _get_support_practice(accent: Accent) -> AbstractPractice:
         support_index = random.randint(0, len(SupportPractice)-1)
         output = None
         for practice in SupportPractice:

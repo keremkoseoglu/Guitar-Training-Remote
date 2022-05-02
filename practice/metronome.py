@@ -2,13 +2,14 @@
 import random
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper, get_external_metronome_helper
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 from config import get_configuration
 
 
-class Metronome(abstract_practice.AbstractPractice):
-    """ Metronome """
+class Metronome():
+    """ Metronome
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Metronome"
 

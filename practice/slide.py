@@ -1,12 +1,13 @@
 """ Guitar slide module """
 from model import exercise
-from practice import abstract_practice
 from practice.notes_on_fretboard import NotesOnFretboard
 from practice.practice_category import PracticeCategory
 
 
-class Slide(abstract_practice.AbstractPractice):
-    """ Guitar slide exercise """
+class Slide():
+    """ Guitar slide exercise
+    PROTOCOL: AbstractPractice
+    """
 
     _TITLE = "Slide guitar"
     _SUBTITLE = "Play the note(s) on each string with slide"

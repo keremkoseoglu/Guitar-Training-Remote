@@ -2,12 +2,13 @@
 import random
 from model import exercise, exercise_step
 from music_theory import degree, mode
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 
 
-class Intervals(abstract_practice.AbstractPractice):
-    """ Intervals """
+class Intervals():
+    """ Intervals
+    PROTOCOL: AbstractPractice
+    """
 
     _DIRECTIONS = ["Up", "Down"]
     _TITLE = "Interval practice"

@@ -1,13 +1,15 @@
 """ All practices """
 import random
 from config import get_configuration
-from factory import abstract_factory, all_practices
+from factory import all_practices
 from model import workout
 from model.guitar import get_random_guitar
 
 
-class SomePractices(abstract_factory.AbstractFactory):
-    """ All practices """
+class SomePractices():
+    """ All practices
+    PROTOCOL: AbstractFactory
+    """
     def __init__(self):
         super().__init__()
         self._select_guitar = True

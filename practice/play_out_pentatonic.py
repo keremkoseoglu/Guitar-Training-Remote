@@ -1,13 +1,14 @@
 """ Play out pentatonic """
-from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from model.exercise import Exercise
 from model.exercise_step import ExerciseStep
 from music_theory.note import Note
 from music_theory.chord import Chord
 
-class PlayOutPentatonic(AbstractPractice):
-    """ Play out pentatonic """
+class PlayOutPentatonic():
+    """ Play out pentatonic
+    PROTOCOL: AbstractPractice
+    """
     _TITLE = "Play out pentatonic"
     _SUBTITLE = "Play X pentatonic and target Y"
 

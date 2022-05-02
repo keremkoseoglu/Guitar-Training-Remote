@@ -2,12 +2,13 @@
 import random
 from model import exercise, exercise_step
 from music_theory import note
-from practice import abstract_practice
 from practice.practice_category import PracticeCategory
 
 
-class NotesOnFretboard(abstract_practice.AbstractPractice):
-    """ Notes on fretboard """
+class NotesOnFretboard():
+    """ Notes on fretboard
+    PROTOCOL: AbstractPractice
+    """
 
     _MAX_NOTE_PER_STEP = 3
     _TITLE = "Single note memorization"

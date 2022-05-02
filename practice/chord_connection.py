@@ -1,13 +1,15 @@
 """ Chord connection """
 import random
 from model import exercise, exercise_step
-from practice import abstract_practice, improv
+from practice import improv
 from practice.practice_category import PracticeCategory
 from music_theory import chord
 
 
-class ChordConnection(abstract_practice.AbstractPractice):
-    """ Chord connection """
+class ChordConnection():
+    """ Chord connection
+    PROTOCOL: AbstractPractice
+    """
     _TITLE = "Chord Connection"
     _SUBTITLE = "Connect chords via"
 
