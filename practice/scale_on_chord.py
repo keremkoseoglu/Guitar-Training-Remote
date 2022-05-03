@@ -6,11 +6,8 @@ from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 
 
-class ScaleOnChord():
-    """ Scale on chord
-    PROTOCOL: AbstractPractice
-    """
-
+class ScaleOnChord(AbstractPractice):
+    """ Scale on chord """
     _TITLE = "Scale on chord"
     _SUBTITLE = "a scale on top of chord"
     _PLAY_CHOICE = ["Play in", "Play out"]

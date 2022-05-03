@@ -4,16 +4,14 @@ This module contains exercises for left hand fingers 2, 3, 4
 from random import randint
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from practice.metronome import Metronome
 from body.hand import Hand
 
 
-class LazyFingers():
-    """ Lazy fingers exercise class
-    PROTOCOL: AbstractPractice
-    """
-
+class LazyFingers(AbstractPractice):
+    """ Lazy fingers exercise class """
     _TITLE = "Lazy fingers"
     _SUBTITLE = "Work your lazy fingers"
     _MAX_STRING_JUMP = 2

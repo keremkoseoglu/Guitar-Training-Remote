@@ -3,15 +3,13 @@ import random
 from copy import deepcopy
 from model import exercise, exercise_step
 from model.exercise_helper import get_flukebox_helper
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from config import get_configuration
 
 
-class Improv():
-    """ Improv
-    PROTOCOL: AbstractPractice
-    """
-
+class Improv(AbstractPractice):
+    """ Improv """
     _TITLE = "Improv"
     _SUBTITLE = "Practice the improv approaches"
 

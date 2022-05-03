@@ -6,11 +6,8 @@ from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 
 
-class ScaleDexterity():
-    """ Scale dexterity
-    PROTOCOL: AbstractPractice
-    """
-
+class ScaleDexterity(AbstractPractice):
+    """ Scale dexterity """
     _TITLE = "Scale dexterity"
     _SUBTITLE = "Play a scale"
 

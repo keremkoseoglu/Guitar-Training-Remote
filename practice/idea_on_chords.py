@@ -1,14 +1,12 @@
 """ Any idea can be used with any chord """
 import random
 from model import exercise, exercise_step
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from music_theory.chord import Chord
 
-class IdeaOnChords():
-    """ Any idea can be used with any chord
-    PROTOCOL: AbstractPractice
-    """
-
+class IdeaOnChords(AbstractPractice):
+    """ Any idea can be used with any chord """
     _TITLE = "Idea on chord"
     _SUBTITLE = "Play the same idea over chords"
     _MAX_CHORDS = 4

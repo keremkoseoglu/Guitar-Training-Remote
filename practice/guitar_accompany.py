@@ -17,5 +17,6 @@ class GuitarAccompany(AbstractUrlList):
     def _config_section(self) -> str:
         return "guitar_accompany"
 
-    def _is_guitar_eligible(self, guitar: dict) -> bool:
+    @staticmethod
+    def _is_guitar_eligible(guitar: dict) -> bool:
         return guitar["type"] == "Guitar"
