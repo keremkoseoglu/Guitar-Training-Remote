@@ -1,13 +1,12 @@
 """ Module for notes on strings practice """
 from model import exercise, exercise_step
 from music_theory import note
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 
 
-class NotesOnStrings():
-    """ Notes on strings practice class
-    PROTOCOL: AbstractPractice
-    """
+class NotesOnStrings(AbstractPractice):
+    """ Notes on strings practice class """
     _TITLE = "Note memorization"
 
     def __init__(self):

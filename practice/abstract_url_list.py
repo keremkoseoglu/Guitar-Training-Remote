@@ -5,15 +5,15 @@ from copy import copy
 import pyperclip
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from config import get_configuration, save_configuration
 from gui.face import FaceFactory
 
 
-class AbstractUrlList():
+class AbstractUrlList(AbstractPractice):
     """ URL list class
     Technically this is not an abstract class, but logically it is
-    PROTOCOL: AbstractPractice
     """
 
     _BUTTON_START = "start"

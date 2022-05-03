@@ -1,11 +1,10 @@
 """ Voice """
 from model import exercise, exercise_step
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 
-class Voice():
-    """ Voice
-    PROTOCOL: AbstractPractice
-    """
+class Voice(AbstractPractice):
+    """ Voice """
     _TITLE = "Voice Pitch"
     _SUBTITLE = "Do voice pitch exercises"
 

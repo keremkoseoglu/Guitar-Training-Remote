@@ -3,13 +3,11 @@ from model.exercise import Exercise
 from model.exercise_step import ExerciseStep
 from music_theory.chord import Chord
 from music_theory.key_signature import KeySignature
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 
-class RandomNoteIntoChord():
-    """ Random note into chord transition
-    PROTOCOL: AbstractPractice
-    """
-
+class RandomNoteIntoChord(AbstractPractice):
+    """ Random note into chord transition """
     _TITLE = "Note into chord"
     _SUBTITLE = "Transit random note into chord"
 

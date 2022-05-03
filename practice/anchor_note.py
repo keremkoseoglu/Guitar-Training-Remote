@@ -1,15 +1,13 @@
 """ Anchor note """
 import random
 from model import exercise, exercise_step
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from music_theory import chord, mode, note, scale
 
 
-class AnchorNote():
-    """ Anchor note
-    PROTOCOL: AbstractPractice
-    """
-
+class AnchorNote(AbstractPractice):
+    """ Anchor note """
     _TITLE = "Anchor Note"
     _SUBTITLE = "Anchor note & use over..."
 

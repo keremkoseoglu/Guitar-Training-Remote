@@ -1,13 +1,12 @@
 """ Harmonics """
 from model import exercise, exercise_step
+from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from music_theory import chord
 
 
-class Harmonic():
-    """ Harmonic
-    PROTOCOL: AbstractPractice
-    """
+class Harmonic(AbstractPractice):
+    """ Harmonic """
     _TITLE = "Harmonics"
     _SUBTITLE = "Play harmonics over"
 

@@ -35,10 +35,8 @@ class Accent:
         self.max_accent = 0
 
 
-class Accents():
-    """ Accent practices
-    PROTOCOL: AbstractPractice
-    """
+class Accents(AbstractPractice):
+    """ Accent practices """
 
     _TITLE = "Accents"
 
