@@ -1,6 +1,6 @@
 """ Program entry point """
 import gui.face
-from practice.metronome_xlet import MetronomeXlet
+from practice.metronome_style import MetronomeStyle
 
 def run_app():
     """ Main """
@@ -8,7 +8,7 @@ def run_app():
 
 def test_app():
     """ Test """
-    test_exercise = MetronomeXlet()
+    test_exercise = MetronomeStyle()
     bass = {"type": "J Bass",
             "kind": "instrument",
             "strings": 4,
