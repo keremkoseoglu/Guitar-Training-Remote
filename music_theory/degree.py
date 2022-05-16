@@ -17,7 +17,7 @@ class Degree:
         while True:
             i = random.randint(0, len(self._degrees) - 1)
             degree = self._degrees[i]
-            if exclude_unison and (degree == 1 or degree == 8):
+            if exclude_unison and degree in (1, 8):
                 continue
             if limit_octave and degree > self._OCTAVE_LIMIT:
                 continue
@@ -28,7 +28,8 @@ class Degree:
         output = []
 
         for range_pos in range(count): # pylint: disable=W0612
-            random_degree = self.get_random_degree(limit_octave=limit_octave, exclude_unison=False)
+            random_degree = self.get_random_degree(limit_octave=limit_octave,
+                                                   exclude_unison=exclude_unison)
             output.append(random_degree)
 
         return output
