@@ -41,7 +41,7 @@ def get_external_metronome_helper(bpm: int) -> ExerciseHelper:
     config = get_configuration()
     if "metronome_app" not in config:
         return None
-    command = config["metronome_app"]["path"].replace(" ", "\ ")
+    command = config["metronome_app"]["path"].replace(" ", "\ ") #pylint: disable=W1401
     command = "open " + command
     output = ExerciseHelper(ExerciseHelperType.OS_COMMAND,
                             {"command": command, "clipboard": str(bpm)})
