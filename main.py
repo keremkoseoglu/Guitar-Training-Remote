@@ -1,6 +1,6 @@
 """ Program entry point """
 import gui.face
-from practice.random_note_into_chord import RandomNoteIntoChord
+from practice.metronome_xlet import MetronomeXlet
 
 def run_app():
     """ Main """
@@ -8,7 +8,7 @@ def run_app():
 
 def test_app():
     """ Test """
-    test_exercise = RandomNoteIntoChord()
+    test_exercise = MetronomeXlet()
     bass = {"type": "J Bass",
             "kind": "instrument",
             "strings": 4,
