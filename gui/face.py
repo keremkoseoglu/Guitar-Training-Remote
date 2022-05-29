@@ -10,7 +10,7 @@ from factory.category_balance import CategoryBalance
 from gui.button_row import ButtonRow
 from gui.helper_button_row import HelperButtonRow
 from gui.metronome import Metronome
-from model.exercise_helper import ExerciseHelperType, ExerciseHelper, get_flukebox_helper
+from model.exercise_helper import ExerciseHelperType, ExerciseHelper, get_flukebox_helper, quit_flukebox
 import config
 
 _APP_TITLE = "Guitar Training Remote"
@@ -117,6 +117,7 @@ class Face(GridLayout):
 
         else:
             if prev_exercise_index != self._workout.get_exercise_index():
+                quit_flukebox()
                 self._helper_buttons.reset_buttons()
                 self._paint_exercise()
             self._paint_exercise_step()

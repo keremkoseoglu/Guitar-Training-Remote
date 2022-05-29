@@ -1,5 +1,6 @@
 """ Exercise helper module """
 from enum import Enum
+import subprocess
 from config import get_configuration
 
 class ExerciseHelperType(Enum):
@@ -35,6 +36,15 @@ def get_flukebox_helper(playlist: str, no_local: bool = False) -> ExerciseHelper
     output = ExerciseHelper(ExerciseHelperType.OS_COMMAND,
                             {"command": command})
     return output
+
+def quit_flukebox():
+    """ Quit FlukeBox """
+    config = get_configuration()
+    if "flukebox" not in config:
+        return
+    if "quit_url" not in config["flukebox"]:
+        return
+    subprocess.call(["curl", config["flukebox"]["quit_url"]])
 
 def get_external_metronome_helper(bpm: int) -> ExerciseHelper:
     """ Returns a metronome helper Exercise """
