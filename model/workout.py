@@ -60,6 +60,22 @@ class WorkOut:
         out_step = self.get_current_step()
         return out_exercise, out_step
 
+    def get_next_exercise(self):
+        """ Returns next exercise """
+        current_exercise = self.get_current_exercise()
+        if current_exercise is None:
+            return None, None
+
+        self._step_index = 0
+        self._exercise_index += 1
+
+        if self._exercise_index >= len(self._exercises):
+            return None, None
+
+        out_exercise = self.get_current_exercise()
+        out_step = self.get_current_step()
+        return out_exercise, out_step
+
     def get_exercise_count(self) -> int:
         """ Returns exercise count """
         return len(self._exercises)

@@ -83,6 +83,8 @@ class Face(GridLayout):
         self._metronome.reset()
         if button == ButtonRow.BUTTON_NEXT:
             self.next_step()
+        elif button == ButtonRow.BUTTON_SKIP:
+            self.next_exercise()
         elif button == ButtonRow.BUTTON_RESTART:
             self._restart()
         elif button == ButtonRow.BUTTON_REPICK:
@@ -98,6 +100,24 @@ class Face(GridLayout):
         except Exception:
             return
 
+        self._setup_exercise_step(prev_exercise_index, next_exer, next_step)
+
+    def next_exercise(self):
+        """ Goes to the next exercise """
+        prev_exercise_index = self._workout.get_exercise_index()
+        try:
+            next_exer, next_step = self._workout.get_next_exercise()
+        except Exception:
+            return
+
+        self._setup_exercise_step(prev_exercise_index, next_exer, next_step)
+
+    def set_step_sub_label_text(self, text: str):
+        """ Alt metni günceller """
+        self._step_sub_label.text = text
+
+    def _setup_exercise_step(self, prev_exercise_index, next_exer, next_step):
+        """ Setup exercise step """
         if next_exer is None or next_step is None:
             self._buttons.set_next_enabled(False)
             self._exercise_main_label.text = ""
@@ -127,10 +147,6 @@ class Face(GridLayout):
             self._open_guitar_apps = False
             for app in self._guitar["apps"]:
                 subprocess.call(["open", app])
-
-    def set_step_sub_label_text(self, text: str):
-        """ Alt metni günceller """
-        self._step_sub_label.text = text
 
     def _paint_exercise(self):
         exe = self._workout.get_current_exercise()
