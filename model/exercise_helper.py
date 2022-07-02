@@ -1,5 +1,6 @@
 """ Exercise helper module """
 from enum import Enum
+import os
 import subprocess
 from config import get_configuration
 
@@ -56,3 +57,14 @@ def get_external_metronome_helper(bpm: int) -> ExerciseHelper:
     output = ExerciseHelper(ExerciseHelperType.OS_COMMAND,
                             {"command": command, "clipboard": str(bpm)})
     return output
+
+def quit_metronome():
+    """ Quit metronome """
+    config = get_configuration()
+    if "metronome_app" not in config:
+        return
+    if "process" not in config["metronome_app"]:
+        return
+    process = config["metronome_app"]["process"]
+    cmd = f"osascript -e 'tell application \"{ process }\" to quit'"
+    os.system(cmd)
