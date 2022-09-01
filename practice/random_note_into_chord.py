@@ -5,6 +5,7 @@ from music_theory.chord import Chord
 from music_theory.key_signature import KeySignature
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
+from performance.advice import Advice
 
 class RandomNoteIntoChord(AbstractPractice):
     """ Random note into chord transition """
@@ -20,6 +21,8 @@ class RandomNoteIntoChord(AbstractPractice):
         """ Returns exercise """
         if guitar["kind"] != "instrument":
             return None
+
+        advice = Advice()
         random_steps = []
 
         random_chords = Chord().get_random_chords(quantity)
@@ -31,7 +34,7 @@ class RandomNoteIntoChord(AbstractPractice):
             except Exception:
                 continue
 
-            random_step = ExerciseStep(f"{note} -> {chord}")
+            random_step = ExerciseStep(f"{note} -> {chord}", advice.get_random_advice())
             random_steps.append(random_step)
 
         output = Exercise(self._TITLE,

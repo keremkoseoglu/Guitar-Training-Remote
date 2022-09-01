@@ -9,6 +9,7 @@ from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from config import get_configuration, save_configuration
 from gui.face import FaceFactory
+from performance.advice import Advice
 
 
 class AbstractUrlList(AbstractPractice):
@@ -57,7 +58,8 @@ class AbstractUrlList(AbstractPractice):
             return None
 
         lesson = self._current_lesson
-        step = exercise_step.ExerciseStep(lesson["name"], lesson["url"])
+        sub_txt = Advice().get_random_advice()
+        step = exercise_step.ExerciseStep(lesson["name"], sub_txt)
         steps = [step]
         output = exercise.Exercise(
             self._title,

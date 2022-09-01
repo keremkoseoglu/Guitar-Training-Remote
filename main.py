@@ -1,6 +1,6 @@
 """ Program entry point """
 import gui.face
-from practice.bass_fill_in import BassFillIn
+from practice.improv import Improv
 # from test.test_quit_metronome import test_quit_metronome
 
 def run_app():
@@ -12,7 +12,7 @@ def test_app():
     # test_quit_metronome()
     # return
 
-    test_exercise = BassFillIn()
+    test_exercise = Improv()
     bass = {"type": "J Bass",
             "kind": "instrument",
             "strings": 4,

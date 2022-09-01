@@ -10,16 +10,13 @@ class Practice(Protocol):
     @property
     def category(self) -> PracticeCategory:
         """ Returns the category of the practice """
-        ...
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns the exercise object """
-        ...
 
     @staticmethod
     def get_random_position_suggestion_text() -> str:
         """ Random suggestion position text """
-        ...
 
 class AbstractPractice(Practice):
     """ Abstract practice class

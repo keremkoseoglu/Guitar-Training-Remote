@@ -6,7 +6,7 @@ from model.exercise_helper import get_flukebox_helper
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from config import get_configuration
-
+from performance.advice import Advice
 
 class Improv(AbstractPractice):
     """ Improv """
@@ -28,6 +28,7 @@ class Improv(AbstractPractice):
 
         random_steps = []
         improvs = []
+        advice = Advice()
 
         for quantity_pos in range(0, quantity): # pylint: disable=W0612
             if len(improvs) <= 0:
@@ -39,25 +40,7 @@ class Improv(AbstractPractice):
                 break
 
             random_main_improv = improvs.pop(random_index)
-            sub_txt = ""
-
-            sub_appended = False
-            for one_two in range(2): # pylint: disable=W0612
-                if len(improvs) == 0:
-                    break
-                if sub_txt == "":
-                    sub_txt += "followed by "
-                if len(improvs) == 1:
-                    random_index = 0
-                else:
-                    random_index = random.randint(0, len(improvs) - 1)
-                random_sub_improv = improvs.pop(random_index)
-                if sub_appended:
-                    sub_txt += ", "
-                else:
-                    sub_appended = True
-                sub_txt += random_sub_improv
-
+            sub_txt = advice.get_random_advice()
             random_step = exercise_step.ExerciseStep(random_main_improv, sub_txt)
             random_steps.append(random_step)
 

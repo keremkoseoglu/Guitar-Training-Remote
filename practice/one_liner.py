@@ -4,7 +4,7 @@ from model import exercise, exercise_step
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from config import get_configuration
-
+from performance.advice import Advice
 
 class OneLiner(AbstractPractice):
     """ One liner """
@@ -31,7 +31,7 @@ class OneLiner(AbstractPractice):
                 one_liners = self._config["one_liners"].copy()
             random_index = random.randint(0, len(one_liners) - 1)
             random_one_liner = one_liners.pop(random_index)
-            random_step = exercise_step.ExerciseStep(random_one_liner, "")
+            random_step = exercise_step.ExerciseStep(random_one_liner, Advice().get_random_advice())
             random_steps.append(random_step)
 
         output = exercise.Exercise(

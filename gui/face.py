@@ -22,6 +22,7 @@ class Face(GridLayout):
     _H1_FONT_SIZE = 100
     _H2_FONT_SIZE = 24
     _H3_FONT_SIZE = 18
+    _MAX_SUB_LABEL_WORDS = 10
 
     def __init__(self, **kwargs):
         super(Face, self).__init__(**kwargs)
@@ -44,9 +45,10 @@ class Face(GridLayout):
         self._step_main_label.size_hint = (1, 0.5)
 
         self._step_sub_label = Label()
-        self._step_sub_label.text = "Test"
+        self.set_step_sub_label_text("Text")
         self._step_sub_label.font_size = str(self._H3_FONT_SIZE) + "dp"
         self._step_sub_label.size_hint = (1, 0.1)
+        self._step_sub_label.halign = "center"
 
         self._stop_watch_label = Label()
         self._stop_watch_label.size_hint = (1, 0.1)
@@ -115,7 +117,26 @@ class Face(GridLayout):
 
     def set_step_sub_label_text(self, text: str):
         """ Alt metni günceller """
-        self._step_sub_label.text = text
+        if " " not in text:
+            self._step_sub_label.text = text
+            return
+
+        label_text = ""
+        words = text.split()
+        word_count = 0
+
+        for word in words:
+            if word_count >= Face._MAX_SUB_LABEL_WORDS:
+                label_text += f"\n{word}"
+                word_count = 0
+            else:
+                if word_count > 0:
+                    label_text += " "
+                label_text += word
+
+            word_count += 1
+
+        self._step_sub_label.text = label_text
 
     def _setup_exercise_step(self, prev_exercise_index, next_exer, next_step):
         """ Setup exercise step """
@@ -124,7 +145,7 @@ class Face(GridLayout):
             self._exercise_main_label.text = ""
             self._exercise_sub_label.text = ""
             self._step_main_label.text = "Finished!"
-            self._step_sub_label.text = "Now play freestyle for fun!"
+            self.set_step_sub_label_text("Now play freestyle for fun!")
 
             flukebox = get_flukebox_helper("final_playlist")
             if flukebox is not None:
@@ -159,7 +180,7 @@ class Face(GridLayout):
     def _paint_exercise_step(self):
         step = self._workout.get_current_step()
         self._step_main_label.text = step.main_text
-        self._step_sub_label.text = str(step.sub_text)
+        self.set_step_sub_label_text(str(step.sub_text))
         self._process_helpers(step.helpers)
 
     def _refresh_status_text(self):

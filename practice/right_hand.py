@@ -18,7 +18,7 @@ from practice.scale_dexterity import ScaleDexterity
 from practice.scale_on_chord import ScaleOnChord
 from practice.chord_connection import ChordConnection
 from practice.chords import Chords
-import technique.right_hand
+import body.right_hand
 
 
 class SupportPractice(Enum):
@@ -45,7 +45,7 @@ class RightHand(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns double thumb exercises """
-        techs = technique.right_hand.RightHand().get_random_techniques(1)
+        techs = body.right_hand.RightHand().get_random_techniques(1)
         if techs is None:
             return None
         tech = techs[0]
@@ -76,45 +76,46 @@ class RightHand(AbstractPractice):
         return output
 
     @staticmethod
-    def _get_support_practice() -> AbstractPractice:
+    def _get_support_practice() -> AbstractPractice: # pylint: disable=R0912
         support_index = random.randint(0, len(SupportPractice)-1)
         output = None
         for practice in SupportPractice:
-            if practice.value == support_index:
-                if practice == SupportPractice.ACCENTS:
-                    output = Accents()
-                    break
-                if practice == SupportPractice.ANCHOR_NOTE:
-                    output = AnchorNote()
-                    break
-                if practice == SupportPractice.ARPEGGIO:
-                    output = Arpeggio()
-                    break
-                if practice == SupportPractice.INTERVAL:
-                    output = Intervals()
-                    break
-                if practice == SupportPractice.LEFT_PERMUTATION:
-                    output = LeftFingerPermutations()
-                    break
-                if practice == SupportPractice.NOTES_ON_FRETBOARD:
-                    output = NotesOnFretboard()
-                    break
-                if practice == SupportPractice.NOTES_ON_STRINGS:
-                    output = NotesOnStrings()
-                    break
-                if practice == SupportPractice.SCALE_DEGREE_SEQUENCE:
-                    output = ScaleDegreeSequence()
-                    break
-                if practice == SupportPractice.SCALE_DEXTERITY:
-                    output = ScaleDexterity()
-                    break
-                if practice == SupportPractice.SCALE_ON_CHORD:
-                    output = ScaleOnChord()
-                    break
-                if practice == SupportPractice.CHORD_CONNECTION:
-                    output = ChordConnection()
-                    break
-                if practice == SupportPractice.CHORDS:
-                    output = Chords()
-                    break
+            if practice.value != support_index:
+                continue
+            if practice == SupportPractice.ACCENTS:
+                output = Accents()
+                break
+            if practice == SupportPractice.ANCHOR_NOTE:
+                output = AnchorNote()
+                break
+            if practice == SupportPractice.ARPEGGIO:
+                output = Arpeggio()
+                break
+            if practice == SupportPractice.INTERVAL:
+                output = Intervals()
+                break
+            if practice == SupportPractice.LEFT_PERMUTATION:
+                output = LeftFingerPermutations()
+                break
+            if practice == SupportPractice.NOTES_ON_FRETBOARD:
+                output = NotesOnFretboard()
+                break
+            if practice == SupportPractice.NOTES_ON_STRINGS:
+                output = NotesOnStrings()
+                break
+            if practice == SupportPractice.SCALE_DEGREE_SEQUENCE:
+                output = ScaleDegreeSequence()
+                break
+            if practice == SupportPractice.SCALE_DEXTERITY:
+                output = ScaleDexterity()
+                break
+            if practice == SupportPractice.SCALE_ON_CHORD:
+                output = ScaleOnChord()
+                break
+            if practice == SupportPractice.CHORD_CONNECTION:
+                output = ChordConnection()
+                break
+            if practice == SupportPractice.CHORDS:
+                output = Chords()
+                break
         return output

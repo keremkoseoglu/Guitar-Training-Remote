@@ -4,6 +4,7 @@ from model import exercise, exercise_step
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from music_theory import chord, mode, note, scale
+from performance.advice import Advice
 
 
 class AnchorNote(AbstractPractice):
@@ -21,11 +22,13 @@ class AnchorNote(AbstractPractice):
         if guitar["kind"] != "instrument":
             return None
 
+        advice = Advice()
         random_steps = []
         i = random.randint(0, 1)
 
         if i == 0:
-            random_steps.append(exercise_step.ExerciseStep("random song"))
+            sub_txt = advice.get_random_advice()
+            random_steps.append(exercise_step.ExerciseStep("random song", sub_txt))
         else:
             for random_note in note.Note().get_random_notes(quantity):
                 context_count = random.randint(1, 5)

@@ -5,6 +5,7 @@ from model.exercise_step import ExerciseStep
 from model.exercise_helper import get_flukebox_helper, ExerciseHelper, ExerciseHelperType
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
+from performance.advice import Advice
 
 class BassFillIn(AbstractPractice):
     """ Bass fill in """
@@ -21,7 +22,7 @@ class BassFillIn(AbstractPractice):
         if guitar["kind"] != "instrument":
             return None
 
-        dummy_step = ExerciseStep(BassFillIn._SUBTITLE)
+        dummy_step = ExerciseStep(BassFillIn._SUBTITLE, Advice().get_random_advice())
 
         output = Exercise(
             self._TITLE,

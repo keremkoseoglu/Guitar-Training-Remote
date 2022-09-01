@@ -1,7 +1,6 @@
 """ Bass accompany module """
 from practice.abstract_url_list import AbstractUrlList
 
-
 class BassAccompany(AbstractUrlList):
     """ Online lesson class """
 
