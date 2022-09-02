@@ -8,7 +8,7 @@
     },
     "instruments": [
         {
-            "type": "Squier Jazz",
+            "type": "Squier Jazz Bass",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
@@ -17,7 +17,7 @@
             "apps": []
         },
         {
-            "type": "Fender Jazz",
+            "type": "Fender Jazz Bass",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
@@ -333,12 +333,12 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "YouTube mix mastering",
-            "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
-        },
-        {
             "name": "YouTube bookmarks",
             "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
+        },
+        {
+            "name": "YouTube mix mastering",
+            "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
         }
     ],
     "transcriptions": [
@@ -537,20 +537,20 @@
     ],
     "advices": [
         "Play only what you hear.",
-        "If you don’t hear anything, don’t play anything.",
-        "Don’t let your fingers and limbs wander — place them intentionally.",
-        "Don’t improvise on endlessly — play something with intention, develop it or not, but then end off, take a break.",
-        "Leave space — create space — intentionally create places where you don’t play.",
+        "If you don\u2019t hear anything, don\u2019t play anything.",
+        "Don\u2019t let your fingers and limbs wander \u2014 place them intentionally.",
+        "Don\u2019t improvise on endlessly \u2014 play something with intention, develop it or not, but then end off, take a break.",
+        "Leave space \u2014 create space \u2014 intentionally create places where you don\u2019t play.",
         "Make your sound blend. Listen to your sound and adjust it to the rest of the band and the room.",
-        "If you play more than one instrument at a time — like a drum kit or multiple keyboards — make sure that they are balanced with one another.",
-        "Don’t make any of your music mechanically or just through patterns of habit. Create each sound, phrase, and piece with choice — deliberately.",
+        "If you play more than one instrument at a time \u2014 like a drum kit or multiple keyboards \u2014 make sure that they are balanced with one another.",
+        "Don\u2019t make any of your music mechanically or just through patterns of habit. Create each sound, phrase, and piece with choice \u2014 deliberately.",
         "Guide your choice of what to play by what you like-not by what someone else will think.",
         "Use contrast and balance the elements: high/low, fast/slow, loud/soft, tense/relaxed, dense/sparse.",
         "Play to make the other musicians sound good. Play things that will make the overall music sound good.",
         "Play with a relaxed body. Always release whatever tension you create.",
-        "Create space — begin, develop, and end phrases with intention.",
-        "Never beat or pound your instrument — play it easily and gracefully.",
-        "Create space — then place something in it.",
-        "Use mimicry sparsely — mostly create phrases that contrast with and develop the phrases of the other players."
+        "Create space \u2014 begin, develop, and end phrases with intention.",
+        "Never beat or pound your instrument \u2014 play it easily and gracefully.",
+        "Create space \u2014 then place something in it.",
+        "Use mimicry sparsely \u2014 mostly create phrases that contrast with and develop the phrases of the other players."
     ]
 }

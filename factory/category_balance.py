@@ -32,6 +32,8 @@ class CategoryBalance(some_practices.SomePractices):
 
         everything = all_practices.AllPractices().get_workout(self.guitar)
         for exercise in everything.exercises:
+            if exercise is None:
+                continue
             groups[get_category_group(exercise.practice_category).name].append(exercise)
 
         exercise_count = random.randint(
