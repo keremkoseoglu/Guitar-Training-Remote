@@ -10,6 +10,7 @@ class PracticeCategory(Enum):
     DEXTERITY = 4
     PERFORMANCE = 5
     EDUCATION = 6
+    SPEED = 7
 
 class PracticeCategoryGroup(Enum):
     """ Practice category group """
@@ -24,7 +25,9 @@ def get_category_group(category: PracticeCategory) -> PracticeCategoryGroup:
     """ Converts category to group """
     if category == PracticeCategory.UNDEFINED:
         return PracticeCategoryGroup.UNDEFINED
-    if category in (PracticeCategory.RIGHT_HAND, PracticeCategory.LEFT_HAND):
+    if category in (PracticeCategory.RIGHT_HAND,
+                    PracticeCategory.LEFT_HAND,
+                    PracticeCategory.SPEED):
         return PracticeCategoryGroup.TECHNIQUE
     if category == PracticeCategory.THEORY:
         return PracticeCategoryGroup.THEORY
