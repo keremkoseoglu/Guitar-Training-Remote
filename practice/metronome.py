@@ -17,7 +17,7 @@ class Metronome(AbstractPractice):
     @property
     def category(self) -> PracticeCategory:
         """ Returns the category of the practice """
-        return PracticeCategory.PERFORMANCE
+        return PracticeCategory.TIMING
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns metronome exercises """

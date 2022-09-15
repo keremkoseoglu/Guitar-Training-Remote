@@ -11,6 +11,7 @@ class PracticeCategory(Enum):
     PERFORMANCE = 5
     EDUCATION = 6
     SPEED = 7
+    TIMING = 8
 
 class PracticeCategoryGroup(Enum):
     """ Practice category group """
@@ -33,7 +34,7 @@ def get_category_group(category: PracticeCategory) -> PracticeCategoryGroup:
         return PracticeCategoryGroup.THEORY
     if category == PracticeCategory.DEXTERITY:
         return PracticeCategoryGroup.DEXTERITY
-    if category == PracticeCategory.PERFORMANCE:
+    if category in (PracticeCategory.PERFORMANCE, PracticeCategory.TIMING):
         return PracticeCategoryGroup.PERFORMANCE
     if category == PracticeCategory.EDUCATION:
         return PracticeCategoryGroup.EDUCATION
