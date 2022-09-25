@@ -10,6 +10,7 @@ from config import get_configuration
 class Metronome(AbstractPractice):
     """ Metronome """
     _TITLE = "Metronome"
+    _MAX_ITERATIONS = 99
 
     def __init__(self):
         self._config = get_configuration()
@@ -22,9 +23,20 @@ class Metronome(AbstractPractice):
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns metronome exercises """
         random_steps = []
+        produced_dicts = []
+        iteration = 0
 
         while len(random_steps) < quantity:
+            iteration += 1
+            if iteration > Metronome._MAX_ITERATIONS:
+                break
+
             random_dict = self._get_random_metronome_exercise()
+
+            if random_dict in produced_dicts:
+                continue
+            produced_dicts.append(random_dict)
+
             random_exercise = random_dict["exercise"]
             random_bpm = self._get_adjusted_random_bpm(random_dict)
 
