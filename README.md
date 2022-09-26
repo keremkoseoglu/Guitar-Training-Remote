@@ -59,7 +59,7 @@ After activating the virtual environment (as described above), run the applicati
 python3 main.py
 ```
 
-To customize the practices, you can edit **/config.json** .
+To customize the practices, you can edit **data/config.json** .
 
 ## How it works
 
@@ -75,7 +75,7 @@ well, such as the chord or notes you need to work on.
 You can modify the current configuration by editing **config.json** . You can 
 modify or add new instruments, chords, modes, arpeggions, improvs, etc.
 
-GTR is integrated with [FlukeBox](https://github.com/keremkoseoglu/flukebox)! If you have a FlukeBox playlist containing your backing tracks, every time the Improv exercise starts, your backing track playlist will open as well. Just make sure that the "flukebox" section of **config.json** contains the right path and playlist values. 
+GTR is integrated with [FlukeBox](https://github.com/keremkoseoglu/flukebox)! If you have a FlukeBox playlist containing your backing tracks, every time the Improv exercise starts, your backing track playlist will open as well. Just make sure that the "flukebox" section of **data/config.json** contains the right path and playlist values. 
 
 ## Adding new practice classes
 
