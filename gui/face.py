@@ -185,7 +185,7 @@ class Face(GridLayout):
 
     def _refresh_status_text(self):
         try:
-            status_text = f"Lesson {str(self._workout.get_exercise_index() + 1)}" \
+            status_text = f"Practice {str(self._workout.get_exercise_index() + 1)}" \
                           f" / {str(self._workout.get_exercise_count())}" \
                           f", step {str(self._workout.get_step_index() + 1)}" \
                           f" / {str(self._workout.get_step_count())}"
