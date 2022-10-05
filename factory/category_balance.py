@@ -7,7 +7,7 @@ from model.guitar import get_random_guitar
 from practice.practice_category import PracticeCategory, get_category_group
 
 class CategoryBalance(some_practices.SomePractices):
-    """ All practices """
+    """ Balanced category practices """
     def __init__(self):
         super().__init__()
         self._select_guitar = True
@@ -23,7 +23,9 @@ class CategoryBalance(some_practices.SomePractices):
 
         tmp_groups = []
         for practice_category in PracticeCategory:
-            tmp_groups.append(get_category_group(practice_category).name)
+            group_name = get_category_group(practice_category).name
+            if group_name not in tmp_groups:
+                tmp_groups.append(group_name)
         groups = {}
         while len(tmp_groups) > 0:
             cat_index = random.randint(0, len(tmp_groups)-1)
@@ -43,7 +45,7 @@ class CategoryBalance(some_practices.SomePractices):
         exercise_per_group = round(exercise_count / len(groups))
         output_exercises = []
 
-        for group in groups:
+        for group in groups.items():
             exercises = groups[group]
             for i in range(0, exercise_per_group): # pylint: disable=W0612
                 if len(exercises) <= 0:

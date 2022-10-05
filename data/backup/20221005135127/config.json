@@ -4,7 +4,8 @@
         "min_practice_count": 8,
         "max_practice_count": 16,
         "must_select": [],
-        "only_select": ""
+        "only_select": "",
+        "disable_helpers": true
     },
     "instruments": [
         {
@@ -315,7 +316,8 @@
         "New style",
         "Active listening",
         "Read workshop notes",
-        "Walking bass practice"
+        "Walking bass practice",
+        "Funk practice on the one"
     ],
     "right_hand_exercises": [
         "4 finger gallop",
