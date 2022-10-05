@@ -4,7 +4,7 @@
         "min_practice_count": 8,
         "max_practice_count": 16,
         "must_select": [],
-        "only_select": ""
+        "only_select": "practice.close_dissonant_notes"
     },
     "instruments": [
         {
@@ -138,7 +138,6 @@
     ],
     "improvs": [
         "Random note",
-        "Simple melody",
         "Chords",
         "Distant notes",
         "Bebop",
@@ -165,10 +164,14 @@
         "Target notes",
         "Mental sentences",
         "Sing along",
-        "Maj over min",
-        "Min over maj",
         "Common tones",
-        "Breath during solo"
+        "Breath during solo",
+        "Do something different",
+        "Catch people no speak",
+        "Simple but feel good",
+        "Mix sugar with medicine",
+        "Close dissonant notes",
+        "Use the entire neck"
     ],
     "metronome_exercises": [
         {
@@ -310,7 +313,9 @@
     },
     "one_liners": [
         "New style",
-        "New song"
+        "Active listening",
+        "Read workshop notes",
+        "Walking bass practice"
     ],
     "right_hand_exercises": [
         "4 finger gallop",
@@ -552,6 +557,8 @@
         "Create space \u2014 begin, develop, and end phrases with intention.",
         "Never beat or pound your instrument \u2014 play it easily and gracefully.",
         "Create space \u2014 then place something in it.",
-        "Use mimicry sparsely \u2014 mostly create phrases that contrast with and develop the phrases of the other players."
+        "Use mimicry sparsely \u2014 mostly create phrases that contrast with and develop the phrases of the other players.",
+        "Find the balance between what the song wants and your fun.",
+        "Mix sugar with medicine."
     ]
 }
