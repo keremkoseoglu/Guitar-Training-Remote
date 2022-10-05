@@ -4,7 +4,6 @@ from vibhaga.inspector import Inspector, Container
 from model import workout
 from config import get_configuration
 
-
 class AllPractices(): # pylint: disable=R0903
     """ All practices
     PROTOCOL: AbstractFactory
@@ -50,7 +49,10 @@ class AllPractices(): # pylint: disable=R0903
             practice_object = practice_objects[random_practice_index]
 
             random_step_count = self._get_random_step_count()
-            produced_exercise = practice_object().get_exercise(random_step_count, guitar)
+            try:
+                produced_exercise = practice_object().get_exercise(random_step_count, guitar)
+            except Exception:
+                produced_exercise = None
             if produced_exercise is not None:
                 exercises.append(produced_exercise)
             practice_objects.pop(random_practice_index)
@@ -72,7 +74,7 @@ class AllPractices(): # pylint: disable=R0903
                 module_count[practice_object.__module__] = 0
             module_count[practice_object.__module__] += 1
 
-        for module in module_count:
+        for module in module_count.items():
             if module_count[module] <= 1:
                 continue
             practice_index = -1

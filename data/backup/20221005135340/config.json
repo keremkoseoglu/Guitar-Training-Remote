@@ -4,7 +4,8 @@
         "min_practice_count": 8,
         "max_practice_count": 16,
         "must_select": [],
-        "only_select": "practice.close_dissonant_notes"
+        "only_select": "",
+        "disable_helpers": true
     },
     "instruments": [
         {
@@ -164,8 +165,6 @@
         "Target notes",
         "Mental sentences",
         "Sing along",
-        "Maj over min",
-        "Min over maj",
         "Common tones",
         "Breath during solo",
         "Do something different",
@@ -316,7 +315,9 @@
     "one_liners": [
         "New style",
         "Active listening",
-        "Read workshop notes"
+        "Read workshop notes",
+        "Walking bass practice",
+        "Funk practice on the one"
     ],
     "right_hand_exercises": [
         "4 finger gallop",

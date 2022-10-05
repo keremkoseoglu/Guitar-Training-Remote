@@ -18,7 +18,6 @@ _APP_TITLE = "Guitar Training Remote"
 
 class Face(GridLayout):
     """ Main form """
-
     _H1_FONT_SIZE = 100
     _H2_FONT_SIZE = 24
     _H3_FONT_SIZE = 18
@@ -28,7 +27,6 @@ class Face(GridLayout):
         super(Face, self).__init__(**kwargs)
 
         # --- Prepare GUI elements -----
-
         self._exercise_main_label = Label()
         self._exercise_main_label.text = "Test"
         self._exercise_main_label.font_size = str(self._H2_FONT_SIZE) + "dp"
@@ -74,7 +72,6 @@ class Face(GridLayout):
         self.add_widget(self._buttons)
 
         # --- Start workout -----
-
         self._workout = None
         self._exercise_step_tick_count = 0
         self._guitar_selected = False
@@ -214,6 +211,11 @@ class Face(GridLayout):
         self._guitar = practice_obj.guitar
 
     def _process_helpers(self, helpers: List[ExerciseHelper]):
+        fconfig = config.get_configuration()
+
+        if fconfig["practice_selection"]["disable_helpers"]:
+            return
+
         for helper in helpers:
             if helper.helper_type == ExerciseHelperType.BROWSER:
                 webbrowser.open(helper.params["url"])
