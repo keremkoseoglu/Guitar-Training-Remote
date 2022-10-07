@@ -45,7 +45,7 @@ class CategoryBalance(some_practices.SomePractices):
         exercise_per_group = round(exercise_count / len(groups))
         output_exercises = []
 
-        for group in groups.items():
+        for group in groups:
             exercises = groups[group]
             for i in range(0, exercise_per_group): # pylint: disable=W0612
                 if len(exercises) <= 0:

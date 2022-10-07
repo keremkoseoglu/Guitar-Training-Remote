@@ -74,7 +74,7 @@ class AllPractices(): # pylint: disable=R0903
                 module_count[practice_object.__module__] = 0
             module_count[practice_object.__module__] += 1
 
-        for module in module_count.items():
+        for module in module_count:
             if module_count[module] <= 1:
                 continue
             practice_index = -1
