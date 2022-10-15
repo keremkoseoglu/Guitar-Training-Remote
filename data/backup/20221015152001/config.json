@@ -4,7 +4,7 @@
         "min_practice_count": 8,
         "max_practice_count": 16,
         "must_select": [],
-        "only_select": "",
+        "only_select": "practice.arpeggio_approach",
         "disable_helpers": false
     },
     "instruments": [

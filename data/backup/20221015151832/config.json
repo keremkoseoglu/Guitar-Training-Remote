@@ -4,7 +4,7 @@
         "min_practice_count": 8,
         "max_practice_count": 16,
         "must_select": [],
-        "only_select": "",
+        "only_select": "practice.arpeggio_approach",
         "disable_helpers": false
     },
     "instruments": [
@@ -157,7 +157,6 @@
         "Play the silence",
         "Whole tone",
         "Accents",
-        "Emphasize chord tones",
         "Emphasize chord changes",
         "Side slipping",
         "Enclosures",
@@ -172,7 +171,9 @@
         "Simple but feel good",
         "Mix sugar with medicine",
         "Close dissonant notes",
-        "Use the entire neck"
+        "Use the entire neck",
+        "Chord tone soloing 13579 DOMb9",
+        "Chord tone approach soloing"
     ],
     "metronome_exercises": [
         {
@@ -341,12 +342,12 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "YouTube bookmarks",
-            "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
-        },
-        {
             "name": "YouTube mix mastering",
             "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
+        },
+        {
+            "name": "YouTube bookmarks",
+            "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
         }
     ],
     "transcriptions": [
