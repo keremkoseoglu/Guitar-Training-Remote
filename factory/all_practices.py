@@ -26,7 +26,8 @@ class AllPractices(): # pylint: disable=R0903
                 "Position",
                 "Guitar",
                 "SupportPractice",
-                "Accent"
+                "Accent",
+                "ApproachDirection"
             ])
 
         AllPractices._delete_duplicates(practice_objects)

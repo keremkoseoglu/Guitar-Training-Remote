@@ -2,7 +2,7 @@
 import random
 from enum import Enum
 from model.exercise import Exercise
-from model.exercise_helper import ExerciseHelper, ExerciseHelperType
+from model.exercise_helper import get_external_metronome_helper
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from practice.arpeggio import Arpeggio
@@ -14,7 +14,6 @@ from practice.scale_dexterity import ScaleDexterity
 from practice.scale_on_chord import ScaleOnChord
 from practice.transcribe_rep_org import TranscribeRepertoirAsOriginal
 from practice.metronome import Metronome
-from model.exercise_helper import get_external_metronome_helper, quit_metronome
 
 class CoreSpeedUpPractice(Enum):
     """ Core speed up practice """
@@ -59,31 +58,25 @@ class SpeedUp(AbstractPractice):
         return core_exercise
 
     @staticmethod
-    def _get_random_core_exercise(quantity: int, guitar: dict) -> Exercise:
+    def _get_random_core_exercise(quantity: int, guitar: dict) -> Exercise: # pylint: disable=R0911
         """ Returns random core exercise """
         random_index = random.randint(0, len(CoreSpeedUpPractice) - 1)
-        index = -1
-
-        for random_practice in CoreSpeedUpPractice:
-            index += 1
-            if index == random_index:
-                break
+        random_practice = CoreSpeedUpPractice(random_index)
 
         if random_practice == CoreSpeedUpPractice.ARPEGGIO:
             return Arpeggio().get_exercise(quantity, guitar)
-        elif random_practice == CoreSpeedUpPractice.CHORD_CONNECTION:
+        if random_practice == CoreSpeedUpPractice.CHORD_CONNECTION:
             return ChordConnection().get_exercise(quantity, guitar)
-        elif random_practice == CoreSpeedUpPractice.IDEA_ON_CHORDS:
+        if random_practice == CoreSpeedUpPractice.IDEA_ON_CHORDS:
             return IdeaOnChords().get_exercise(quantity, guitar)
-        elif random_practice == CoreSpeedUpPractice.INTERVAL:
+        if random_practice == CoreSpeedUpPractice.INTERVAL:
             return Intervals().get_exercise(quantity, guitar)
-        elif random_practice == CoreSpeedUpPractice.KNOWN_RIFF:
+        if random_practice == CoreSpeedUpPractice.KNOWN_RIFF:
             return TranscribeRepertoirAsOriginal().get_exercise(quantity, guitar)
-        elif random_practice == CoreSpeedUpPractice.LEFT_PERMUTATION:
+        if random_practice == CoreSpeedUpPractice.LEFT_PERMUTATION:
             return LeftFingerPermutations().get_exercise(quantity, guitar)
-        elif random_practice == CoreSpeedUpPractice.SCALE_DEXTERITY:
+        if random_practice == CoreSpeedUpPractice.SCALE_DEXTERITY:
             return ScaleDexterity().get_exercise(quantity, guitar)
-        elif random_practice == CoreSpeedUpPractice.SCALE_ON_CHORD:
+        if random_practice == CoreSpeedUpPractice.SCALE_ON_CHORD:
             return ScaleOnChord().get_exercise(quantity, guitar)
-        else:
-            assert False
+        assert False
