@@ -39,21 +39,35 @@ class Hand:
 
         return output
 
-    def get_random_fret_finger_permutation(self) -> List[Finger]:
+    def get_random_fret_finger_permutation(self, allow_duplicates: bool = False) -> List[Finger]:
         """ Returns a single finger permutation """
         output = []
         fret_fingers = self._get_fret_fingers()
-        while len(fret_fingers) > 0:
-            random_index = randint(0, len(fret_fingers)-1)
-            random_finger = fret_fingers.pop(random_index)
-            output.append(random_finger)
+
+        if allow_duplicates:
+            rnd_len = randint(1, len(fret_fingers))
+            while len(output) < rnd_len:
+                random_index = randint(0, len(fret_fingers)-1)
+                random_finger = fret_fingers[random_index]
+                output.append(random_finger)
+        else:
+            while len(fret_fingers) > 0:
+                random_index = randint(0, len(fret_fingers)-1)
+                random_finger = fret_fingers.pop(random_index)
+                output.append(random_finger)
+
         return output
 
-    def get_random_fret_finger_permutations(self, count: int) -> List[List[Finger]]:
+    def get_random_fret_finger_permutations(
+            self,
+            count: int,
+            allow_duplicates: bool = False) -> List[List[Finger]]:
         """ Returns a list of finger permutations """
         output = []
         while len(output) < count:
-            random_permutation = self.get_random_fret_finger_permutation()
+            random_permutation = self.get_random_fret_finger_permutation(
+                allow_duplicates=allow_duplicates)
+
             if random_permutation not in output:
                 output.append(random_permutation)
         return output

@@ -39,7 +39,14 @@ class LeftFingerPermutations(AbstractPractice):
             permutation_count = randint(
                 LeftFingerPermutations._AT_LEAST,
                 self._config["max_left_permutation"])
-            permutations = hand.get_random_fret_finger_permutations(permutation_count)
+
+            duplicate_rnd = randint(0, 1)
+            allow_duplicates = duplicate_rnd == 0
+
+            permutations = hand.get_random_fret_finger_permutations(
+                permutation_count,
+                allow_duplicates=allow_duplicates)
+
             permutation_text = ""
             for permutation in permutations:
                 if permutation_text != "":
