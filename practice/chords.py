@@ -10,7 +10,9 @@ from music_theory.position import Position
 class Chords(AbstractPractice):
     """ Chords """
     _TITLE = "Chords"
-    _SUBTITLES = ["Play the following chords", "Play walking bass lines"]
+    _SUBTITLES = ["Play the following chords",
+                  "Play walking bass lines",
+                  "Play with common notes"]
     _STEP_TXT = "From positions"
 
     @property
