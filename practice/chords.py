@@ -10,7 +10,7 @@ from music_theory.position import Position
 class Chords(AbstractPractice):
     """ Chords """
     _TITLE = "Chords"
-    _SUBTITLE = "Play the following chords"
+    _SUBTITLES = ["Play the following chords", "Play walking bass lines"]
     _STEP_TXT = "From positions"
 
     @property
@@ -42,9 +42,11 @@ class Chords(AbstractPractice):
 
             random_steps.append(random_step)
 
+        subtitle = Chords._SUBTITLES[random.randint(0, len(Chords._SUBTITLES) - 1)]
+
         output = exercise.Exercise(
             self._TITLE,
-            self._SUBTITLE,
+            subtitle,
             random_steps,
             practice_category=self.category)
 
