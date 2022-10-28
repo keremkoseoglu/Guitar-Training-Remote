@@ -4,7 +4,7 @@
         "min_practice_count": 8,
         "max_practice_count": 16,
         "must_select": [],
-        "only_select": "practice.left_permutation",
+        "only_select": "practice.chords",
         "disable_helpers": false
     },
     "instruments": [
@@ -14,7 +14,7 @@
             "strings": 5,
             "octaves": 4,
             "from": 0,
-            "to": 50,
+            "to": 30,
             "apps": []
         },
         {
@@ -22,7 +22,7 @@
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 51,
+            "from": 31,
             "to": 100,
             "apps": []
         },
@@ -342,12 +342,12 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "YouTube mix mastering",
-            "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
-        },
-        {
             "name": "YouTube bookmarks",
             "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
+        },
+        {
+            "name": "YouTube mix mastering",
+            "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
         }
     ],
     "transcriptions": [

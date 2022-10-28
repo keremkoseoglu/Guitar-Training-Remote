@@ -4,13 +4,14 @@ from model import exercise, exercise_step
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from music_theory import chord
+from music_theory.position import Position
 
 
 class Chords(AbstractPractice):
     """ Chords """
     _TITLE = "Chords"
     _SUBTITLE = "Play the following chords"
-    _POSITIONS = [1, 3, 5]
+    _STEP_TXT = "From positions"
 
     @property
     def category(self) -> PracticeCategory:
@@ -32,10 +33,11 @@ class Chords(AbstractPractice):
             for stuff_char in stuff:
                 if stuff_txt != "":
                     stuff_txt += " | "
-                stuff_txt += stuff_char
+                stuff_txt += f"({Chords._get_random_position()})"
+                stuff_txt += f" {stuff_char}"
 
             random_step = exercise_step.ExerciseStep(
-                Chords._get_random_position(),
+                Chords._STEP_TXT,
                 stuff_txt)
 
             random_steps.append(random_step)
@@ -50,5 +52,5 @@ class Chords(AbstractPractice):
 
     @staticmethod
     def _get_random_position():
-        random_position = random.randint(0, len(Chords._POSITIONS)-1)
-        return "Position " + str(Chords._POSITIONS[random_position])
+        random_position = Position.get_random_chord_position()
+        return f"P{random_position}"
