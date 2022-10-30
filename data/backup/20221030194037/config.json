@@ -1,11 +1,11 @@
 {
     "practice_selection": {
         "max_steps_per_exercise": 5,
-        "min_practice_count": 8,
-        "max_practice_count": 16,
+        "min_practice_count": 6,
+        "max_practice_count": 24,
         "must_select": [],
-        "only_select": "practice.chords",
-        "disable_helpers": false
+        "only_select": "",
+        "disable_helpers": true
     },
     "instruments": [
         {
