@@ -37,7 +37,7 @@ class NotesOnStrings(AbstractPractice):
             note_count = strings
             if self.min_note_count is not None and self.min_note_count > strings:
                 note_count = self.min_note_count
-            notes_of_step = note_obj.get_random_notes(note_count)
+            notes_of_step = note_obj.get_random_notes(count=note_count, same_shift=True)
             for note_of_step in notes_of_step:
                 if step_text != "":
                     step_text += ", "

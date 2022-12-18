@@ -32,7 +32,7 @@ class NotesOnFretboard(AbstractPractice):
             step_text = ""
 
             note_count_of_step = random.randint(1, self._MAX_NOTE_PER_STEP)
-            notes_of_step = note_obj.get_random_notes(note_count_of_step)
+            notes_of_step = note_obj.get_random_notes(count=note_count_of_step, same_shift=True)
             for note_of_step in notes_of_step:
                 if step_text != "":
                     step_text += ", "

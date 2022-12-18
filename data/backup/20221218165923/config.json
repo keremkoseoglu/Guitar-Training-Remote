@@ -1,11 +1,11 @@
 {
     "practice_selection": {
-        "max_steps_per_exercise": 4,
-        "min_practice_count": 6,
-        "max_practice_count": 24,
+        "max_steps_per_exercise": 6,
+        "min_practice_count": 12,
+        "max_practice_count": 12,
         "must_select": [],
-        "only_select": "",
-        "disable_helpers": true
+        "only_select": "practice.notes_on_fretboard",
+        "disable_helpers": false
     },
     "instruments": [
         {
@@ -173,7 +173,8 @@
         "Close dissonant notes",
         "Use the entire neck",
         "Chord tone soloing 13579 DOMb9",
-        "Chord tone approach soloing"
+        "Chord tone approach soloing",
+        "Story: Journey to chord tones"
     ],
     "metronome_exercises": [
         {
@@ -318,7 +319,8 @@
         "Active listening",
         "Read workshop notes",
         "Walking bass practice",
-        "Funk practice on the one"
+        "Funk practice on the one",
+        "Listen to isolated track"
     ],
     "right_hand_exercises": [
         "4 finger gallop",

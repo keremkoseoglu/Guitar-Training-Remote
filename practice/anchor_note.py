@@ -30,7 +30,7 @@ class AnchorNote(AbstractPractice):
             sub_txt = advice.get_random_advice()
             random_steps.append(exercise_step.ExerciseStep("random song", sub_txt))
         else:
-            for random_note in note.Note().get_random_notes(quantity):
+            for random_note in note.Note().get_random_notes(count=quantity, same_shift=True):
                 context_count = random.randint(1, 5)
 
                 context_type = random.randint(0, 2)
