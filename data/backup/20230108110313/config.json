@@ -310,7 +310,7 @@
     ],
     "default_bpm": 90,
     "metronome_app": {
-        "path": "/Applications/Beat Keeper.app",
+        "path": "/Applications/KK/Beat Keeper.app",
         "min": 28,
         "max": 300,
         "process": "Beat Keeper"
