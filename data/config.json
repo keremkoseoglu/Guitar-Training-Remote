@@ -4,7 +4,7 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "practice.fingers_234",
+        "only_select": "",
         "disable_helpers": false
     },
     "instruments": [
