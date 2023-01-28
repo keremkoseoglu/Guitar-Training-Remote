@@ -1,5 +1,6 @@
 """ Category balance based generator """
 import random
+from typing import List
 from config import get_configuration
 from factory import  all_practices, some_practices
 from model import workout
@@ -14,8 +15,7 @@ class CategoryBalance(some_practices.SomePractices):
         self.guitar = {}
         self._config = get_configuration()
 
-    def get_workout(self, guitar: dict = None) -> workout.WorkOut:
-        """ Returns a new workout containing all practices """
+    def get_workout(self, guitar: dict = None, exclude_classes: List[str] = None) -> workout.WorkOut:
         if self._select_guitar:
             self.guitar = get_random_guitar()
         else:
@@ -32,7 +32,7 @@ class CategoryBalance(some_practices.SomePractices):
             tmp_group = tmp_groups.pop(cat_index)
             groups[tmp_group] = []
 
-        everything = all_practices.AllPractices().get_workout(self.guitar)
+        everything = all_practices.AllPractices().get_workout(self.guitar, exclude_classes=exclude_classes)
         for exercise in everything.exercises:
             if exercise is None:
                 continue

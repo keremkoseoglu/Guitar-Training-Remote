@@ -1,5 +1,6 @@
 """ All practices """
 import random
+from typing import List
 from vibhaga.inspector import Inspector, Container
 from model import workout
 from config import get_configuration
@@ -12,23 +13,27 @@ class AllPractices(): # pylint: disable=R0903
     def __init__(self):
         self._config = get_configuration()
 
-    def get_workout(self, guitar: dict = None) -> workout.WorkOut:
+    def get_workout(self, guitar: dict = None, exclude_classes: List[str] = None) -> workout.WorkOut:
         """ Returns a new workout containing all practices """
         exercises = []
+        inspector_exclude_classes = ["AbstractPractice",
+                                     "AbstractUrlList",
+                                     "PracticeCategory",
+                                     "PracticeCategoryGroup",
+                                     "Position",
+                                     "Guitar",
+                                     "SupportPractice",
+                                     "Accent",
+                                     "ApproachDirection"]
+
+        if exclude_classes is not None:
+            for exclude_class in exclude_classes:
+                inspector_exclude_classes.append(exclude_class)
+
         practice_objects = Inspector.get_classes_in_container(
             Container(["practice"]),
             ["abstract"],
-            [
-                "AbstractPractice",
-                "AbstractUrlList",
-                "PracticeCategory",
-                "PracticeCategoryGroup",
-                "Position",
-                "Guitar",
-                "SupportPractice",
-                "Accent",
-                "ApproachDirection"
-            ])
+            inspector_exclude_classes)
 
         AllPractices._delete_duplicates(practice_objects)
 

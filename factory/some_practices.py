@@ -1,5 +1,6 @@
 """ All practices """
 import random
+from typing import List
 from config import get_configuration
 from factory import all_practices
 from model import workout
@@ -16,14 +17,14 @@ class SomePractices():
         self.guitar = {}
         self._config = get_configuration()
 
-    def get_workout(self, guitar: dict = None) -> workout.WorkOut:
+    def get_workout(self, guitar: dict = None, exclude_classes: List[str] = None) -> workout.WorkOut:
         """ Returns a new workout containing all practices """
         if self._select_guitar:
             self.guitar = get_random_guitar()
         else:
             self.guitar = guitar
 
-        output = all_practices.AllPractices().get_workout(self.guitar)
+        output = all_practices.AllPractices().get_workout(self.guitar, exclude_classes=exclude_classes)
 
         remain_count = random.randint(
             self._config["practice_selection"]["min_practice_count"],

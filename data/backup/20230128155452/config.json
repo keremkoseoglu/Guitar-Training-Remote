@@ -4,7 +4,7 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "",
+        "only_select": "practice.fingers_234",
         "disable_helpers": false
     },
     "instruments": [
@@ -310,7 +310,7 @@
     ],
     "default_bpm": 90,
     "metronome_app": {
-        "path": "/Applications/KK/Beat Keeper.app",
+        "path": "/Applications/Beat Keeper.app",
         "min": 28,
         "max": 300,
         "process": "Beat Keeper"
