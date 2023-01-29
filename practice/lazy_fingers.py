@@ -38,7 +38,7 @@ class LazyFingers(AbstractPractice):
             random_fingers = Hand().get_random_fret_fingers(random_finger_count)
             strings = []
             fingers = []
-            prev_rand_string = -1
+            prev_random_string = -1
 
             while len(random_fingers) > 0:
                 random_finger_index = randint(0, len(random_fingers)-1)
@@ -47,7 +47,7 @@ class LazyFingers(AbstractPractice):
 
                 while True:
                     random_string = randint(1, string_count)
-                    if prev_rand_string == -1:
+                    if prev_random_string == -1:
                         break
                     string_jump = abs(random_string - prev_random_string)
                     if string_jump <= LazyFingers._MAX_STRING_JUMP:
