@@ -21,7 +21,7 @@ class CommonChordNotes(AbstractPractice):
         chord = Chord()
 
         while len(random_steps) < quantity:
-            chords = chord.get_random_chords(2)
+            chords = chord.get_random_chords(2, different_roots=True)
             random_step = ExerciseStep(f"{chords[0]} | {chords[1]}", "Play transition")
             random_steps.append(random_step)
 
