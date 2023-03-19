@@ -4,25 +4,25 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "practice.fingers_234",
+        "only_select": "",
         "disable_helpers": false
     },
     "instruments": [
         {
-            "type": "Squier Jazz Bass",
+            "type": "J Bass",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
             "from": 0,
-            "to": 30,
+            "to": 50,
             "apps": []
         },
         {
-            "type": "Fender Jazz Bass",
+            "type": "P Bass",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 31,
+            "from": 51,
             "to": 100,
             "apps": []
         },
@@ -159,15 +159,13 @@
         "Accents",
         "Emphasize chord changes",
         "Side slipping",
-        "Enclosures",
         "Think about next chord",
         "Target notes",
-        "Mental sentences",
+        "Mental sentences (lyrics)",
         "Sing along",
         "Common tones",
         "Breath during solo",
         "Do something different",
-        "Catch people no speak",
         "Simple but feel good",
         "Mix sugar with medicine",
         "Close dissonant notes",
@@ -175,7 +173,9 @@
         "Chord tone soloing 13579 DOMb9",
         "Chord tone approach soloing",
         "Story: Journey to chord tones",
-        "Melodic minor mod sweep"
+        "Melodic minor mod sweep",
+        "Start on different positions",
+        "Start spacey, complex after"
     ],
     "metronome_exercises": [
         {
@@ -310,10 +310,10 @@
     ],
     "default_bpm": 90,
     "metronome_app": {
-        "path": "/Applications/Beat Keeper.app",
+        "path": "/Applications/Modus.app",
         "min": 28,
         "max": 300,
-        "process": "Beat Keeper"
+        "process": "Simple Metronome"
     },
     "one_liners": [
         "New style",
