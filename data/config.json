@@ -181,127 +181,152 @@
         {
             "exercise": "Random mute",
             "external": false,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "Play ahead beat",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "Play behind beat",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "Half split 1+",
             "external": true,
-            "zero_mod": 4
+            "zero_mod": 4,
+            "step_count": 3
         },
         {
             "exercise": "Half split 2+",
             "external": true,
-            "zero_mod": 4
+            "zero_mod": 4,
+            "step_count": 3
         },
         {
             "exercise": "Half split 3+",
             "external": true,
-            "zero_mod": 4
+            "zero_mod": 4,
+            "step_count": 3
         },
         {
             "exercise": "Half split 4+",
             "external": true,
-            "zero_mod": 4
+            "zero_mod": 4,
+            "step_count": 3
         },
         {
             "exercise": "Half split 1-",
             "external": true,
-            "zero_mod": 4
+            "zero_mod": 4,
+            "step_count": 3
         },
         {
             "exercise": "Half split 2-",
             "external": true,
-            "zero_mod": 4
+            "zero_mod": 4,
+            "step_count": 3
         },
         {
             "exercise": "Half split 3-",
             "external": true,
-            "zero_mod": 4
+            "zero_mod": 4,
+            "step_count": 3
         },
         {
             "exercise": "Half split 4-",
             "external": true,
-            "zero_mod": 4
+            "zero_mod": 4,
+            "step_count": 3
         },
         {
             "exercise": "1- 2- 3- 4-",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "1- 3-",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "2- 4-",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "1+ 2+ 3+ 4+",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "1+ 3+",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "2+ 4+",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "1+",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "2+",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "3+",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "4+",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "1-",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "2-",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "3-",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         },
         {
             "exercise": "4-",
             "external": true,
-            "zero_mod": 0
+            "zero_mod": 0,
+            "step_count": 1
         }
     ],
     "bpm_range": [
@@ -546,6 +571,7 @@
         "Reggae",
         "Rev. Partido Alto",
         "Samba",
+        "Songo",
         "Tumbao"
     ],
     "advices": [

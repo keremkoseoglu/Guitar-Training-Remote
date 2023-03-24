@@ -25,8 +25,9 @@ class Metronome(AbstractPractice):
         random_steps = []
         produced_dicts = []
         iteration = 0
+        step_count = 0
 
-        while len(random_steps) < quantity:
+        while step_count < quantity:
             iteration += 1
             if iteration > Metronome._MAX_ITERATIONS:
                 break
@@ -53,6 +54,7 @@ class Metronome(AbstractPractice):
 
             random_step.helpers = [helper]
             random_steps.append(random_step)
+            step_count += random_dict["step_count"]
 
         output = exercise.Exercise(self._TITLE,
                                    "Run the following exercise",
