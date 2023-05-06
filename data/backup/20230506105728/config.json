@@ -4,26 +4,35 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "practice.metronome",
+        "only_select": "practice.ghost_16",
         "disable_helpers": false
     },
     "instruments": [
-        {
-            "type": "J Bass",
-            "kind": "instrument",
-            "strings": 5,
-            "octaves": 4,
-            "from": 0,
-            "to": 50,
-            "apps": []
-        },
         {
             "type": "P Bass",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 51,
-            "to": 100,
+            "from": 0,
+            "to": 20,
+            "apps": []
+        },
+        {
+            "type": "Sire Bass",
+            "kind": "instrument",
+            "strings": 5,
+            "octaves": 4,
+            "from": 21,
+            "to": 40,
+            "apps": []
+        },
+        {
+            "type": "J Bass",
+            "kind": "instrument",
+            "strings": 5,
+            "octaves": 4,
+            "from": 41,
+            "to": 60,
             "apps": []
         },
         {
@@ -31,9 +40,20 @@
             "kind": "instrument",
             "strings": 6,
             "octaves": 5,
-            "from": 101,
-            "to": 102,
+            "from": 61,
+            "to": 80,
             "apps": []
+        },
+        {
+            "type": "Keys",
+            "kind": "instrument",
+            "strings": 0,
+            "octaves": 4,
+            "from": 81,
+            "to": 100,
+            "apps": [
+                "/Applications/MainStage 3.app"
+            ]
         },
         {
             "type": "Vocal",
@@ -43,17 +63,6 @@
             "from": 103,
             "to": 104,
             "apps": []
-        },
-        {
-            "type": "Keys",
-            "kind": "instrument",
-            "strings": 0,
-            "octaves": 4,
-            "from": 105,
-            "to": 106,
-            "apps": [
-                "/Applications/MainStage 3.app"
-            ]
         }
     ],
     "chord_types": [
@@ -370,12 +379,12 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "YouTube bookmarks",
-            "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
-        },
-        {
             "name": "YouTube mix mastering",
             "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
+        },
+        {
+            "name": "YouTube bookmarks",
+            "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
         }
     ],
     "transcriptions": [
