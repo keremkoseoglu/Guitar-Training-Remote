@@ -17,7 +17,7 @@ class Harmonic(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns harmonic over random chord connection exercises """
-        if guitar["strings"] <= 0:
+        if not (guitar["kind"] == "instrument" and guitar["strings"] > 0):
             return None
 
         random_steps = []

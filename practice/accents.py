@@ -52,9 +52,7 @@ class Accents(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns accent exercise """
-        if guitar["kind"] != "instrument":
-            return None
-        if guitar["strings"] <= 0:
+        if not (guitar["kind"] == "instrument" and guitar["strings"] > 0):
             return None
 
         random_accent = self._get_random_accent()

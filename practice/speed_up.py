@@ -41,9 +41,7 @@ class SpeedUp(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> Exercise:
         """ Returns random one liner exercises """
-        if guitar["kind"] != "instrument":
-            return None
-        if guitar["strings"] <= 0:
+        if not (guitar["kind"] == "instrument" and guitar["strings"] > 0):
             return None
 
         core_exercise = SpeedUp._get_random_core_exercise(quantity, guitar)

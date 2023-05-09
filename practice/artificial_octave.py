@@ -19,7 +19,7 @@ class ArtificialOctave(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns anchor note exercise """
-        if guitar["kind"] != "instrument":
+        if not (guitar["kind"] == "instrument" and guitar["strings"] > 0):
             return None
 
         output = exercise.Exercise(ArtificialOctave._TITLE, ArtificialOctave._DESCRIPTION)

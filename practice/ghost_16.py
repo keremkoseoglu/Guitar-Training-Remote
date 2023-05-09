@@ -20,7 +20,7 @@ class GhostNote16thMotor(AbstractPractice):
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
         """ Returns improv exercises """
-        if guitar["strings"] <= 0:
+        if not (guitar["kind"] == "instrument" and guitar["strings"] > 0):
             return None
 
         random_step = exercise_step.ExerciseStep("Pick random song", "in FlukeBox")
