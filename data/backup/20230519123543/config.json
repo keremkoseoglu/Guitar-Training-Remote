@@ -4,7 +4,7 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "practice/ghost_16",
+        "only_select": "",
         "disable_helpers": false
     },
     "instruments": [
@@ -187,12 +187,6 @@
         "Start spacey, complex after"
     ],
     "metronome_exercises": [
-        {
-            "exercise": "Random mute",
-            "external": false,
-            "zero_mod": 0,
-            "step_count": 1
-        },
         {
             "exercise": "Play ahead beat",
             "external": true,
@@ -379,10 +373,6 @@
     "max_left_permutation": 2,
     "online_lessons": [
         {
-            "name": "YouTube mix mastering",
-            "url": "https://www.youtube.com/results?search_query=mix+OR+mastering"
-        },
-        {
             "name": "YouTube bookmarks",
             "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2hIx4dDJNjWK2ZJuBgsH33"
         }
@@ -397,6 +387,10 @@
         {
             "name": "Bass accompany",
             "url": "https://www.youtube.com/watch?v=7i8fNTcREMw&list=PLPwYR-WkPQ2WGH5xz7dzocef42ZEh5Qij"
+        },
+        {
+            "name": "Scott groove trainer",
+            "url": "https://scottsbasslessons.com/groove-trainer-pub"
         }
     ],
     "guitar_accompany": [
