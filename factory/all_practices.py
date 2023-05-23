@@ -5,35 +5,39 @@ from vibhaga.inspector import Inspector, Container
 from model import workout
 from config import get_configuration
 
-class AllPractices(): # pylint: disable=R0903
-    """ All practices
+
+class AllPractices:  # pylint: disable=R0903
+    """All practices
     PROTOCOL: AbstractFactory
     """
 
     def __init__(self):
         self._config = get_configuration()
 
-    def get_workout(self, guitar: dict = None, exclude_classes: List[str] = None) -> workout.WorkOut:
-        """ Returns a new workout containing all practices """
+    def get_workout(
+        self, guitar: dict = None, exclude_classes: List[str] = None
+    ) -> workout.WorkOut:
+        """Returns a new workout containing all practices"""
         exercises = []
-        inspector_exclude_classes = ["AbstractPractice",
-                                     "AbstractUrlList",
-                                     "PracticeCategory",
-                                     "PracticeCategoryGroup",
-                                     "Position",
-                                     "Guitar",
-                                     "SupportPractice",
-                                     "Accent",
-                                     "ApproachDirection"]
+        inspector_exclude_classes = [
+            "AbstractPractice",
+            "AbstractUrlList",
+            "PracticeCategory",
+            "PracticeCategoryGroup",
+            "Position",
+            "Guitar",
+            "SupportPractice",
+            "Accent",
+            "ApproachDirection",
+        ]
 
         if exclude_classes is not None:
             for exclude_class in exclude_classes:
                 inspector_exclude_classes.append(exclude_class)
 
         practice_objects = Inspector.get_classes_in_container(
-            Container(["practice"]),
-            ["abstract"],
-            inspector_exclude_classes)
+            Container(["practice"]), ["abstract"], inspector_exclude_classes
+        )
 
         AllPractices._delete_duplicates(practice_objects)
 
@@ -44,8 +48,8 @@ class AllPractices(): # pylint: disable=R0903
                     if practice_object.__module__ == only_select:
                         random_step_count = self._get_random_step_count()
                         produced_exercise = practice_object().get_exercise(
-                            random_step_count,
-                            guitar)
+                            random_step_count, guitar
+                        )
                         exercises.append(produced_exercise)
                         output = workout.WorkOut(exercises)
                         return output
@@ -56,7 +60,9 @@ class AllPractices(): # pylint: disable=R0903
 
             random_step_count = self._get_random_step_count()
             try:
-                produced_exercise = practice_object().get_exercise(random_step_count, guitar)
+                produced_exercise = practice_object().get_exercise(
+                    random_step_count, guitar
+                )
             except Exception:
                 produced_exercise = None
             if produced_exercise is not None:
@@ -68,8 +74,8 @@ class AllPractices(): # pylint: disable=R0903
 
     def _get_random_step_count(self):
         return random.randint(
-            1,
-            self._config["practice_selection"]["max_steps_per_exercise"])
+            1, self._config["practice_selection"]["max_steps_per_exercise"]
+        )
 
     @staticmethod
     def _delete_duplicates(practice_objects):

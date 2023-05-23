@@ -18,7 +18,7 @@
             "apps": []
         },
         {
-            "type": "Sire Bass",
+            "type": "Ibanez Bass",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
@@ -357,7 +357,6 @@
     "one_liners": [
         "New style",
         "Active listening",
-        "Read workshop notes",
         "Walking bass practice",
         "Funk practice on the one",
         "Listen to isolated track"
@@ -607,5 +606,19 @@
         "Use mimicry sparsely \u2014 mostly create phrases that contrast with and develop the phrases of the other players.",
         "Find the balance between what the song wants and your fun.",
         "Mix sugar with medicine."
-    ]
+    ],
+    "lesson_notes": {
+        "folders": [
+            "/Users/kerem/Documents/music/lessons/Bass/Bass Grooves",
+            "/Users/kerem/Documents/music/lessons/Bass/Latin Bass Book",
+            "/Users/kerem/Documents/music/lessons/Bass/Selka",
+            "/Users/kerem/Documents/music/lessons/Bass/Ultimate Slap Bass",
+            "/Users/kerem/Documents/music/lessons/Composition",
+            "/Users/kerem/Documents/music/lessons/Theory"
+        ],
+        "files": [
+            "/Users/kerem/Documents/music/lessons/Bass/Flavio/Caribbean and Brazilian patterns.pdf",
+            "/Users/kerem/Documents/music/lessons/Bass/Guy Bernfeld/guy bernfeld.docx"
+        ]
+    }
 }

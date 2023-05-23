@@ -4,7 +4,7 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "",
+        "only_select": "practice.lesson_notes",
         "disable_helpers": false
     },
     "instruments": [
@@ -18,7 +18,7 @@
             "apps": []
         },
         {
-            "type": "Sire Bass",
+            "type": "Ibanez Bass",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
@@ -151,12 +151,11 @@
         "Chords",
         "Distant notes",
         "Bebop",
-        "Emotion graph",
         "Play out - mel.min.",
         "Play out - chromatic",
         "Play out - pentatonic",
         "Coltrane patterns",
-        "Phrasing (Enjoy)",
+        "Phrasing (breathe, enjoy)",
         "Strong beat / note",
         "Double stops",
         "Call & response",
@@ -167,13 +166,12 @@
         "Whole tone",
         "Accents",
         "Emphasize chord changes",
-        "Side slipping",
+        "Side step",
         "Think about next chord",
         "Target notes",
         "Mental sentences (lyrics)",
         "Sing along",
         "Common tones",
-        "Breath during solo",
         "Do something different",
         "Simple but feel good",
         "Mix sugar with medicine",
@@ -184,7 +182,20 @@
         "Story: Journey to chord tones",
         "Melodic minor mod sweep",
         "Start on different positions",
-        "Start spacey, complex after"
+        "Start spacey, complex after",
+        "Mix short / long phrases",
+        "Melodic contour",
+        "Single note function change",
+        "Motivic development",
+        "Anagram",
+        "Same idea different chord",
+        "Rhythmic displacement",
+        "Rhythmic dissonance",
+        "Retrograde",
+        "Inversion",
+        "Thin out",
+        "Ornamentation",
+        "Rhythm sync"
     ],
     "metronome_exercises": [
         {
@@ -346,7 +357,6 @@
     "one_liners": [
         "New style",
         "Active listening",
-        "Read workshop notes",
         "Walking bass practice",
         "Funk practice on the one",
         "Listen to isolated track"
@@ -596,5 +606,19 @@
         "Use mimicry sparsely \u2014 mostly create phrases that contrast with and develop the phrases of the other players.",
         "Find the balance between what the song wants and your fun.",
         "Mix sugar with medicine."
-    ]
+    ],
+    "lesson_notes": {
+        "folders": [
+            "/Users/kerem/Documents/music/lessons/Bass/Bass Grooves",
+            "/Users/kerem/Documents/music/lessons/Bass/Latin Bass Book",
+            "/Users/kerem/Documents/music/lessons/Bass/Selka",
+            "/Users/kerem/Documents/music/lessons/Bass/Ultimate Slap Bass",
+            "/Users/kerem/Documents/music/lessons/Composition",
+            "/Users/kerem/Documents/music/lessons/Theory"
+        ],
+        "files": [
+            "/Users/kerem/Documents/music/lessons/Bass/Flavio/Caribbean and Brazilian patterns.pdf",
+            "/Users/kerem/Documents/music/lessons/Bass/Guy Bernfeld/guy bernfeld.docx"
+        ]
+    }
 }

@@ -11,18 +11,19 @@ from body.hand import Hand
 
 
 class LazyFingers(AbstractPractice):
-    """ Lazy fingers exercise class """
+    """Lazy fingers exercise class"""
+
     _TITLE = "Lazy fingers"
     _SUBTITLE = "Work your lazy fingers"
     _MAX_STRING_JUMP = 2
 
     @property
     def category(self) -> PracticeCategory:
-        """ Returns the category of the practice """
+        """Returns the category of the practice"""
         return PracticeCategory.LEFT_HAND
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
-        """ Returns lazy fingers exercises """
+        """Returns lazy fingers exercises"""
         if guitar["kind"] != "instrument":
             return None
 
@@ -33,7 +34,7 @@ class LazyFingers(AbstractPractice):
         metronome = Metronome()
         random_steps = []
 
-        for quantity_pos in range(quantity): # pylint: disable=W0612
+        for quantity_pos in range(quantity):  # pylint: disable=W0612
             random_finger_count = randint(2, 4)
             random_fingers = Hand().get_random_fret_fingers(random_finger_count)
             strings = []
@@ -41,7 +42,7 @@ class LazyFingers(AbstractPractice):
             prev_random_string = -1
 
             while len(random_fingers) > 0:
-                random_finger_index = randint(0, len(random_fingers)-1)
+                random_finger_index = randint(0, len(random_fingers) - 1)
                 random_finger = random_fingers.pop(random_finger_index)
                 fingers.append(random_finger)
 
@@ -68,20 +69,16 @@ class LazyFingers(AbstractPractice):
 
             random_bpm = metronome.get_random_bpm()
 
-            random_step = exercise_step.ExerciseStep(
-                f"{str(random_bpm)} bpm",
-                pattern)
+            random_step = exercise_step.ExerciseStep(f"{str(random_bpm)} bpm", pattern)
 
-            random_step.helpers = [ExerciseHelper(
-                ExerciseHelperType.METRONOME,
-                {"bpm": random_bpm})]
+            random_step.helpers = [
+                ExerciseHelper(ExerciseHelperType.METRONOME, {"bpm": random_bpm})
+            ]
 
             random_steps.append(random_step)
 
         output = exercise.Exercise(
-            self._TITLE,
-            self._SUBTITLE,
-            random_steps,
-            practice_category=self.category)
+            self._TITLE, self._SUBTITLE, random_steps, practice_category=self.category
+        )
 
         return output
