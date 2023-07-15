@@ -4,7 +4,7 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "practice.lesson_notes",
+        "only_select": "",
         "disable_helpers": false
     },
     "instruments": [
@@ -18,7 +18,7 @@
             "apps": []
         },
         {
-            "type": "Ibanez Bass",
+            "type": "Yamaha BB435",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
@@ -195,7 +195,9 @@
         "Inversion",
         "Thin out",
         "Ornamentation",
-        "Rhythm sync"
+        "Rhythm sync",
+        "Mid finger tremolo",
+        "Triplet / quintuplet"
     ],
     "metronome_exercises": [
         {
@@ -614,7 +616,9 @@
             "/Users/kerem/Documents/music/lessons/Bass/Selka",
             "/Users/kerem/Documents/music/lessons/Bass/Ultimate Slap Bass",
             "/Users/kerem/Documents/music/lessons/Composition",
-            "/Users/kerem/Documents/music/lessons/Theory"
+            "/Users/kerem/Documents/music/lessons/Theory",
+            "/Users/kerem/Documents/music/lessons/Bass/Paul Westwood/Bass Bible",
+            "/Users/kerem/Documents/music/lessons/Bass/Paul Westwood/Bass Bible Disc 2"
         ],
         "files": [
             "/Users/kerem/Documents/music/lessons/Bass/Flavio/Caribbean and Brazilian patterns.pdf",
