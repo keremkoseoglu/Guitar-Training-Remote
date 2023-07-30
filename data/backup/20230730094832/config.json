@@ -4,7 +4,7 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "",
+        "only_select": "practice.modal_exchange",
         "disable_helpers": false
     },
     "instruments": [
@@ -103,22 +103,74 @@
         13
     ],
     "modes": [
-        "Ionian",
-        "Dorian",
-        "Phrygian",
-        "Lydian",
-        "Mixo",
-        "Aeolian",
-        "Locrian",
-        "Jazz minor",
-        "Dorian b2",
-        "Lydian aug",
-        "Lydian dom",
-        "Mixo b6",
-        "Half dim",
-        "Altered",
-        "Dim",
-        "Whole"
+        {
+            "mode": "Ionian",
+            "chord": ""
+        },
+        {
+            "mode": "Dorian",
+            "chord": "-#13"
+        },
+        {
+            "mode": "Phrygian",
+            "chord": "b9"
+        },
+        {
+            "mode": "Lydian",
+            "chord": "#11"
+        },
+        {
+            "mode": "Super Lydian",
+            "chord": "#11"
+        },
+        {
+            "mode": "Mixo",
+            "chord": "7"
+        },
+        {
+            "mode": "Aeolian",
+            "chord": "-"
+        },
+        {
+            "mode": "Locrian",
+            "chord": "-b5b9"
+        },
+        {
+            "mode": "Jazz minor",
+            "chord": "♮7"
+        },
+        {
+            "mode": "Dorian b2",
+            "chord": "-b9#13"
+        },
+        {
+            "mode": "Lydian aug",
+            "chord": "+5#11"
+        },
+        {
+            "mode": "Lydian dom",
+            "chord": "7#11"
+        },
+        {
+            "mode": "Mixo b6",
+            "chord": "7b13"
+        },
+        {
+            "mode": "Half dim",
+            "chord": "ø7"
+        },
+        {
+            "mode": "Altered",
+            "chord": "alt"
+        },
+        {
+            "mode": "Dim",
+            "chord": "dim"
+        },
+        {
+            "mode": "Whole",
+            "chord": "wh"
+        }
     ],
     "notes": [
         "C",
@@ -361,7 +413,8 @@
         "Active listening",
         "Walking bass practice",
         "Funk practice on the one",
-        "Listen to isolated track"
+        "Listen to isolated track",
+        "Slap bass practice"
     ],
     "right_hand_exercises": [
         "4 finger gallop",
@@ -585,6 +638,7 @@
         "Partido Alto",
         "Reggae",
         "Rev. Partido Alto",
+        "Salsa (flavio)",
         "Samba",
         "Songo",
         "Tumbao"

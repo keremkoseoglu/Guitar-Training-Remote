@@ -3,26 +3,28 @@ import random
 from copy import deepcopy
 from config import get_configuration
 
+
 class Note:
+    """Note class"""
+
     _SHARP = "#"
     _FLAT = "b"
 
-    """ Note class """
     def __init__(self):
         self._config = get_configuration()
 
     def get_random_note(self) -> str:
-        """ Returns a random note """
+        """Returns a random note"""
         i = random.randint(0, len(self._config["notes"]) - 1)
         return self._config["notes"][i]
 
     def get_random_notes(self, count, same_shift: bool = False) -> []:
-        """ Returns random notes """
+        """Returns random notes"""
         output = []
         returnable_shift = ""
         notes = deepcopy(self._config["notes"])
 
-        for count_pos in range(count): # pylint: disable=W0612
+        for count_pos in range(count):  # pylint: disable=W0612
             if len(notes) <= 0:
                 break
 
