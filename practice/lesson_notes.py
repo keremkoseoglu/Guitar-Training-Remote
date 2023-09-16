@@ -1,8 +1,9 @@
 """ Lesson notes module
 This module brings up a random lesson defined in config.json
 """
+from copy import deepcopy
 import os
-from random import choice
+from random import choice, randint
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
 from practice.abstract_practice import AbstractPractice
@@ -26,13 +27,19 @@ class LessonNotes(AbstractPractice):
         random_steps = []
         fconfig = config.get_configuration()
         note_types = [0, 1]
+        files_copy = deepcopy(fconfig["lesson_notes"]["files"])
 
         for quantity_pos in range(quantity):  # pylint: disable=W0612
             random_note_type = choice(note_types)
 
             if random_note_type == 0:
-                random_file = choice(fconfig["lesson_notes"]["files"])
-            elif random_note_type == 1:
+                file_count = len(files_copy)
+                if file_count <= 0:
+                    random_note_type = 1
+                else:
+                    random_file = files_copy.pop(randint(0, file_count))
+
+            if random_note_type == 1:
                 random_folder = choice(fconfig["lesson_notes"]["folders"])
                 random_file = LessonNotes._get_random_file_in_folder(random_folder)
 

@@ -14,7 +14,7 @@
             "strings": 5,
             "octaves": 4,
             "from": 0,
-            "to": 20,
+            "to": 24,
             "apps": []
         },
         {
@@ -22,8 +22,8 @@
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 21,
-            "to": 40,
+            "from": 25,
+            "to": 50,
             "apps": []
         },
         {
@@ -31,8 +31,17 @@
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 41,
-            "to": 60,
+            "from": 51,
+            "to": 75,
+            "apps": []
+        },
+        {
+            "type": "Sire",
+            "kind": "instrument",
+            "strings": 5,
+            "octaves": 4,
+            "from": 76,
+            "to": 100,
             "apps": []
         },
         {
@@ -40,8 +49,8 @@
             "kind": "instrument",
             "strings": 6,
             "octaves": 5,
-            "from": 61,
-            "to": 80,
+            "from": 101,
+            "to": 102,
             "apps": []
         },
         {
@@ -49,8 +58,8 @@
             "kind": "instrument",
             "strings": 0,
             "octaves": 4,
-            "from": 81,
-            "to": 100,
+            "from": 103,
+            "to": 104,
             "apps": [
                 "/Applications/MainStage 3.app"
             ]
@@ -60,8 +69,8 @@
             "kind": "voice",
             "strings": 0,
             "octaves": 3,
-            "from": 103,
-            "to": 104,
+            "from": 105,
+            "to": 106,
             "apps": []
         }
     ],
@@ -137,7 +146,7 @@
         },
         {
             "mode": "Jazz minor",
-            "chord": "♮7"
+            "chord": "\u266e7"
         },
         {
             "mode": "Dorian b2",
@@ -157,7 +166,7 @@
         },
         {
             "mode": "Half dim",
-            "chord": "ø7"
+            "chord": "\u00f87"
         },
         {
             "mode": "Altered",
