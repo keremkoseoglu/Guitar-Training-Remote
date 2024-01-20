@@ -7,18 +7,20 @@ from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from performance.advice import Advice
 
+
 class RandomNoteIntoChord(AbstractPractice):
-    """ Random note into chord transition """
+    """Random note into chord transition"""
+
     _TITLE = "Note into chord"
     _SUBTITLE = "Transit random note into chord"
 
     @property
     def category(self) -> PracticeCategory:
-        """ Returns the category of the practice """
+        """Returns the category of the practice"""
         return PracticeCategory.DEXTERITY
 
     def get_exercise(self, quantity: int, guitar: dict) -> Exercise:
-        """ Returns exercise """
+        """Returns exercise"""
         if guitar["kind"] != "instrument":
             return None
 
@@ -37,9 +39,8 @@ class RandomNoteIntoChord(AbstractPractice):
             random_step = ExerciseStep(f"{note} -> {chord}", advice.get_random_advice())
             random_steps.append(random_step)
 
-        output = Exercise(self._TITLE,
-                          self._SUBTITLE,
-                          random_steps,
-                          practice_category=self.category)
+        output = Exercise(
+            self._TITLE, self._SUBTITLE, random_steps, practice_category=self.category
+        )
 
         return output

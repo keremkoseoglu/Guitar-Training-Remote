@@ -4,44 +4,53 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "practice.lesson_notes",
+        "only_select": "Spaced16thPattern",
         "disable_helpers": false
     },
     "instruments": [
         {
-            "type": "P Bass",
+            "type": "Sadowsky",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
             "from": 0,
-            "to": 24,
+            "to": 33,
             "apps": []
         },
         {
-            "type": "Yamaha BB435",
+            "type": "Fender P",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 25,
-            "to": 50,
+            "from": 34,
+            "to": 66,
             "apps": []
         },
         {
-            "type": "J Bass",
+            "type": "G&L L-2500",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 51,
-            "to": 75,
-            "apps": []
-        },
-        {
-            "type": "Sire",
-            "kind": "instrument",
-            "strings": 5,
-            "octaves": 4,
-            "from": 76,
+            "from": 67,
             "to": 100,
+            "apps": []
+        },
+        {
+            "type": "Fender J",
+            "kind": "instrument",
+            "strings": 5,
+            "octaves": 4,
+            "from": 101,
+            "to": 102,
+            "apps": []
+        },
+        {
+            "type": "Sire P5",
+            "kind": "instrument",
+            "strings": 5,
+            "octaves": 4,
+            "from": 103,
+            "to": 104,
             "apps": []
         },
         {
@@ -49,8 +58,8 @@
             "kind": "instrument",
             "strings": 6,
             "octaves": 5,
-            "from": 101,
-            "to": 102,
+            "from": 105,
+            "to": 106,
             "apps": []
         },
         {
@@ -58,8 +67,8 @@
             "kind": "instrument",
             "strings": 0,
             "octaves": 4,
-            "from": 103,
-            "to": 104,
+            "from": 107,
+            "to": 108,
             "apps": [
                 "/Applications/MainStage 3.app"
             ]
@@ -69,8 +78,8 @@
             "kind": "voice",
             "strings": 0,
             "octaves": 3,
-            "from": 105,
-            "to": 106,
+            "from": 109,
+            "to": 110,
             "apps": []
         }
     ],
@@ -641,6 +650,7 @@
         "Bolero",
         "Bossa Nova",
         "Funk",
+        "Guajira",
         "Merengue",
         "Montuno",
         "Mozambique",
