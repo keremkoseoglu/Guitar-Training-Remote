@@ -1,4 +1,5 @@
 """ All practices """
+
 import random
 from typing import List
 from vibhaga.inspector import Inspector, Container
@@ -53,6 +54,20 @@ class AllPractices:  # pylint: disable=R0903
                         exercises.append(produced_exercise)
                         output = workout.WorkOut(exercises)
                         return output
+
+        if "dont_select" in self._config["practice_selection"]:
+            removable_indices = []
+            index = -1
+            for practice_object in practice_objects:
+                index += 1
+                if (
+                    practice_object.__module__
+                    in self._config["practice_selection"]["dont_select"]
+                ):
+                    removable_indices.append(index)
+            removable_indices.sort(reverse=True)
+            for index in removable_indices:
+                practice_objects.pop(index)
 
         while len(practice_objects) > 0:
             random_practice_index = random.randint(0, len(practice_objects) - 1)

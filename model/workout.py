@@ -1,4 +1,5 @@
 """ Workout module """
+
 import random
 from typing import List
 from model.exercise import Exercise
@@ -6,7 +7,7 @@ from model.exercise_step import ExerciseStep
 
 
 class WorkOut:
-    """ Workout class """
+    """Workout class"""
 
     def __init__(self, exercises: List):
         self._exercises = exercises
@@ -16,24 +17,24 @@ class WorkOut:
 
     @property
     def exercises(self) -> List:
-        """ Exercises in workout """
+        """Exercises in workout"""
         return self._exercises
 
     def add_guitar(self, guitar: dict):
-        """ Adds a new instrument """
+        """Adds a new instrument"""
         guitar_step = ExerciseStep(guitar["type"])
         guitar_exercise = Exercise("Guitar", "Pick the following guitar", [guitar_step])
         self._exercises.insert(0, guitar_exercise)
 
     def get_current_exercise(self) -> Exercise:
-        """ Returns current exercise """
+        """Returns current exercise"""
         try:
             return self._exercises[self._exercise_index]
-        except Exception: # pylint: disable=W0703
+        except Exception:  # pylint: disable=W0703
             return None
 
     def get_current_step(self) -> ExerciseStep:
-        """ Returns current step """
+        """Returns current step"""
         current_exercise = self.get_current_exercise()
         if current_exercise is None:
             return None
@@ -42,7 +43,7 @@ class WorkOut:
         return current_exercise.steps[self._step_index]
 
     def get_next_step(self):
-        """ Returns next step """
+        """Returns next step"""
         current_exercise = self.get_current_exercise()
         if current_exercise is None:
             return None, None
@@ -61,7 +62,7 @@ class WorkOut:
         return out_exercise, out_step
 
     def get_next_exercise(self):
-        """ Returns next exercise """
+        """Returns next exercise"""
         current_exercise = self.get_current_exercise()
         if current_exercise is None:
             return None, None
@@ -77,25 +78,41 @@ class WorkOut:
         return out_exercise, out_step
 
     def get_exercise_count(self) -> int:
-        """ Returns exercise count """
+        """Returns exercise count"""
         return len(self._exercises)
 
     def get_exercise_index(self) -> int:
-        """ Returns exercise index """
+        """Returns exercise index"""
         return self._exercise_index
 
     def get_step_count(self) -> int:
-        """ Returns step count """
+        """Returns step count"""
         return len(self.get_current_exercise().steps)
 
     def get_step_index(self) -> int:
-        """ Returns step index """
+        """Returns step index"""
         return self._step_index
 
-    def remove_random_exercises(self,
-                                remain: int,
-                                preserve: List[str] = None):
-        """ Removes random exercises from the dataset """
+    def remove_exercises(self, removables: List[str]):
+        """Remove given exercises"""
+        if removables is None or len(removables) <= 0:
+            return
+
+        removable_indices = []
+
+        exercise_index = -1
+        for exercise in self._exercises:
+            exercise_index += 1
+            if exercise.title in removables:
+                removable_indices.append(exercise_index)
+
+        removable_indices.sort(reverse=True)
+
+        for index in removable_indices:
+            self._exercises.pop(index)
+
+    def remove_random_exercises(self, remain: int, preserve: List[str] = None):
+        """Removes random exercises from the dataset"""
         if preserve is not None and len(preserve) > 0:
             for exercise_title in preserve:
                 found = False
@@ -104,7 +121,7 @@ class WorkOut:
                         found = True
                         break
                 if not found:
-                    #raise Exception("Invalid preservable exercise " + exercise_title)
+                    # raise Exception("Invalid preservable exercise " + exercise_title)
                     return
 
         while len(self._exercises) > remain:
@@ -116,6 +133,6 @@ class WorkOut:
             self._exercises.pop(abandon_index)
 
     def rewind(self):
-        """ Rewind """
+        """Rewind"""
         self._exercise_index = 0
         self._step_index = 0

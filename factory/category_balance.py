@@ -1,21 +1,26 @@
 """ Category balance based generator """
+
 import random
 from typing import List
 from config import get_configuration
-from factory import  all_practices, some_practices
+from factory import all_practices, some_practices
 from model import workout
 from model.guitar import get_random_guitar
 from practice.practice_category import PracticeCategory, get_category_group
 
+
 class CategoryBalance(some_practices.SomePractices):
-    """ Balanced category practices """
+    """Balanced category practices"""
+
     def __init__(self):
         super().__init__()
         self._select_guitar = True
         self.guitar = {}
         self._config = get_configuration()
 
-    def get_workout(self, guitar: dict = None, exclude_classes: List[str] = None) -> workout.WorkOut:
+    def get_workout(
+        self, guitar: dict = None, exclude_classes: List[str] = None
+    ) -> workout.WorkOut:
         if self._select_guitar:
             self.guitar = get_random_guitar()
         else:
@@ -28,11 +33,14 @@ class CategoryBalance(some_practices.SomePractices):
                 tmp_groups.append(group_name)
         groups = {}
         while len(tmp_groups) > 0:
-            cat_index = random.randint(0, len(tmp_groups)-1)
+            cat_index = random.randint(0, len(tmp_groups) - 1)
             tmp_group = tmp_groups.pop(cat_index)
             groups[tmp_group] = []
 
-        everything = all_practices.AllPractices().get_workout(self.guitar, exclude_classes=exclude_classes)
+        everything = all_practices.AllPractices().get_workout(
+            self.guitar, exclude_classes=exclude_classes
+        )
+
         for exercise in everything.exercises:
             if exercise is None:
                 continue
@@ -40,14 +48,15 @@ class CategoryBalance(some_practices.SomePractices):
 
         exercise_count = random.randint(
             self._config["practice_selection"]["min_practice_count"],
-            self._config["practice_selection"]["max_practice_count"])
+            self._config["practice_selection"]["max_practice_count"],
+        )
 
         exercise_per_group = round(exercise_count / len(groups))
         output_exercises = []
 
         for group in groups:
             exercises = groups[group]
-            for i in range(0, exercise_per_group): # pylint: disable=W0612
+            for i in range(0, exercise_per_group):  # pylint: disable=W0612
                 if len(exercises) <= 0:
                     break
                 random_index = random.randint(0, len(exercises) - 1)
@@ -61,5 +70,5 @@ class CategoryBalance(some_practices.SomePractices):
         return output
 
     def set_select_guitar(self, select: bool):
-        """ Do we need to select a guitar """
+        """Do we need to select a guitar"""
         self._select_guitar = select

@@ -4,7 +4,10 @@
         "min_practice_count": 12,
         "max_practice_count": 12,
         "must_select": [],
-        "only_select": "Spaced16thPattern",
+        "dont_select": [
+            "accents"
+        ],
+        "only_select": "",
         "disable_helpers": false
     },
     "instruments": [
@@ -14,7 +17,7 @@
             "strings": 5,
             "octaves": 4,
             "from": 0,
-            "to": 33,
+            "to": 50,
             "apps": []
         },
         {
@@ -22,8 +25,8 @@
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 34,
-            "to": 66,
+            "from": 51,
+            "to": 80,
             "apps": []
         },
         {
@@ -31,17 +34,8 @@
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 67,
-            "to": 100,
-            "apps": []
-        },
-        {
-            "type": "Fender J",
-            "kind": "instrument",
-            "strings": 5,
-            "octaves": 4,
-            "from": 101,
-            "to": 102,
+            "from": 81,
+            "to": 90,
             "apps": []
         },
         {
@@ -49,8 +43,8 @@
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 103,
-            "to": 104,
+            "from": 91,
+            "to": 100,
             "apps": []
         },
         {
@@ -267,7 +261,8 @@
         "Ornamentation",
         "Rhythm sync",
         "Mid finger tremolo",
-        "Triplet / quintuplet"
+        "Triplet / quintuplet",
+        "Focus on thirds"
     ],
     "metronome_exercises": [
         {
@@ -427,12 +422,7 @@
         "process": "Simple Metronome"
     },
     "one_liners": [
-        "New style",
-        "Active listening",
-        "Walking bass practice",
-        "Funk practice on the one",
-        "Listen to isolated track",
-        "Slap bass practice"
+        "Listen to isolated track"
     ],
     "right_hand_exercises": [
         "4 finger gallop",
@@ -680,7 +670,8 @@
         "Create space \u2014 then place something in it.",
         "Use mimicry sparsely \u2014 mostly create phrases that contrast with and develop the phrases of the other players.",
         "Find the balance between what the song wants and your fun.",
-        "Mix sugar with medicine."
+        "Mix sugar with medicine.",
+        "Focus on feeling."
     ],
     "lesson_notes": {
         "folders": [
