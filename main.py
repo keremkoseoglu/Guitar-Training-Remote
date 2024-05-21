@@ -1,9 +1,8 @@
 """ Program entry point """
+
 import gui.face
 from practice.improv import Improv
 from config.backup import Backup
-
-# from test.test_quit_metronome import test_quit_metronome
 
 
 def run_app():

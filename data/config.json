@@ -18,7 +18,7 @@
             "strings": 5,
             "octaves": 4,
             "from": 0,
-            "to": 50,
+            "to": 40,
             "apps": []
         },
         {
@@ -26,12 +26,21 @@
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 51,
-            "to": 80,
+            "from": 41,
+            "to": 70,
             "apps": []
         },
         {
             "type": "G&L L-2500",
+            "kind": "instrument",
+            "strings": 5,
+            "octaves": 4,
+            "from": 71,
+            "to": 80,
+            "apps": []
+        },
+        {
+            "type": "Sire P5",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
@@ -40,21 +49,12 @@
             "apps": []
         },
         {
-            "type": "Sire P5",
-            "kind": "instrument",
-            "strings": 5,
-            "octaves": 4,
-            "from": 91,
-            "to": 100,
-            "apps": []
-        },
-        {
             "type": "Guitar",
             "kind": "instrument",
             "strings": 6,
             "octaves": 5,
-            "from": 105,
-            "to": 106,
+            "from": 91,
+            "to": 100,
             "apps": []
         },
         {
@@ -231,7 +231,7 @@
         "Whole tone",
         "Accents",
         "Emphasize chord changes",
-        "Side step",
+        "Side step #11b13",
         "Think about next chord",
         "Target notes",
         "Mental sentences (lyrics)",
@@ -263,7 +263,11 @@
         "Rhythm sync",
         "Mid finger tremolo",
         "Triplet / quintuplet",
-        "Focus on thirds"
+        "Focus on thirds",
+        "Rhythmic vocabulary",
+        "Rhythmic: Perdido",
+        "Rhythmic: I like pizza",
+        "Rhythmic: Another song"
     ],
     "metronome_exercises": [
         {
@@ -423,7 +427,8 @@
         "process": "Simple Metronome"
     },
     "one_liners": [
-        "Listen to isolated track"
+        "Listen to isolated track",
+        "Rhythmic vocabulary"
     ],
     "right_hand_exercises": [
         "4 finger gallop",
