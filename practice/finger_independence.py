@@ -5,6 +5,7 @@ This module contains exercises for left hand fingers
 from random import randint
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
+from model.guitar import get_random_fret
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from practice.metronome import Metronome
@@ -58,10 +59,11 @@ class FingerIndependence(AbstractPractice):
                     fingers_str += " "
                 fingers_str += finger_str
 
+            first_fret = get_random_fret()
             random_bpm = metronome.get_random_bpm()
 
             random_step = exercise_step.ExerciseStep(
-                f"{str(random_bpm)} bpm", fingers_str
+                f"Fret {str(first_fret)} ({str(random_bpm)} bpm)", sub_text=fingers_str
             )
 
             random_step.helpers = [
