@@ -1,9 +1,11 @@
 """ Lazy fingers module
 This module contains exercises for left hand fingers 2, 3, 4
 """
+
 from random import randint
 from model import exercise, exercise_step
 from model.exercise_helper import ExerciseHelperType, ExerciseHelper
+from model.guitar import get_random_fret
 from practice.abstract_practice import AbstractPractice
 from practice.practice_category import PracticeCategory
 from practice.metronome import Metronome
@@ -68,8 +70,11 @@ class LazyFingers(AbstractPractice):
                 pattern += "  " + fingers[pattern_index].name
 
             random_bpm = metronome.get_random_bpm()
+            first_fret = get_random_fret()
 
-            random_step = exercise_step.ExerciseStep(f"{str(random_bpm)} bpm", pattern)
+            random_step = exercise_step.ExerciseStep(
+                f"Fret {str(first_fret)} ({str(random_bpm)} bpm)", pattern
+            )
 
             random_step.helpers = [
                 ExerciseHelper(ExerciseHelperType.METRONOME, {"bpm": random_bpm})
