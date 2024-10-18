@@ -1,11 +1,13 @@
 """ Chord module """
+
 import random
 from music_theory.key_signature import KeySignature
 from config import get_configuration
 
 
 class Chord:
-    """ Chord class """
+    """Chord class"""
+
     _MAX_DO = 100
 
     def __init__(self):
@@ -14,17 +16,17 @@ class Chord:
         self._key_signature = KeySignature()
 
     def get_random_chord_type(self) -> str:
-        """ Retuns random chord types """
+        """Retuns random chord types"""
         i = random.randint(0, len(self._chord_types) - 1)
         return self._chord_types[i]
 
     def get_random_chords(self, count: int, different_roots: bool = False) -> []:
-        """ Returns random chords """
+        """Returns random chords"""
         output = []
         random_notes = []
         did = 0
 
-        for count_pos in range(count): # pylint: disable=W0612
+        for count_pos in range(count):  # pylint: disable=W0612
             did += 1
             if did > Chord._MAX_DO:
                 break
@@ -39,5 +41,5 @@ class Chord:
         return output
 
     def get_random_chord(self) -> []:
-        """ Returns a random chord """
+        """Returns a random chord"""
         return self.get_random_chords(1)[0]

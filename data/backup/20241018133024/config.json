@@ -6,9 +6,10 @@
         "must_select": [],
         "dont_select": [
             "practice.bass_fill_in",
+            "practice.modal_exchange",
             "practice.transcribe_rep_org"
         ],
-        "only_select": "",
+        "only_select": "practice.tetra_chord",
         "disable_helpers": false
     },
     "instruments": [
@@ -18,7 +19,7 @@
             "strings": 5,
             "octaves": 4,
             "from": 0,
-            "to": 40,
+            "to": 25,
             "apps": []
         },
         {
@@ -26,26 +27,26 @@
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 41,
-            "to": 70,
+            "from": 26,
+            "to": 50,
             "apps": []
         },
         {
-            "type": "G&L L-2500",
+            "type": "Ugr Jazz",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 71,
-            "to": 80,
+            "from": 51,
+            "to": 75,
             "apps": []
         },
         {
-            "type": "Sire P5",
+            "type": "Sire M7",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
-            "from": 81,
-            "to": 90,
+            "from": 76,
+            "to": 100,
             "apps": []
         },
         {
@@ -53,8 +54,8 @@
             "kind": "instrument",
             "strings": 6,
             "octaves": 5,
-            "from": 91,
-            "to": 100,
+            "from": 105,
+            "to": 106,
             "apps": []
         },
         {
@@ -267,7 +268,9 @@
         "Rhythmic vocabulary",
         "Rhythmic: Perdido",
         "Rhythmic: I like pizza",
-        "Rhythmic: Another song"
+        "Rhythmic: Another song",
+        "Dim chord tone THY",
+        "Avoid notes"
     ],
     "metronome_exercises": [
         {
@@ -644,9 +647,11 @@
     "styles": [
         "Baiao",
         "Bolero",
+        "Bomba",
         "Bossa Nova",
         "Funk",
         "Guajira",
+        "Kizomba",
         "Merengue",
         "Montuno",
         "Mozambique",
