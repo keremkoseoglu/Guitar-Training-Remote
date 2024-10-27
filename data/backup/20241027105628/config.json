@@ -9,7 +9,7 @@
             "practice.modal_exchange",
             "practice.transcribe_rep_org"
         ],
-        "only_select": "practice.tetra_chord",
+        "only_select": "practice.key_signature_quiz",
         "disable_helpers": false
     },
     "instruments": [
@@ -220,7 +220,7 @@
         "Play out - mel.min.",
         "Play out - chromatic",
         "Play out - pentatonic",
-        "Coltrane patterns",
+        "Tetra chords",
         "Phrasing (breathe, enjoy)",
         "Strong beat / note",
         "Double stops",
