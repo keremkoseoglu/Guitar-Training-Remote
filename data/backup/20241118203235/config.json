@@ -9,45 +9,19 @@
             "practice.modal_exchange",
             "practice.transcribe_rep_org"
         ],
-        "only_select": "practice.key_signature_quiz",
+        "only_select": "",
         "disable_helpers": false
     },
     "instruments": [
         {
-            "type": "Sadowsky",
+            "type": "Bass",
             "kind": "instrument",
             "strings": 5,
             "octaves": 4,
             "from": 0,
-            "to": 25,
-            "apps": []
-        },
-        {
-            "type": "Fender P",
-            "kind": "instrument",
-            "strings": 5,
-            "octaves": 4,
-            "from": 26,
-            "to": 50,
-            "apps": []
-        },
-        {
-            "type": "Ugr Jazz",
-            "kind": "instrument",
-            "strings": 5,
-            "octaves": 4,
-            "from": 51,
-            "to": 75,
-            "apps": []
-        },
-        {
-            "type": "Sire M7",
-            "kind": "instrument",
-            "strings": 5,
-            "octaves": 4,
-            "from": 76,
             "to": 100,
-            "apps": []
+            "apps": [],
+            "select_only": true
         },
         {
             "type": "Guitar",
@@ -56,7 +30,8 @@
             "octaves": 5,
             "from": 105,
             "to": 106,
-            "apps": []
+            "apps": [],
+            "select_only": false
         },
         {
             "type": "Keys",
@@ -67,7 +42,8 @@
             "to": 108,
             "apps": [
                 "/Applications/MainStage 3.app"
-            ]
+            ],
+            "select_only": false
         },
         {
             "type": "Vocal",
@@ -76,7 +52,8 @@
             "octaves": 3,
             "from": 109,
             "to": 110,
-            "apps": []
+            "apps": [],
+            "select_only": true
         }
     ],
     "chord_types": [
@@ -98,8 +75,11 @@
         "\u22067#5",
         "7#11",
         "7b13",
-        "m7b5",
-        "7alt"
+        "-7b5",
+        "7alt",
+        "-△7",
+        "△7#5",
+        "7aug"
     ],
     "degrees": [
         1,
@@ -184,6 +164,34 @@
         {
             "mode": "Whole",
             "chord": "wh"
+        },
+        {
+            "mode": "Harm min",
+            "chord": "-△7"
+        },
+        {
+            "mode": "Locrian nat 13",
+            "chord": "-7b5"
+        },
+        {
+            "mode": "Ionian #5",
+            "chord": "△7#5"
+        },
+        {
+            "mode": "Dorian #4",
+            "chord": "-7b5"
+        },
+        {
+            "mode": "Mixo b9b13",
+            "chord": "7aug"
+        },
+        {
+            "mode": "Lydian #9",
+            "chord": "-△7"
+        },
+        {
+            "mode": "Alt dom dim 7",
+            "chord": "o7"
         }
     ],
     "notes": [
@@ -270,7 +278,8 @@
         "Rhythmic: I like pizza",
         "Rhythmic: Another song",
         "Dim chord tone THY",
-        "Avoid notes"
+        "Avoid notes",
+        "Harmonic minor modes"
     ],
     "metronome_exercises": [
         {

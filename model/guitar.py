@@ -12,6 +12,11 @@ def get_random_fret(low_fret: int = 4, high_fret: int = 12) -> int:
 def get_random_guitar() -> dict:
     """Returns a random guitar"""
     config = get_configuration()
+
+    for guitar in config["instruments"]:
+        if "select_only" in guitar and guitar["select_only"]:
+            return guitar
+
     storage = get_storage()
 
     while True:
