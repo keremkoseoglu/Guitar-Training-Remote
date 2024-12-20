@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3adc262d-018b-4989-b44e-f37356e3518d" name="Default" comment="Position bug fix" />
+    <list default="true" id="3adc262d-018b-4989-b44e-f37356e3518d" name="Default" comment="Position bug fix">
+      <change beforePath="$PROJECT_DIR$/.idea/Guitar Training Remote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Guitar Training Remote.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241118121709/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241118121709/storage.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241118193658/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241118193658/storage.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241118203235/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241118203235/storage.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241119170830/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241119170830/storage.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241119171336/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/20241119171336/storage.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/abstract_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory/abstract_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/all_practices.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory/all_practices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/exercise.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/exercise.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,36 +64,37 @@
       <replace>u</replace>
     </replaceStrings>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="1WZ3sNqjtXt2xWDC0AN8vbTCc6v" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/kerem/Documents/dev/Guitar_Training_Remote",
+    "settings.editor.selected.configurable": "preferences.editor"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Guitar Training Remote" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -111,6 +133,14 @@
       </list>
     </option>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -203,69 +233,6 @@
     <MESSAGE value="Code inspection" />
     <MESSAGE value="Position bug fix" />
     <option name="LAST_COMMIT_MESSAGE" value="Position bug fix" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="754" y="328" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1580703843002">
-      <screen x="0" y="23" width="1920" height="1124" />
-    </state>
-    <state x="754" y="328" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.1124@0.23.1920.1124" timestamp="1580703843002" />
-    <state x="1031" y="577" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1584030755665">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state x="1031" y="577" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2560.1364@0.23.2560.1364" timestamp="1584030755665" />
-    <state x="822" y="305" key="CommitChangelistDialog2" timestamp="1584031142082">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state x="822" y="305" key="CommitChangelistDialog2/0.23.2560.1364@0.23.2560.1364" timestamp="1584031142082" />
-    <state width="1665" height="477" key="GridCell.Tab.0.bottom" timestamp="1584031152077">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state width="1665" height="382" key="GridCell.Tab.0.bottom/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868025" />
-    <state width="1665" height="477" key="GridCell.Tab.0.bottom/0.23.2560.1364@0.23.2560.1364" timestamp="1584031152077" />
-    <state width="1665" height="477" key="GridCell.Tab.0.center" timestamp="1584031152077">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state width="1665" height="382" key="GridCell.Tab.0.center/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868024" />
-    <state width="1665" height="477" key="GridCell.Tab.0.center/0.23.2560.1364@0.23.2560.1364" timestamp="1584031152077" />
-    <state width="1665" height="477" key="GridCell.Tab.0.left" timestamp="1584031152076">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state width="1665" height="382" key="GridCell.Tab.0.left/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868023" />
-    <state width="1665" height="477" key="GridCell.Tab.0.left/0.23.2560.1364@0.23.2560.1364" timestamp="1584031152076" />
-    <state width="1665" height="477" key="GridCell.Tab.0.right" timestamp="1584031152077">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state width="1665" height="382" key="GridCell.Tab.0.right/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868024" />
-    <state width="1665" height="477" key="GridCell.Tab.0.right/0.23.2560.1364@0.23.2560.1364" timestamp="1584031152077" />
-    <state width="1665" height="477" key="GridCell.Tab.1.bottom" timestamp="1584031152079">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state width="1665" height="382" key="GridCell.Tab.1.bottom/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868026" />
-    <state width="1665" height="477" key="GridCell.Tab.1.bottom/0.23.2560.1364@0.23.2560.1364" timestamp="1584031152079" />
-    <state width="1665" height="477" key="GridCell.Tab.1.center" timestamp="1584031152078">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state width="1665" height="382" key="GridCell.Tab.1.center/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868025" />
-    <state width="1665" height="477" key="GridCell.Tab.1.center/0.23.2560.1364@0.23.2560.1364" timestamp="1584031152078" />
-    <state width="1665" height="477" key="GridCell.Tab.1.left" timestamp="1584031152078">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state width="1665" height="382" key="GridCell.Tab.1.left/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868025" />
-    <state width="1665" height="477" key="GridCell.Tab.1.left/0.23.2560.1364@0.23.2560.1364" timestamp="1584031152078" />
-    <state width="1665" height="477" key="GridCell.Tab.1.right" timestamp="1584031152078">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state width="1665" height="382" key="GridCell.Tab.1.right/0.23.1920.1124@0.23.1920.1124" timestamp="1580452868026" />
-    <state width="1665" height="477" key="GridCell.Tab.1.right/0.23.2560.1364@0.23.2560.1364" timestamp="1584031152078" />
-    <state x="879" y="444" key="Vcs.Push.Dialog.v2" timestamp="1584031144290">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state x="879" y="444" key="Vcs.Push.Dialog.v2/0.23.2560.1364@0.23.2560.1364" timestamp="1584031144290" />
-    <state x="972" y="537" key="com.intellij.ide.util.TipDialog" timestamp="1584030750245">
-      <screen x="0" y="23" width="2560" height="1364" />
-    </state>
-    <state x="729" y="447" key="com.intellij.ide.util.TipDialog/0.23.1920.1124@0.23.1920.1124" timestamp="1580961180322" />
-    <state x="972" y="537" key="com.intellij.ide.util.TipDialog/0.23.2560.1364@0.23.2560.1364" timestamp="1584030750245" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

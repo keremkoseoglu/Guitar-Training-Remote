@@ -4,6 +4,7 @@ import os
 import subprocess
 from config import get_configuration
 
+
 class ExerciseHelperType(Enum):
     """ Defines an exercise helper type
     Examples: open browser, start metronome, etc """
@@ -16,7 +17,8 @@ class ExerciseHelperType(Enum):
 
 class ExerciseHelper:
     """ Defines an exercise helper """
-    def __init__(self, helper_type: ExerciseHelperType, params: {}=None):
+
+    def __init__(self, helper_type: ExerciseHelperType, params: {} = None):
         self.helper_type = helper_type
         if params is None:
             self.params = {}
@@ -38,6 +40,7 @@ def get_flukebox_helper(playlist: str, no_local: bool = False) -> ExerciseHelper
                             {"command": command})
     return output
 
+
 def quit_flukebox():
     """ Quit FlukeBox """
     config = get_configuration()
@@ -47,16 +50,18 @@ def quit_flukebox():
         return
     subprocess.call(["curl", config["flukebox"]["quit_url"]])
 
+
 def get_external_metronome_helper(bpm: int) -> ExerciseHelper:
     """ Returns a metronome helper Exercise """
     config = get_configuration()
     if "metronome_app" not in config:
         return None
-    command = config["metronome_app"]["path"].replace(" ", "\ ") #pylint: disable=W1401
+    command = config["metronome_app"]["path"].replace(" ", "\ ")  # pylint: disable=W1401
     command = "open " + command
     output = ExerciseHelper(ExerciseHelperType.OS_COMMAND,
                             {"command": command, "clipboard": str(bpm)})
     return output
+
 
 def quit_metronome():
     """ Quit metronome """
@@ -66,5 +71,5 @@ def quit_metronome():
     if "process" not in config["metronome_app"]:
         return
     process = config["metronome_app"]["process"]
-    cmd = f"osascript -e 'tell application \"{ process }\" to quit'"
+    cmd = f"osascript -e 'tell application \"{process}\" to quit'"
     os.system(cmd)

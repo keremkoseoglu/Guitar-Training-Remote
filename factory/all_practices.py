@@ -16,7 +16,7 @@ class AllPractices:  # pylint: disable=R0903
         self._config = get_configuration()
 
     def get_workout(
-        self, guitar: dict = None, exclude_classes: List[str] = None
+            self, guitar: dict = None, exclude_classes: List[str] = None
     ) -> workout.WorkOut:
         """Returns a new workout containing all practices"""
         exercises = []
@@ -61,8 +61,8 @@ class AllPractices:  # pylint: disable=R0903
             for practice_object in practice_objects:
                 index += 1
                 if (
-                    practice_object.__module__
-                    in self._config["practice_selection"]["dont_select"]
+                        practice_object.__module__
+                        in self._config["practice_selection"]["dont_select"]
                 ):
                     removable_indices.append(index)
             removable_indices.sort(reverse=True)

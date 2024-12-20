@@ -4,6 +4,7 @@ from typing import List
 from model.exercise_helper import ExerciseHelper
 from practice.practice_category import PracticeCategory
 
+
 @dataclass
 class Exercise:
     """ Exercise class """
