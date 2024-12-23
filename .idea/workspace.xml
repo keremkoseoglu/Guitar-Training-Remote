@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3adc262d-018b-4989-b44e-f37356e3518d" name="Default" comment="Position bug fix">
-      <change beforePath="$PROJECT_DIR$/.idea/Guitar Training Remote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Guitar Training Remote.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241118121709/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241118121709/storage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241118193658/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241118193658/storage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241118203235/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241118203235/storage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241119170830/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241119170830/storage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241119171336/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/backup/20241119171336/storage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/abstract_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory/abstract_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/all_practices.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory/all_practices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/exercise.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/exercise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/exercise_step.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/exercise_step.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +55,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "keremkoseoglu"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/keremkoseoglu/Guitar-Training-Remote.git",
+    "accountId": "fb933f65-a80c-43cc-9771-96e68df886b3"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
@@ -220,11 +217,38 @@
       <option name="project" value="LOCAL" />
       <updated>1584031142349</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Position bug fix">
+      <option name="closed" value="true" />
+      <created>1734713883727</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734713883728</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Position bug fix">
+      <option name="closed" value="true" />
+      <created>1734714022958</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734714022958</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>

@@ -1,4 +1,5 @@
 """ Intervals """
+
 import random
 from model import exercise, exercise_step
 from music_theory import degree, mode
@@ -7,18 +8,19 @@ from practice.practice_category import PracticeCategory
 
 
 class Intervals(AbstractPractice):
-    """ Intervals """
+    """Intervals"""
+
     _DIRECTIONS = ["Up", "Down"]
     _TITLE = "Interval practice"
     _SUBTITLE = "Play shifting intervals"
 
     @property
     def category(self) -> PracticeCategory:
-        """ Returns the category of the practice """
+        """Returns the category of the practice"""
         return PracticeCategory.DEXTERITY
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
-        """ Returns random interval exercises """
+        """Returns random interval exercises"""
         if guitar["kind"] != "instrument":
             return None
 
@@ -26,18 +28,21 @@ class Intervals(AbstractPractice):
         mode_obj = mode.Mode()
         random_steps = []
 
-        for step_index in range(0, quantity): # pylint: disable=W0612
-            mode_text = f"{mode_obj.get_random_mode()} {self._get_direction()}"
-
+        for step_index in range(0, quantity):  # pylint: disable=W0612
+            direction = self._get_direction()
+            min_degree = 0 if direction == "Up" else 4
+            mode_text = f"{mode_obj.get_random_mode()} {direction}"
             step_text = ""
 
             while True:
                 degree_count = 2
-                degrees = degree_obj.get_random_degrees(degree_count, limit_octave=True)
+                degrees = degree_obj.get_random_degrees(
+                    degree_count, limit_octave=True, min_degree=min_degree
+                )
+
                 if not (
-                        (degree_count == 2 and degrees[0] == degrees[1])
-                        or
-                        (degree_count == 2 and abs(degrees[1] - degrees[0]) == 1)
+                    (degree_count == 2 and degrees[0] == degrees[1])
+                    or (degree_count == 2 and abs(degrees[1] - degrees[0]) == 1)
                 ):
                     break
 
@@ -50,10 +55,8 @@ class Intervals(AbstractPractice):
             random_steps.append(random_step)
 
         output = exercise.Exercise(
-            self._TITLE,
-            self._SUBTITLE,
-            random_steps,
-            practice_category=self.category)
+            self._TITLE, self._SUBTITLE, random_steps, practice_category=self.category
+        )
 
         return output
 
