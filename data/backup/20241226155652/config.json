@@ -9,7 +9,7 @@
       "practice.modal_exchange",
       "practice.transcribe_rep_org"
     ],
-    "only_select": "practice.interval",
+    "only_select": "practice.disco",
     "disable_helpers": false
   },
   "instruments": [
