@@ -213,6 +213,34 @@
     "Bb",
     "B"
   ],
+  "sharpy_notes": [
+    "C",
+    "C#",
+    "D",
+    "D#",
+    "E",
+    "F",
+    "F#",
+    "G",
+    "G#",
+    "A",
+    "A#",
+    "B"
+  ],
+  "flatty_notes": [
+    "C",
+    "Db",
+    "D",
+    "Eb",
+    "E",
+    "F",
+    "Gb",
+    "G",
+    "Ab",
+    "A",
+    "Bb",
+    "B"
+  ],
   "arpeggios": [
     "Do an arpeggio on the given scale",
     "Walk diatonic arpeggios from scale",
@@ -230,10 +258,8 @@
     "Play out - pentatonic",
     "Tetra chords",
     "Phrasing (breathe, enjoy)",
-    "Strong beat / note",
     "Double stops",
     "Asc. call & Desc. resp.",
-    "Dom7 phrygian",
     "Dom7 altered",
     "Dom7 3rd Dim",
     "Play the silence",
@@ -252,7 +278,6 @@
     "Close dissonant notes",
     "Use the entire neck",
     "Chord tone approach soloing",
-    "Story: Journey to chord tones",
     "Start on different positions",
     "Start spacey, complex after",
     "Mix short / long phrases",
@@ -261,15 +286,14 @@
     "Mid finger tremolo",
     "Triplet / quintuplet",
     "Focus on thirds",
-    "Rhythmic vocabulary",
     "Rhythmic: Perdido",
     "Rhythmic: I like pizza",
     "Rhythmic: Another song",
-    "Dim chord tone THY",
     "Avoid notes",
     "Harmonic minor modes",
-    "Brecker 2-5-1",
-    "Play in small windows"
+    "Gwizdala 2-5-1",
+    "Play in small windows",
+    "Superimp. triad pairs"
   ],
   "metronome_exercises": [
     {
@@ -472,6 +496,10 @@
     {
       "name": "Gwizdala 2-5-1",
       "url": "https://janekgwizdala.com/jazz-vocabulary-iivi"
+    },
+    {
+      "name": "84 bebop licks",
+      "url": "https://www.youtube.com/watch?v=wD1cfHwST14"
     },
     {
       "name": "Gwizdala giant steps",

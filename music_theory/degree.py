@@ -1,6 +1,7 @@
 """ Degree module """
 
 import random
+from typing import List
 from config import get_configuration
 
 
@@ -30,7 +31,7 @@ class Degree:
 
     def get_random_degrees(
         self, count: int, limit_octave=False, exclude_unison=False, min_degree=0
-    ) -> []:
+    ) -> List:
         """Returns random degrees"""
         output = []
 
@@ -42,4 +43,14 @@ class Degree:
             )
             output.append(random_degree)
 
+        return output
+
+    def get_random_chord_tones(self, count: int) -> List:
+        """Returns random chord tones"""
+        output = []
+        chord_tones = [1, 3, 5, 7]
+        for _ in range(count):
+            random_idx = random.randint(0, len(chord_tones) - 1)
+            chord_tone = chord_tones.pop(random_idx)
+            output.append(chord_tone)
         return output

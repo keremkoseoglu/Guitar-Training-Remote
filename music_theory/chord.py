@@ -1,7 +1,9 @@
 """ Chord module """
 
 import random
+from typing import List
 from music_theory.key_signature import KeySignature
+from music_theory.note import Note
 from config import get_configuration
 
 
@@ -14,13 +16,14 @@ class Chord:
         config = get_configuration()
         self._chord_types = config["chord_types"]
         self._key_signature = KeySignature()
+        self._note = Note()
 
     def get_random_chord_type(self) -> str:
         """Retuns random chord types"""
         i = random.randint(0, len(self._chord_types) - 1)
         return self._chord_types[i]
 
-    def get_random_chords(self, count: int, different_roots: bool = False) -> []:
+    def get_random_chords(self, count: int, different_roots: bool = False) -> List:
         """Returns random chords"""
         output = []
         random_notes = []
@@ -43,3 +46,13 @@ class Chord:
     def get_random_chord(self) -> []:
         """Returns a random chord"""
         return self.get_random_chords(1)[0]
+
+    def get_two_subsequent_whole_step_basic_chords(self) -> List:
+        """Returns two subsequent chords"""
+        random_notes = self._note.get_two_subsequent_whole_step_notes()
+
+        if random.randint(0, 1) == 1:
+            random_notes[0] += "-"
+            random_notes[1] += "-"
+
+        return random_notes

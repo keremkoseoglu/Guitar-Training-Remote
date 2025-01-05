@@ -9,7 +9,7 @@
       "practice.modal_exchange",
       "practice.transcribe_rep_org"
     ],
-    "only_select": "practice.disco",
+    "only_select": "",
     "disable_helpers": false
   },
   "instruments": [
@@ -472,6 +472,10 @@
     {
       "name": "Gwizdala 2-5-1",
       "url": "https://janekgwizdala.com/jazz-vocabulary-iivi"
+    },
+    {
+      "name": "84 bebop licks",
+      "url": "https://www.youtube.com/watch?v=wD1cfHwST14"
     },
     {
       "name": "Gwizdala giant steps",

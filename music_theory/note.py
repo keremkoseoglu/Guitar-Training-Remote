@@ -1,6 +1,8 @@
 """ Note module """
+
 import random
 from copy import deepcopy
+from typing import List
 from config import get_configuration
 
 
@@ -18,7 +20,7 @@ class Note:
         i = random.randint(0, len(self._config["notes"]) - 1)
         return self._config["notes"][i]
 
-    def get_random_notes(self, count, same_shift: bool = False) -> []:
+    def get_random_notes(self, count, same_shift: bool = False) -> List:
         """Returns random notes"""
         output = []
         returnable_shift = ""
@@ -55,3 +57,22 @@ class Note:
             output.append(random_note)
 
         return output
+
+    def get_two_subsequent_whole_step_notes(self) -> List:
+        """Returns two subsequent notes"""
+        note1 = self.get_random_note()
+
+        if "#" in note1:
+            note2_candidates = self._config["sharpy_notes"]
+        else:
+            note2_candidates = self._config["flatty_notes"]
+
+        note1_idx = note2_candidates.index(note1)
+        note2_idx = note1_idx + 2
+
+        if note2_idx > len(note2_candidates) - 1:
+            note2_idx -= len(note2_candidates)
+
+        note2 = note2_candidates[note2_idx]
+
+        return [note1, note2]
