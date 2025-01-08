@@ -465,7 +465,8 @@
     "Palm mute",
     "Slap",
     "Double hand tap",
-    "Pick"
+    "Pick",
+    "Nail 16th"
   ],
   "final_url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2qFYrBUuc8U3Cea-ETDAMv",
   "bass_fill_url": "https://www.youtube.com/results?search_query=bass+fill",
@@ -504,10 +505,6 @@
     {
       "name": "Gwizdala giant steps",
       "url": "https://janekgwizdala.com/decoding-giant-steps"
-    },
-    {
-      "name": "YouTube transcriptions",
-      "url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2qFYrBUuc8U3Cea-ETDAMv"
     }
   ],
   "bass_accompany": [
