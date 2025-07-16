@@ -3,7 +3,9 @@
         "max_steps_per_exercise": 6,
         "min_practice_count": 12,
         "max_practice_count": 12,
-        "must_select": [],
+        "must_select": [
+            "practice.small_window"
+        ],
         "dont_select": [
             "practice.bass_fill_in",
             "practice.modal_exchange",
@@ -254,7 +256,6 @@
         "Random note",
         "Chords",
         "Distant notes",
-        "Bebop",
         "Play out - mel.min.",
         "Play out - chromatic",
         "Play out - pentatonic",
@@ -279,7 +280,6 @@
         "Mix sugar with medicine",
         "Close dissonant notes",
         "Use the entire neck",
-        "Chord tone approach soloing",
         "Start on different positions",
         "Start spacey, complex after",
         "Mix short / long phrases",
@@ -296,7 +296,9 @@
         "Gwizdala 2-5-1",
         "Play in small windows",
         "Superimp. triad pairs",
-        "Approach tones"
+        "David Baker Bebop Line",
+        "Half step between chords",
+        "Bebop approach enclosures"
     ],
     "metronome_exercises": [
         {
@@ -465,7 +467,9 @@
         "Fifths up (Guy)",
         "Fours down (Guy)",
         "Metropolis tap solo",
-        "Walk That Walk"
+        "Walk That Walk",
+        "David Baker Bebop Line",
+        "Love Theory"
     ],
     "right_hand_exercises": [
         "4 finger gallop",
@@ -706,7 +710,7 @@
         "Mozambique",
         "Naningo",
         "Partido Alto",
-        "Reggae",
+        "Reggae (one bar space)",
         "Rev. Partido Alto",
         "Salsa (flavio)",
         "Samba",
@@ -738,6 +742,7 @@
     "lesson_notes": {
         "folders": [
             "/Users/kerem/Documents/music/lessons/Bass/Bass Grooves",
+            "/Users/kerem/Documents/music/lessons/Bass/Brooke",
             "/Users/kerem/Documents/music/lessons/Bass/Latin Bass Book",
             "/Users/kerem/Documents/music/lessons/Bass/Selka",
             "/Users/kerem/Documents/music/lessons/Bass/Ultimate Slap Bass",

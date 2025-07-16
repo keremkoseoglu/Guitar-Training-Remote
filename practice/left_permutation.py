@@ -1,4 +1,4 @@
-""" Left hand permutations module """
+"""Left hand permutations module"""
 
 from random import randint
 from model import exercise, exercise_step
@@ -54,7 +54,8 @@ class LeftFingerPermutations(AbstractPractice):
                 if permutation_text != "":
                     permutation_text += " |"
                 for finger in permutation:
-                    permutation_text += " " + str(finger.number)
+                    strong = "*" if randint(0, 1) == 0 else ""
+                    permutation_text += " " + strong + str(finger.number)
             first_fret = get_random_fret()
             random_bpm = metronome.get_random_bpm()
             random_step = exercise_step.ExerciseStep(
