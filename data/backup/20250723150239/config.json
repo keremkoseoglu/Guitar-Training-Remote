@@ -8,10 +8,9 @@
         ],
         "dont_select": [
             "practice.bass_fill_in",
-            "practice.modal_exchange",
-            "practice.transcribe_rep_org"
+            "practice.modal_exchange"
         ],
-        "only_select": "",
+        "only_select": "practice.arpeggio",
         "disable_helpers": false
     },
     "instruments": [
@@ -196,6 +195,14 @@
         {
             "mode": "Altered bb7",
             "chord": "o7"
+        },
+        {
+            "mode": "Major Pentatonic",
+            "chord": ""
+        },
+        {
+            "mode": "Minor Pentatonic",
+            "chord": "-"
         }
     ],
     "notes": [

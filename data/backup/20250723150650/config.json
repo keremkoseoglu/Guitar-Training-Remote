@@ -8,10 +8,9 @@
         ],
         "dont_select": [
             "practice.bass_fill_in",
-            "practice.modal_exchange",
-            "practice.transcribe_rep_org"
+            "practice.modal_exchange"
         ],
-        "only_select": "",
+        "only_select": "practice.penta_fill",
         "disable_helpers": false
     },
     "instruments": [
