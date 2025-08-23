@@ -10,7 +10,7 @@
             "practice.bass_fill_in",
             "practice.modal_exchange"
         ],
-        "only_select": "practice.left_permutation",
+        "only_select": "practice.mind_bending",
         "disable_helpers": false
     },
     "instruments": [

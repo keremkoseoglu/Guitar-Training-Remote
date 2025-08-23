@@ -11,8 +11,15 @@ class Backup:
 
     def run(self):
         """ Runs a new backup operation """
-        self.remove_old_backups()
-        self.create_new_backup()
+        try:
+            self.remove_old_backups()
+        except Exception:
+            pass
+
+        try:
+            self.create_new_backup()
+        except Exception:
+            pass
 
     def remove_old_backups(self):
         """ Removes old backups """
