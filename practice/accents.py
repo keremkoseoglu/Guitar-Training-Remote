@@ -1,4 +1,5 @@
-""" Accent practices """
+"""Accent practices"""
+
 import random
 from copy import copy
 from enum import Enum
@@ -17,7 +18,8 @@ from config import get_configuration
 
 
 class SupportPractice(Enum):
-    """ Support practices """
+    """Support practices"""
+
     INTERVALS = 1
     LAZY_FINGERS = 2
     NOTES_ON_FRETBOARD = 3
@@ -29,14 +31,15 @@ class SupportPractice(Enum):
 
 
 class Accent:
-    """ Defines an accent """
+    """Defines an accent"""
+
     def __init__(self):
         self.accent = ""
         self.max_accent = 0
 
 
 class Accents(AbstractPractice):
-    """ Accent practices """
+    """Accent practices"""
 
     _TITLE = "Accents"
 
@@ -47,11 +50,11 @@ class Accents(AbstractPractice):
 
     @property
     def category(self) -> PracticeCategory:
-        """ Returns the category of the practice """
+        """Returns the category of the practice"""
         return PracticeCategory.RIGHT_HAND
 
     def get_exercise(self, quantity: int, guitar: dict) -> exercise.Exercise:
-        """ Returns accent exercise """
+        """Returns accent exercise"""
         if not (guitar["kind"] == "instrument" and guitar["strings"] > 0):
             return None
 
@@ -63,16 +66,16 @@ class Accents(AbstractPractice):
 
         output = practice.get_exercise(quantity, guitar)
         output.title = Accents._TITLE
-        output.description += f"\r\n with accent on: {random_accent.accent}"
+        output.description += f"\r\n with > on: {random_accent.accent}"
         return output
 
     def _get_random_accent(self) -> Accent:
         output = Accent()
         output_accents = []
         local_accents = copy(self._accents)
-        random_accent_count = random.randint(1, len(local_accents)-1)
+        random_accent_count = random.randint(1, len(local_accents) - 1)
         while len(output_accents) < random_accent_count:
-            random_accent_pos = random.randint(0, len(local_accents)-1)
+            random_accent_pos = random.randint(0, len(local_accents) - 1)
             random_accent = local_accents.pop(random_accent_pos)
             output_accents.append(random_accent)
         output_accents.sort()
@@ -93,7 +96,7 @@ class Accents(AbstractPractice):
 
     @staticmethod
     def _get_support_practice(accent: Accent) -> AbstractPractice:
-        support_index = random.randint(0, len(SupportPractice)-1)
+        support_index = random.randint(0, len(SupportPractice) - 1)
         output = None
         for practice in SupportPractice:
             if practice.value == support_index:

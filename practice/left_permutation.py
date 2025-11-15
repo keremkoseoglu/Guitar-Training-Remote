@@ -86,9 +86,9 @@ def _build_permutation_text(permutations: list) -> str:
             result += " |"
         for finger in permutation:
             if decorator == "V":
-                strong = "*" if randint(0, 1) == 0 else ""
+                strong = ">" if randint(0, 1) == 0 else ""
             elif decorator == "L":
-                strong = "L" if randint(0, 1) == 0 else ""
+                strong = "." if randint(0, 1) == 0 else ""
             else:
                 strong = ""
 
