@@ -1,4 +1,4 @@
-""" Program entry point """
+"""Program entry point"""
 
 import gui.face
 from practice.improv import Improv

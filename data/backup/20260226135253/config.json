@@ -10,7 +10,7 @@
             "practice.bass_fill_in",
             "practice.modal_exchange"
         ],
-        "only_select": "",
+        "only_select": "practice.improv",
         "disable_helpers": false
     },
     "instruments": [
@@ -252,9 +252,7 @@
         "Do arpeggio - all positions / fingers"
     ],
     "improvs": [
-        "Random note",
         "Chords",
-        "Distant notes",
         "Play out - mel.min.",
         "Play out - chromatic",
         "Play out - pentatonic",
@@ -273,14 +271,11 @@
         "Target notes",
         "Mental sentences (lyrics)",
         "Sing along",
-        "Common tones",
         "Do something different",
-        "Simple but feel good",
         "Mix sugar with medicine",
         "Close dissonant notes",
         "Use the entire neck",
         "Start on different positions",
-        "Start spacey, complex after",
         "Mix short / long phrases",
         "Single note function change",
         "Same idea different chord",
@@ -295,7 +290,8 @@
         "Play in small windows",
         "Superimp. triad pairs",
         "Half step between chords",
-        "Bebop approach enclosures"
+        "Bebop approach enclosures",
+        "State Develop Period (4 bars)"
     ],
     "metronome_exercises": [
         {
@@ -480,6 +476,7 @@
     ],
     "final_url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2qFYrBUuc8U3Cea-ETDAMv",
     "bass_fill_url": "https://www.youtube.com/results?search_query=bass+fill",
+    "ireal_backup_folder": "/Users/kerem/Documents/music/ireal",
     "flukebox": {
         "path": "/Users/kerem/Documents/dev/flukebox/",
         "backing_playlist": "backing",
@@ -497,20 +494,20 @@
     ],
     "transcriptions": [
         {
-            "name": "Gwizdala altered",
-            "url": "https://janekgwizdala.com/bass-players-guide-to-altered-chords-and-scales"
-        },
-        {
-            "name": "Gwizdala 2-5-1",
-            "url": "https://janekgwizdala.com/jazz-vocabulary-iivi"
-        },
-        {
             "name": "84 bebop licks",
             "url": "https://www.youtube.com/watch?v=wD1cfHwST14"
         },
         {
             "name": "Gwizdala giant steps",
             "url": "https://janekgwizdala.com/decoding-giant-steps"
+        },
+        {
+            "name": "Gwizdala altered",
+            "url": "https://janekgwizdala.com/bass-players-guide-to-altered-chords-and-scales"
+        },
+        {
+            "name": "Gwizdala 2-5-1",
+            "url": "https://janekgwizdala.com/jazz-vocabulary-iivi"
         }
     ],
     "bass_accompany": [
