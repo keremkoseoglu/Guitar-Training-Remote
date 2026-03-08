@@ -476,7 +476,9 @@
     ],
     "final_url": "https://www.youtube.com/playlist?list=PLRhDqjUQfUJ2qFYrBUuc8U3Cea-ETDAMv",
     "bass_fill_url": "https://www.youtube.com/results?search_query=bass+fill",
+    "improv_on_ireal": true,
     "ireal_backup_folder": "/Users/kerem/Documents/music/ireal",
+    "ireal_cache_folder": "/Users/kerem/Documents/dev/Guitar_Training_Remote/data/cache/ireal",
     "flukebox": {
         "path": "/Users/kerem/Documents/dev/flukebox/",
         "backing_playlist": "backing",
@@ -512,12 +514,12 @@
     ],
     "bass_accompany": [
         {
-            "name": "Bass accompany",
-            "url": "https://www.youtube.com/watch?v=7i8fNTcREMw&list=PLPwYR-WkPQ2WGH5xz7dzocef42ZEh5Qij"
-        },
-        {
             "name": "Scott groove trainer",
             "url": "https://scottsbasslessons.com/groove-trainer-pub"
+        },
+        {
+            "name": "Bass accompany",
+            "url": "https://www.youtube.com/watch?v=7i8fNTcREMw&list=PLPwYR-WkPQ2WGH5xz7dzocef42ZEh5Qij"
         }
     ],
     "guitar_accompany": [
@@ -694,7 +696,9 @@
         "Bolero",
         "Bomba",
         "Bossa Nova",
+        "Carimbo",
         "Cha Cha",
+        "Cumbia",
         "Funk",
         "Guajira",
         "Kizomba",
@@ -709,6 +713,7 @@
         "Salsa (flavio)",
         "Samba",
         "Soca",
+        "Son Montuno",
         "Songo",
         "Tumbao"
     ],

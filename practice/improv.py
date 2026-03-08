@@ -36,7 +36,7 @@ class Improv(AbstractPractice):
         advice = Advice()
 
         if self._config["improv_on_ireal"]:
-            ireal_backup = ireal.Factory.get_latest_backup_in_config_folder()
+            ireal_songs = ireal.FileSystem().obtain_latest_backup_songs()
 
         for quantity_pos in range(0, quantity):  # pylint: disable=W0612
             if len(improvs) <= 0:
@@ -50,7 +50,7 @@ class Improv(AbstractPractice):
             random_main_improv = improvs.pop(random_index)
 
             if self._config["improv_on_ireal"]:
-                random_song_name = ireal_backup.get_random_song_name()
+                random_song_name = ireal_songs.get_random()
                 sub_txt = random_song_name
             else:
                 sub_txt = advice.get_random_advice()

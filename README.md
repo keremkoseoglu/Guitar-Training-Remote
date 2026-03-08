@@ -1,5 +1,7 @@
 # Guitar Training Remote
 
+Guitar Training Remote generates randomized, customizable instrument routines for smarter daily practice.
+
 I write this Python application for my own bass guitar practice needs. It can be
 used with any instrument though. The name is inspired by the [Jedi Training Remote](https://www.starwars.com/databank/training-remote), seen
 on Star Wars.
